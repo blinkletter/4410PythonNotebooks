@@ -1,0 +1,18 @@
+# Ionization of trityl groups
+#
+# Horn, M. and Mayr, H. (2010), Stabilities of Trityl-Protected Substrates: The Wide Mechanistic Spectrum of Trityl Ester Hydrolyses. Chem. Eur. J., 16: 7469-7477. https://doi.org/10.1002/chem.200902669
+# Chemistry A European J - 2010.pdf
+#
+#       ,,,                                        ,   90%CH3CN/10%water,   80%, 60%, 50%
+# p-Substituents,,,                      pKr (-log),     k(ionization)(/s^-1),,,
+Substituent, Sub1,     Sub2,      Sub3,      pKr,      k_90ACN,  k_80ACN,  k_60ACN,   k_50ACN
+None,        H,         H,         H,        -6.63,    1.47E-5,  5.88E-5,   2.70E-4,  5.57E-4                     
+Me,          p-CH3,     H,         H,        -5.41,    1.03E-4,  3.59E-4,   1.46E-3,  3.01E-3                     
+Me2,         p-CH3,     p-CH3,     H,        -4.71,    3.23E-4,  1.21E-3,   5.62E-3,  9.59E-3                       
+Me3,         p-CH3,     p-CH3,     p-CH3,    -3.56,    1.30E-3,  4.98E-3,   1.77E-2,  3.33E-2                        
+OMe,         p-OCH3,    H,         H,        -3.40,    1.20E-3,  4.53E-3,   1.50E-2,  2.40E-2                      
+OMe2,        p-OCH3,    p-OCH3,    H,        -1.24,    4.04E-2,  1.15E-1,   3.06E-1,  4.41E-1                         
+OMe3,        p-OCH3,    p-OCH3,    p-OCH3,    0.82,    6.80E-1,  1.58,      3.86,     5.56                         
+DMA,         p-N(CH3)2, H,         H,         3.88,    1.08,     2.00,      4.51,     7.40                        
+DMA2,        p-N(CH3)2, p-OCH3,     H,         4.86,    6.23,     1.22E1,    2.49E1,   3.93E1                          
+DMA3,        p-N(CH3)2, p-N(CH3)2, H,         6.94,    1.28E2,   2.15E2,          ,                       

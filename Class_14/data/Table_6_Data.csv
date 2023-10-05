@@ -1,0 +1,31 @@
+# Data for solvolysis of benzhydrylchloride
+# ja01134a054.pdf
+# Siegfried Altscher, Richard Baltzly, and Samuel W. Blackman JACS 1952 74 (14), 3649-3652 DOI: 10.1021/ja01134a054
+# EtOH results from James F. Norris and Clifford Banta JACS 1928 50 (6), 1804-1808 DOI: 10.1021/ja01393a049
+# * More EtOH results from James F. Norris and John Twiss Blake JACS 1928 50 (6), 1808-1812 DOI: 10.1021/ja01393a050
+# All at 25 deg C
+#                                               Methanol    isopropanol     Ethanol        
+# substituent,     sub1,    sub2,     sub3,   k (x 10^3),   k (x 10^3),    k (x 10^3)    More EtoH ref
+Substituent,       Sub1,    Sub2,     Sub3,    k_MeOH,         k_iPrOH,    k_EtOH,      Extra
+H,                 H,         H,       H,     48.9,          0.343,        2.66,                         
+o-Cl,              o-Cl,      H,       H,      0.615,             ,        0.254,                          
+m-Cl,              m-Cl,      H,       H,      1.27,              ,        0.059,        *               
+p-Cl,              p-Cl,      H,       H,     22.8,          0.175,        1.07,                     
+p-CH3,             p-CH3,     H,       H,         ,               ,       43.3,                           
+m-OEt,             m-OEt,     H,       H,         ,          0.396,           ,                  
+p-OCH3,            p-OCH3,    H,       H,         ,       1700,               ,                      
+p-NO2,             p-NO2,     H,       H,      0.0330,            ,           ,                    
+"3,4-Cl2",         m-Cl,     p-Cl,     H,      0.902,             ,           ,                    
+"4,4'-Cl2",        p-Cl,     H,     p-Cl,      6.27,         0.057,        0.40,                                 
+"2,4,4'-Cl3",      o-Cl,     p-Cl,    p-Cl,    0.113,             ,           ,                         
+"4-CH3,4'-Cl",     p-CH3,    H,     p-Cl,         ,          2.74,            ,                         
+"4-OCH3,3-Cl",     p-OCH3,   m-Cl,     H,         ,         48.4,             ,                        
+"4-OCH3-3,4'-Cl2", p-OCH3,   m-Cl,    p-Cl,       ,         24.1,             ,                            
+p-C6H5,            p-C6H5,    H,       H,         ,               ,       36.2,          
+p-Br,              p-Br,      H,       H,         ,               ,        0.883,        *            
+m-CH3,             m-CH3,     H,       H,         ,               ,        5.54,         *           
+o-CH3,             o-CH3,     H,       H,         ,               ,        7.64,         *           
+p-Et,              p-Et,      H,       H,         ,               ,       55.8,          *           
+o-OCH3,            o-OCH3,    H,       H,         ,               ,      247,            *           
+p-OC6H5,           p-OC6H5,   H,       H,         ,               ,      843,            *         
+"4,4'-(CH3)2",     p-CH3,    H,    p-CH3,         ,               ,     1100,            *               
