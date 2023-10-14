@@ -4,6 +4,9 @@
 # EtOH results from James F. Norris and Clifford Banta JACS 1928 50 (6), 1804-1808 DOI: 10.1021/ja01393a049
 # * More EtOH results from James F. Norris and John Twiss Blake JACS 1928 50 (6), 1808-1812 DOI: 10.1021/ja01393a050
 # All at 25 deg C
+# removed all ortho substituents
+# removed p-Et *(Norris-Blake) and p-C6H5(Norris-Banta) - check original data!
+#
 #                                               Methanol    isopropanol     Ethanol        
 # substituent,     sub1,    sub2,     sub3,   k (x 10^3),   k (x 10^3),    k (x 10^3)    More EtoH ref
 Substituent,       Sub1,    Sub2,     Sub3,    k_MeOH,         k_iPrOH,    k_EtOH,      Extra
@@ -22,5 +25,6 @@ p-NO2,             p-NO2,     H,       H,      0.0330,            ,           ,
 p-C6H5,            p-C6H5,    H,       H,         ,               ,       36.2,          
 p-Br,              p-Br,      H,       H,         ,               ,        0.883,        *            
 m-CH3,             m-CH3,     H,       H,         ,               ,        5.54,         *           
+p-Et,              p-Et,      H,       H,         ,               ,       55.8,          *           
 p-OC6H5,           p-OC6H5,   H,       H,         ,               ,      843,            *         
 "4,4'-(CH3)2",     p-CH3,    H,    p-CH3,         ,               ,     1100,            *               
