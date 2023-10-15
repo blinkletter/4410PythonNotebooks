@@ -22,7 +22,7 @@ p-NO2,             p-NO2,     H,       H,      0.0330,            ,           ,
 "4-CH3,4'-Cl",     p-CH3,    H,     p-Cl,         ,          2.74,            ,                         
 "4-OCH3,3-Cl",     p-OCH3,   m-Cl,     H,         ,         48.4,             ,                        
 "4-OCH3-3,4'-Cl2", p-OCH3,   m-Cl,    p-Cl,       ,         24.1,             ,                            
-p-C6H5,            p-C6H5,    H,       H,         ,               ,       36.2,          
+p-C6H5,            p-C6H5,    H,       H,         ,               ,       3.62,          
 p-Br,              p-Br,      H,       H,         ,               ,        0.883,        *            
 m-CH3,             m-CH3,     H,       H,         ,               ,        5.54,         *           
 p-Et,              p-Et,      H,       H,         ,               ,       55.8,          *           
