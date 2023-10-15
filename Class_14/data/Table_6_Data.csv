@@ -16,9 +16,9 @@ m-OEt,             m-OEt,     H,       H,         ,          0.396,           ,
 p-OCH3,            p-OCH3,    H,       H,         ,       1700,               ,                      
 p-NO2,             p-NO2,     H,       H,      0.0330,            ,           ,                    
 "3,4-Cl2",         m-Cl,     p-Cl,     H,      0.902,             ,           ,                    
-"4,4'-Cl2",        p-Cl,     H,     p-Cl,      6.27,         0.057,        0.40,                                 
+"4,4'-Cl2",        p-Cl,      H,      p-Cl,    6.27,         0.057,        0.40,                                 
 "2,4,4'-Cl3",      o-Cl,     p-Cl,    p-Cl,    0.113,             ,           ,                         
-"4-CH3,4'-Cl",     p-CH3,    H,     p-Cl,         ,          2.74,            ,                         
+"4-CH3,4'-Cl",     p-CH3,     H,      p-Cl,         ,        2.74,            ,                         
 "4-OCH3,3-Cl",     p-OCH3,   m-Cl,     H,         ,         48.4,             ,                        
 "4-OCH3-3,4'-Cl2", p-OCH3,   m-Cl,    p-Cl,       ,         24.1,             ,                            
 p-C6H5,            p-C6H5,    H,       H,         ,               ,        3.62,         # was 36.2 in paper. I corrected it assuming an error in the paper. 
@@ -28,4 +28,4 @@ o-CH3,             o-CH3,     H,       H,         ,               ,        7.64,
 p-Et,              p-Et,      H,       H,         ,               ,       55.8,          *           
 o-OCH3,            o-OCH3,    H,       H,         ,               ,      247,            *           
 p-OC6H5,           p-OC6H5,   H,       H,         ,               ,      843,            *         
-"4,4'-(CH3)2",     p-CH3,    H,    p-CH3,         ,               ,     1100,            *               
+"4,4'-(CH3)2",     p-CH3,     H,      p-CH3,      ,               ,     1100,            *               
