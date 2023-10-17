@@ -1,0 +1,14 @@
+Substituent, Name,                  rate_k
+p-NO2,       p-nitrophenol,         0.013
+p-CN,        p-hydroxybenzonitrile, 0.026
+m-NO2,       m-nitrophenol,         0.032
+m-CN,        m-hydroxybenzonitrile, 0.044
+p-N2C6H5,    p-benzeneazophenol,    0.050
+m-Cl,        m-chlorophenol,        0.101
+p-Cl,        p-chlorophenol,        0.108
+H,           phenol,                0.205
+m-CH3,       m-cresol,              0.256
+p-CH3,       p-cresol,              0.257
+#
+#
+# "The Velocities of Combination of Sodium Derivatives of Phenols with Olefine Oxides.", David Runciman Boyd and Ernest Robert Marle., J. Chem. Soc., Trans., 1914, 105, 2117-2139. https://doi.org/10.1039/CT9140502117
