@@ -2,11 +2,11 @@
 # from "Acetolysis reactivities of substituted benzyl and polycyclic arylmethyl p- toluenesulfonates. Correlations with SCF-π and CNDO MO methods." A. Streitwieser Jr., e. al., J. Am. Chem. Soc., 1970, 92, 5141-5150 https://doi.org/ 10.1021/ja00720a025
 #
 # Substituent,     k (X 10^-5 s^-1)
-Substitueny,     k
+Substituent,     k
 p-CH3,          96.3     
 m-CH3,           4.54    
 p-F,             4.19    
-H,,              1.71    
+H,               1.71    
 p-Cl,            0.86    
 m-Cl,            0.087   
 m-CF3,           0.0446   
