@@ -3,11 +3,11 @@
 #
 # Substituent,     k (X 10^-5 s^-1)
 Substituent,     k
-p-CH3,          96.3     
-m-CH3,           4.54    
-p-F,             4.19    
-H,               1.71    
-p-Cl,            0.86    
-m-Cl,            0.087   
-m-CF3,           0.0446   
-p-CF3,           0.0277       
+p-CH3,          96.3
+m-CH3,           4.54
+p-F,             4.19
+H,               1.71
+p-Cl,            0.86
+m-Cl,            0.087
+m-CF3,           0.0446
+p-CF3,           0.0277
