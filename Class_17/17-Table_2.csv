@@ -1,0 +1,22 @@
+### ALKALINE HYDROLYSIS DATA FOR TAFT
+###
+### from K.C. Ingold, W.S. Nathan, "Mechanism of, and constitutional factors controlling, the hydrolysis of carboxylic esters. Part VIII. Energies associated with induced polar effects in the hydrolysis of substituted benzoic esters." J. Chem. Soc., 1936. 222-225. https://doi.org/10. 1039/jr9360000222
+### and D.P. Evans, J.J. Gordon, H.B. Watson,  "Studies of the ortho-effect. Part III. Alkaline hydrolysis of benzoic esters." J. Chem. Soc., 1937, 1430-1432. https: //doi.org/10.1039/jr9370001430
+### Alkaline Hydrolysis 25 deg c (second order rate)
+### 85% ethanol in acid, 25 deg C
+###substituent,  k X 10^5 M^-1 s^-1, ref
+Substituent,      k,          ref
+p-NH2,               1.27,    Evans
+p-OCH3,             11.5,     Evans
+p-CH3,              25.1,     Evans
+H,                  55.0,     Evans
+p-Cl,              237,       Evans
+p-I,               278,       Evans
+p-Br,              289,       Evans
+p-NO2,            5670,       Evans
+H,                  62.1,    Ingold
+m-CH3,              43.3,    Ingold
+m-Cl,              477,      Ingold
+m-NO2,            4290,      Ingold
+p-F,               126,      Ingold
+p-NO2,            7200,      Ingold

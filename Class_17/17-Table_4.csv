@@ -1,0 +1,18 @@
+### pKa DATA FOR TAFT
+###
+### from the famous Williams pKa Table: 
+### 
+###substituent,  pKa XCOOH,     pKa XCH2OH
+substituent,      pKa_COOH,      pKa_CH2OH
+CH3,                 4.76,       16           
+CH2Cl,               2.86,       14.31          
+CH2Br,               2.86,                  
+CHCl2,               1.29,       12.89       
+CCl3,                0.65,       12.24           
+CBr3,                0.66,                   
+CF3,                 0,          12.37          
+CH2F,                2.66,                    
+C6H5,                4.31,       15.4           
+CH2CN,               2.43,                    
+CH2OCH3,             3.53,                    
+C2F5,                 ,          11.35          
