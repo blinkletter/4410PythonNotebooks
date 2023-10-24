@@ -3,7 +3,7 @@
 ### from the famous Williams pKa Table: 
 ### 
 ###substituent,  pKa XCOOH,     pKa XCH2OH
-substituent,      pKa_COOH,      pKa_CH2OH
+Substituent,      pKa_COOH,      pKa_CH2OH
 CH3,                 4.76,       16           
 CH2Cl,               2.86,       14.31          
 CH2Br,               2.86,                  
