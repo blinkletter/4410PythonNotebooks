@@ -2,17 +2,17 @@
 ###
 ### from the famous Williams pKa Table: 
 ### 
-###substituent,  pKa XCOOH,     pKa XCH2OH
-Substituent,      pKa_COOH,      pKa_CH2OH
-CH3,                 4.76,       16
-CH2Cl,               2.86,       14.31
-CH2Br,               2.86,                  
-CHCl2,               1.29,       12.89
-CCl3,                0.65,       12.24
-CBr3,                0.66,                   
-CF3,                 0,          12.37
-CH2F,                2.66,                    
-C6H5,                4.31,       15.4   
-CH2CN,               2.43,                    
-CH2OCH3,             3.53,                    
-C2F5,                 ,          11.35
+###group,  pKa XCOOH,     pKa XCH2OH,    substituent equivalent
+Group,      pKa_COOH,      pKa_CH2OH,    Substituent, Number_of_substituents
+CH3,                 4.76,       16,      H,            1    
+CH2Cl,               2.86,       14.31,   m-Cl,         1    
+CH2Br,               2.86,        ,       m-Br,         1             
+CHCl2,               1.29,       12.89,   m-Cl,         2    
+CCl3,                0.65,       12.24,   m-Cl,         3    
+CBr3,                0.66,        ,       m-Br,         3              
+CF3,                 0,          12.37,   m-F,          3   
+CH2F,                2.66,        ,       m-Cl,         1                
+C6H5,                4.31,       15.4,       ,             
+CH2CN,               2.43,         ,      m-CN,         1    
+CH2OCH3,             3.53,         ,      m-OCH3,       1              
+C2F5,                 ,          11.35,      ,
