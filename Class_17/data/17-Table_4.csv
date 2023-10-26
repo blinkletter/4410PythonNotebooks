@@ -2,17 +2,17 @@
 ###
 ### from the famous Williams pKa Table: 
 ### 
-###Group,     Formula of group, pKa XCOOH, pKa XCH2OH, substituent equivalent
-Group              Formula,             pKa_COOH,  pKa_CH2OH,  Substituent, Number_of_substituents
-Me,              CH3,                 4.76,       16,      H,            1    
-ClCH2,           CH2Cl,               2.86,       14.31,   m-Cl,         1    
-BrCH2,           CH2Br,               2.86,        ,       m-Br,         1             
-Cl2CH,           CHCl2,               1.29,       12.89,   m-Cl,         2    
-Cl3C,            CCl3,                0.65,       12.24,   m-Cl,         3    
-Br3C,            CBr3,                0.66,        ,       m-Br,         3              
-F3C,             CF3,                 0,          12.37,   m-F,          3   
-FCH2,            CH2F,                2.66,        ,       m-F,         1                
-Ph,              C6H5,                4.31,       15.4,    m-C6H5,       1      
-CNCH2,           CH2CN,               2.43,         ,      m-CN,         1    
-CH2OCH3,         CH2OCH3,             3.53,         ,      m-OCH3,       1              
-C2F5,            C2F5,                 ,          11.35,      ,
+###Group,     Formula of group, pKa XCOOH,      pKa XCH2OH, substituent equivalent, multiplicity
+Group,           Formula,             pKa_COOH,  pKa_CH2OH,   Substituent,  Number_of_substituents
+Me,              CH3,                 4.76,       16,         H,            1    
+ClCH2,           CH2Cl,               2.86,       14.31,      m-Cl,         1    
+BrCH2,           CH2Br,               2.86,        ,          m-Br,         1             
+Cl2CH,           CHCl2,               1.29,       12.89,      m-Cl,         2    
+Cl3C,            CCl3,                0.65,       12.24,      m-Cl,         3    
+Br3C,            CBr3,                0.66,        ,          m-Br,         3              
+F3C,             CF3,                 0,          12.37,      m-F,          3   
+FCH2,            CH2F,                2.66,        ,          m-F,          1                
+Ph,              C6H5,                4.31,       15.4,       m-C6H5,       1      
+CNCH2,           CH2CN,               2.43,         ,         m-CN,         1    
+CH2OCH3,         CH2OCH3,             3.53,         ,         m-OCH3,       1              
+C2F5,            C2F5,                 ,          11.35,         ,
