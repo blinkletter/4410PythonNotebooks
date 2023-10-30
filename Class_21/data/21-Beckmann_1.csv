@@ -1,0 +1,22 @@
+### BECKMANN REARRANGEMENT DATA
+###
+### from "Kinetic Study of Beckmann rearrangement of Anti Benzaldoximes in Perchloric acid." A.S.P. Azzuoz, B.O. Kashmola, Iraqi National Journal Of Chemistry, 2011, 41.  https://www.iasj.net/iasj/download/4df054d1d9589785
+###
+### antialdoxime conc = 1-^-4 M
+### perchloric acid concentrations = 0.6328 M respectively 
+###
+#Name,                  Substituent,        k /10^-4 s^-1- at 4 temperatures
+Name,                   Substituent,   323K,     333K,     343K,      353K
+benzaldoxime,            H,            0.37,     0.71,     1.25,      1.77
+o-nitrobenzaldoxime,     o-NO2,        1.11,     1.55,     2.02,      2.97
+m-nitrobenzaldoxime,     m-NO2,        4.07,     7.73,     9.68,      12.63
+p-nitrobenzaldoxime,     p-NO2,       11.53,    28.65,    49.73,      69.34
+o-chlorobenzaldoxime,    o-Cl,         0.34,     0.66,     0.99,      1.68
+m-chlorobenzaldoxime,    m-Cl,         2.32,     4.97,     6.54,      7.82
+p-chlorobenzaldoxime,    p-Cl,         0.32,     0.62,     0.97,      1.56
+o-hydroxybenzaldoxime,   o-OH,         0.27,     0.41,     0.73,      1.09
+m-hydroxybenzaldoxime,   m-OH,         1.11,     2.08,     3.00,      5.15
+p-hydroxybenzaldoxime,   p-OH,         5.20,     8.64,    12.07,      16.53
+o-methylbenzaldoxime,    o-CH3,        0.34,     0.64,     0.91,      1.45
+m-methylbenzaldoxime,    m-CH3,        0.33,     0.62,     0.89,      1.44
+p-methylbenzaldoxime,    p-CH3,        0.21,     0.46,     0.81,      1.24
