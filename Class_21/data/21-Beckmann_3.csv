@@ -15,5 +15,5 @@ p-Methoxyacetophenone,        p-OCH3,          13.29,     Pearson 1952
 p-Nitroacetophenone,          p-NO2,            0.031,    Pearson 1952                  
 m-Nitroacetophenone,          m-NO2,            0.0458,   Pearson 1954                 
 m-Methylacetophenone,         m-CH3,            1.763,    Pearson 1954            
-"3,5-dimethylacetophenone",   35-CH3,           2.377,    Pearson 1954            
-"3,4,5-dimethylacetophenone", 345-CH3,          3.729,    Pearson 1954            
+"3,5-dimethylacetophenone",   "3,5-CH3",        2.377,    Pearson 1954            
+"3,4,5-dimethylacetophenone", "3,4,5-CH3",      3.729,    Pearson 1954            
