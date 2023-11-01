@@ -1,0 +1,25 @@
+### BECKMANN REARRANGEMENT DATA
+###
+### from "Kinetics and mechanism of the Beckmann rearrangement of acetophenone oximes in sulphuric acid." Gregory, B. J., Moodie, R. B., & Schofield, K., Journal of the Chemical Society B: Physical Organic, 1970, 338-346. https://doi.org/10.1039/j29700000338 
+### in 98.2% sulfuric acid. temp = 80 deg C 
+###
+#Name,                        Substituent,        k /10^-4 s^-1
+Name,                         Substituent,      kobs,     ref
+p-Methylacetophenone,         p-CH3,                
+p-tert-Butylacetophenone,     p-C(CH3)3,                           
+Acetophenone,                 H,               17.0
+p-Chloroacetophenone,         p-Cl,            11.7           
+p-Methoxyacetophenone,        p-OCH3,           40            
+p-Nitroacetophenone,          p-NO2,                      
+m-Nitroacetophenone,          m-NO2,                     
+m-Methylacetophenone,         m-CH3,                
+"3,5-dimethylacetophenone",   "3,5-CH3",            
+"3,4,5-dimethylacetophenone", "3,4,5-CH3",          
+                             , m-Br,           7.2                    
+                              ,p-Br,           11.7
+                              ,m-Cl,           7.2                              
+                              ,m-F,            6.3                              
+                               ,p-F,           13.8
+                               ,m-I,            8.8                             
+                               p-I,            12.3                             
+                                                            
