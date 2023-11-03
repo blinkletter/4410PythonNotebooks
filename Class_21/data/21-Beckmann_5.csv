@@ -1,0 +1,14 @@
+### BECKMANN REARRANGEMENT DATA
+###
+### from "Studies of the Beckmann change. Part IV. Some effects of substitution on the rate of rearrangement of ketoxime picryl ethers. A suggested mechanism of the transformation"
+### Arthur W. Chapman  and  Frederick A. Fidler  
+### J. Chem. Soc., 1936, 448-453
+### https://doi.org/10.1039/JR9360000448
+###
+### relative rates extrapolated to 84 degrees C in CCl4 solution of rearrangement of oxime ether to anilide product.
+###
+#Substituent,        kH/kX anti,    kH/kX syn
+Substituent,        kH/kX anti,    kH/kX syn
+H,                      1,             1           
+p-Cl,                   5.00,         2.45            
+p-CH3,                  0.13,         0.41               
