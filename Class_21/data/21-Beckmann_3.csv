@@ -8,7 +8,7 @@
 #Name,                        Substituent,        k /10^-3 min^-1
 Name,                         Substituent,      kobs,     ref
 p-Methylacetophenone,         p-CH3,            2.101,    Pearson 1952            
-p-tert-Butylacetophenone,     p-C(CH3)3,            2.012,    Pearson 1952                       
+p-tert-Butylacetophenone,     p-C(CH3)3,        2.012,    Pearson 1952                       
 Acetophenone,                 H,                1.127,    Pearson 1952       
 p-Chloroacetophenone,         p-Cl,             0.714,    Pearson 1952                  
 p-Methoxyacetophenone,        p-OCH3,          13.29,     Pearson 1952                    
