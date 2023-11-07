@@ -1,0 +1,43 @@
+﻿### pH rate profile data for rate constant of rearrangement in 1:1 dioxane water
+###
+### Data from "On the Rearrangement in Dioxane/Water of (\textit{Z})-Arylhydrazones of 5-Amino-3-benzoyl-1,2,4-oxadiazole into (2-Aryl-5-phenyl-2\textit{H}-1,2,3-triazol-4-yl)ureas: Substituent Effects on the Different Reaction Pathways."
+### F. D'Anna, V. Frenna, G. Macaluso, S. Marullo, S. Morganti, V. Pace, D. Spinelli, R. Spisani, C. Tavani, J. Org. Chem., 2006, 71, 5616-5624. https://doi.org/10.1021/jo0605849
+### data sets are found in the supplementary material at https://ndownloader.figstatic.com/files/4775281
+###
+###
+pS+,"k(A,R)x10^4",BUFFER
+0.1,12.6,HCl
+0.21,11.3,HCl
+0.3,10.3,HCl
+0.54,7.69,HCl
+0.79,5.38,HCl
+1.03,3.51,HCl
+1.24,2.4,HCl
+1.58,1.24,HCl
+1.82,0.762,Citrate
+2.02,0.52,Citrate
+2.21,0.363,Citrate
+2.54,0.242,Citrate
+3.15,0.129,Citrate
+3.81,0.119,Citrate
+4.54,0.12,Citrate
+5.11,0.117,Citrate
+5.65,0.119,Citrate
+6.08,0.118,Citrate
+6.6,0.12,Citrate
+7.02,0.125,Citrate
+7.52,0.133,Citrate
+8.35,0.181,Citrate
+9.22,0.376,Borate
+9.52,0.708,Borate
+9.85,1.42,Borate
+10.09,2.32,Borate
+10.41,4.57,Borate
+10.59,6.82,Borate
+10.82,11.1,Borate
+11.12,20.9,Borate
+11.43,40.4,Borate
+11.59,56.6,Borate
+11.87,102,Borate
+12.11,171,Borate
+12.37,296,Borate

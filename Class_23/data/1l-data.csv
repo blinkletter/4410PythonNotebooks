@@ -1,0 +1,36 @@
+﻿### pH rate profile data for rate constant of rearrangement in 1:1 dioxane water
+###
+### Data from "On the Rearrangement in Dioxane/Water of (\textit{Z})-Arylhydrazones of 5-Amino-3-benzoyl-1,2,4-oxadiazole into (2-Aryl-5-phenyl-2\textit{H}-1,2,3-triazol-4-yl)ureas: Substituent Effects on the Different Reaction Pathways."
+### F. D'Anna, V. Frenna, G. Macaluso, S. Marullo, S. Morganti, V. Pace, D. Spinelli, R. Spisani, C. Tavani, J. Org. Chem., 2006, 71, 5616-5624. https://doi.org/10.1021/jo0605849
+### data sets are found in the supplementary material at https://ndownloader.figstatic.com/files/4775281
+###
+###
+pS+,"k(A,R)x10^5",BUFFER
+0.56,3.07,HCl
+0.75,2.15,HCl
+0.89,1.59,HCl
+1.17,0.847,HCl
+1.35,0.579,HCl
+1.5,0.409,HCl
+1.68,0.273,HCl
+1.9,0.166,HCl
+2.1,0.106,HCl
+2.4,0.0677,HCl
+2.75,0.0611,HCl
+3.15,0.0608,Citrate
+3.8,0.061,Citrate
+4.26,0.0611,Citrate
+4.7,0.0789,Citrate
+5.3,0.212,Citrate
+5.64,0.457,Citrate
+6.14,1.18,Citrate
+6.63,3.45,Citrate
+7.02,8.34,Citrate
+7.64,29.3,Citrate
+7.94,60.1,Citrate
+8.53,200,Citrate
+9.02,592,Citrate
+9.52,1730,Citrate
+9.79,3060,Citrate
+10,4700,Citrate
+10.3,9160,Citrate
