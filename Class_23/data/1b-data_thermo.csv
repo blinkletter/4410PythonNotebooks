@@ -1,0 +1,47 @@
+﻿### Data for unsubstituted reactant from table S2 of the supplementary material for
+###
+### "The First Kinetic Evidence for Acid Catalysis in a Monocyclic Rearrangement of Heterocycles:  Conversion of the 
+### Z-Phenylhydrazone of 5-Amino-3-benzoyl-1,2,4-oxadiazole into N,5-Diphenyl-2H-1,2,3-triazol-4-ylurea." 
+### B. Cosimelli, V. Frenna, S. Guernelli, C.Z. Lanza, G. Macaluso, G. Petrillo, D. Spinelli, 
+### J. Org. Chem., 2002, 67, 8010-8018. https://doi.org/10.1021/jo026039z
+###
+### pS+ is the reported value for pS+
+### delta_H and delta_S are the thermodynamic parameters determined by the authors in kJ/mole and J/mol.K, respectively
+### "k(A,R)x10^5" is the measured rates at 293.15K.  We will need to calculate rates for 313.15K
+### BUFFER is the buffer used in each set of experiments
+###
+pS+,delta_H,delta_S,"k(A,R)x10^5",BUFFER
+0.1,86,-29,10.1,HCl
+0.18,85,-31,9.44,HCl
+0.25,85,-31,8.91,HCl
+0.29,85,-33,8.51,HCl
+0.33,85,-36,8.17,HCl
+0.4,85,-34,7.5,HCl
+0.49,85,-35,6.65,HCl
+0.58,86,-33,5.79,HCl
+0.71,86,-35,4.85,HCl
+0.8,85,-38,4.23,HCl
+0.89,85,-40,3.64,HCl
+1.11,85,-42,2.33,HCl
+1.21,84,-49,1.95,Citrate
+1.8,84,-58,0.558,Citrate
+2.3,86,-59,0.204,Citrate
+2.8,89,-57,0.0867,Citrate
+3.6,95,-38,0.06,Citrate
+4.35,95,-38,0.0604,Citrate
+6.2,96,-37,0.0605,Citrate
+6.95,96,-37,0.0693,Citrate
+7.48,97,-33,0.0713,Citrate
+8.5,92,-43,0.131,Citrate
+9.16,92,-40,0.247,Borate
+9.6,89,-39,0.658,Borate
+9.88,88,-37,1.25,Borate
+10.19,92,-22,2.12,Borate
+10.45,88,-28,4.05,Borate
+10.79,92,-11,7.53,Borate
+11.1,89,-14,15.8,Borate
+11.45,88,-12,32.7,Borate
+11.7,88,-7,55.3,Borate
+11.81,84,-18,67.6,Borate
+11.97,87,-5,94.8,Borate
+12.1,80,-28,128,Borate
