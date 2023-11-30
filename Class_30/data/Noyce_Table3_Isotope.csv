@@ -1,0 +1,28 @@
+### Data from table 3 of 
+###
+### "Two mechanisms for the acid-catalyzed hydrolysis of enol acetates.""
+### Donald S. Noyce and Ralph M. Pollack
+### Journal of the American Chemical Society 1969 91 (1), 119-124
+### https://doi.org/10.1021/ja01029a025
+### 
+### rates of hydrolysis of substituted .alpha.-acetoxystyrenes
+### in various deuterated sulfuric acid mixtures with D2O-D2HSO4
+###
+### Temp = 25.0 deg C
+### "Compound" is the number given by the authors for each substituted acetoxystyrene.
+###
+"Compound",  "Substituent", "PercentH2SO4",  "D0",         "k (/ 10-3 s-1)"       
+1,            p-OCH3,          6.22,         -0.08,        0.162
+2,            p-CH3,           6.17,         -0.07,        0.0619
+3,            H,               6.16,         -0.07,        0.0514
+4,            p-Cl,            6.14,         -0.07,        0.0473
+5,            m-Cl,            6.16,         -0.07,        0.0423
+6,            p-NO2,           6.18,         -0.07,        0.0414
+6,            p-NO2,           8.83,         -0.33,        0.0631
+6,            p-NO2,          17.80,         -1.00,        0.162
+6,            p-NO2,          31.26,         -2.01,        0.460
+6,            p-NO2,          39.62,         -2.65,        0.825
+6,            p-NO2,          45.31,         -3.12,        1.25
+6,            p-NO2,          57.04,         -4.35,        3.10
+6,            p-NO2,          64.94,         -5.37,        8.11
+6,            p-NO2,          66.90,         -5.64,       13.9
