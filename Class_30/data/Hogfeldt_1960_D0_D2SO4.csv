@@ -1,0 +1,35 @@
+### Data from table 3 of 
+###
+### "Acidity Constants of Some Hammett Indicators in Heavy Water. The Hammett Acidity Function, D0, for DCl and D2SO4 Solutions"
+### E. Högfeldt and J. Bigeleisen
+### Journal of the American Chemical Society 1960 82 (1), 15-20
+### DOI: 10.1021/ja01486a005
+### 
+### D0 Values (H) for D2SO4/D2O mixtures
+###
+### Note: The paper contains reported pKa values for BH+ for aniline indicators
+### Note: Authors compare to H0 data in Paul and Long 1957 10.1021/cr50013a001
+###
+### Temp = 25.0 deg C
+###
+"log(Conc /M)",  "H0",         "D0"
+-3.80,           3.50,         3.50
+-3.60,           3.28,         3.28
+-3.40,           3.08,         3.08
+-3.20,           2.84,         2.90
+-3.00,           2.64,         2.73
+-2.80,           2.45,         2.54
+-2.60,           2.26,         2.38
+-2.40,           2.07,         2.20
+-2.20,           1.89,         2.01
+-2.00,           1.72,         1.85
+-1.80,           1.54,         1.71
+-1.60,           1.38,         1.51
+-1.40,           1.22,         1.33
+-1.20,           1.03,         1.13
+-1.00,           0.83,         0.95
+-0.80,           0.65,         0.72
+-0.60,           0.45,         0.51
+-0.40,           0.23,         0.26
+-0.20,          -0.02,        -0.01
+-0.00,          -0.30,        -0.30
