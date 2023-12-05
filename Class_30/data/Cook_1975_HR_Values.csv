@@ -10,7 +10,7 @@
 ###
 ### Temp = 25.0 deg C
 ### Note: This paper has values for othjer temperatures as well.
-"wt% H2SO4", "HR"
+"%H2SO4", "HR"
  6,         -0.08
  8,         -0.03
 10,         -0.55
