@@ -1,0 +1,23 @@
+### Data from table V of 
+###
+### Hammett acidity function for some super acid systems. I. Systems H2SO4-SO3, H2SO4-HSO3F, H2SO4-HSO3Cl, and H2SO4-HB(HSO4)4
+### R. J. Gillespie, T. E. Peel, and E. A. Robinson
+### Journal of the American Chemical Society 1971 93 (20), 5083-5087
+### DOI: 10.1021/ja00749a021
+### 
+### Temp = 25.0 deg C
+### Concentrations in %wt H2SO4 
+###
+"%H2SO4",  "H0"
+98.00,      -10.44 
+98.20,      -10.50 
+98.40,      -10.56 
+98.60,      -10.62 
+98.80,      -10.71 
+99.00,      -10.84 
+99.20,      -10.93 
+99.40,      -11.05 
+99.60,      -11.15 
+99.80,      -11.40 
+99.90,      -11.64 
+100.00,     -11.93

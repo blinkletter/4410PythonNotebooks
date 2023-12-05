@@ -1,0 +1,54 @@
+### Data from table 1 of 
+###
+### "The Thermodynamic Properties of Aqueous Sulfuric Acid Solutions and Hydrates from 15 to 300 K."
+### W. F. Giauque, E. W. Hornung, J. E. Kunzler, and T. R. Rubin
+### Journal of the American Chemical Society 1960 82 (1), 62-70
+### DOI: 10.1021/ja01486a014
+### 
+### Activity coefficient of water in sulfuric acid
+###
+### Temp = 25.0 deg C
+### Concentrations in molal H2SO4 (mole H2SO4 per kg of solvent)
+###
+### Correction: a_H2O for c=1000 is reported as 1.50E-7. It clearly should be 1.50E-6
+### gamma_H2SO4 is activity coefficient for H2SO4. Does it track with H_0?
+###
+### Note: a_H2O is "apparent mole fraction of water". gamma_H2O = a_H2O/X_H2O where X_H2O is actual mole fraction.
+###
+"conc H2SO4 / m", "a_H2O",   "gamma_H2SO4"
+   1,              9.622E-1,  0.13
+   2,              9.130E-1,  0.1253 
+   3,              8.514E-1,  0.1411 
+   4,              7.800E-1,  0.1683 
+   5,              7.035E-1,  0.2062
+   6,              6.257E-1,  0.254 
+   7,              5.503E-1,  0.315 
+   8,              4.806E-1,  0.385 
+   9,              4.175E-1,  0.464 
+  10,              3.611E-1,  0.555 
+  11,              3.113E-1,  0.656 
+  12,              2.678E-1,  0.766 
+  13,              2.303E-1,  0.884
+  14,              1.980E-1,  1.010 
+  15,              1.701E-1,  1.143 
+  16,              1.462E-1,  1.286 
+  17,              1.255E-1,  1.435 
+  18,              1.077E-1,  1.593 
+  19,              9.233E-2,  1.761 
+  20,              7.929E-2,  1.932 
+  25,              3.799E-2,  2.842 
+  30,              1.937E-2,  3.736 
+  35,              1.042E-2,  4.557 
+  40,              5.90E-3,   5.28 
+  45,              3.53E-3,   5.88
+  50,              2.23E-3,   6.33 
+  60,              1.05E-3,   6.81 
+  70,              5.80E-4,   6.91 
+  80,              3.61E-4,   6.80 
+  90,              2.47E-4,   6.57 
+ 100,              1.79E-4,   6.30 
+ 200,              3.20E-5,   3.98 
+ 300,              1.38E-5,   2.83
+ 400,              7.87E-6,   2.19 
+ 500,              5.20E-6,   1.78 
+1000,              1.50E-7,   0.92
