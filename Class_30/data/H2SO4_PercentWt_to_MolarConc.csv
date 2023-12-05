@@ -5,8 +5,9 @@
 ### Note: Found on internet. I hope its correct.
 ###
 ### Temp = 20.0 deg C
+### Density is Density ρ at 20°C (g/cm³)
 ###
-"% (H2SO4)",     "Density ρ at 20°C (g/cm³)",     "g (H2SO4 )/l",     "mol (H2SO4)/l"
+"%H2SO4",          "Density",                     "g/l",              "mol/l"
 1,                  1.0051,                        10.05,              0.103
 2,                  1.0118,                        20.24,              0.206
 3,                  1.0184,                        30.55,              0.312
