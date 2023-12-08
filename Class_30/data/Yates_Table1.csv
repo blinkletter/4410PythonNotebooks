@@ -11,7 +11,7 @@
 ### Temp = 25.0 deg C
 ### kobs units are (/ 10-2 min-1)
 ###
-"Ester", "PercentH2SO4",  "kobs"
+"Ester", "%H2SO4",  "kobs"
 MeOAc,       14.1,          1.50
 MeOAc,       20.7,          2.61
 MeOAc,       28.3,          4.22
