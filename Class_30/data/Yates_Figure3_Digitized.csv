@@ -1,0 +1,26 @@
+### Data from Figure 3 of 
+###
+### "Mechanisms of ester hydrolysis in aqueous sulfuric acids"
+### Keith. Yates and Robert A. McClelland
+### Journal of the American Chemical Society 1967 89 (11), 2686-2692
+### https://doi.org/10.1021/ja00987a033
+### 
+### rates of hydrolysis of various esters
+### in various sulfuric acid mixtures
+###
+### Temp = 25.0 deg C
+### x is log aH2O
+### y is log kobs + mlogH0
+###
+x,         y
+-5.55729388790375, -6.280914008664228
+-4.439743215640501, -6.40849812574353
+-3.560436353841664, -6.6322865928935375
+-2.234585082265269, -6.326030841058562
+-1.6331619941190993, -5.335480685057575
+-1.359767457520594, -4.766065857107584
+-1.020874952301856, -4.101613880720971
+-0.7990168570851383, -3.694709434131669
+-0.6682902740679221, -3.477609930192364
+-0.3693968710017731, -2.7999147044959702
+-0.05627258647392852, -2.2167179187897013
