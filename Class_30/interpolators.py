@@ -38,6 +38,39 @@ def MakeInterpolationFunctionForH0inH2SO4byPercentWt():
     return(interpolation)
 
 
+###################################################
+### Create Interpolation Function for HR from %H2SO4
+###################################################
+
+### This function below could be in an external library that you call in your own program.
+
+def MakeInterpolationFunctionForHRinH2SO4byPercentWt():
+    Data_File_Name = "04_Deno_1955_HR_Values.csv"
+
+    import pandas as pd
+    import numpy as np
+    from scipy.interpolate import make_smoothing_spline               # A function for interpolating a plot using a Bspline algorithm. Returns an interpolation function.
+    
+    #github_location = "https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_30/data/"
+    github_location = "./data/"
+        
+    Filename = github_location + Data_File_Name
+    
+    df = pd.read_csv(Filename, 
+                     delimiter = ",", 
+                     skipinitialspace=True, 
+                     comment = "#") 
+    
+    
+    x = df["%H2SO4"]
+    y = df["HR"]
+    
+    interpolation = make_smoothing_spline(x, y,      ### The x and y data
+                                          w=None,    ### A list of weights for each point (default = None)
+                                          lam=0.1)  ### A factor for the degree of smoothing. Change this to change the smoothness.
+    
+    return(interpolation)
+
 
 ###################################################
 ### Create Interpolation Function for a_H2O by X_H2SO4
@@ -68,7 +101,9 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byMoleFraction():
     df1["mole fraction"] = molal / (molal + 1000/molwtH20)
     
     x = df1["mole fraction"]
-    y = df1["a_H2O"]
+    y = df1["aH2O"]
+
+
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
@@ -106,9 +141,9 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byPercentWt():
     
     df1["%H2SO4"] = percent_H2SO4
     df1["mole fraction"] = molal / (molal + 1000/molwtH20)
-    
+
     x = df1["%H2SO4"]
-    y = df1["a_H2O"]
+    y = df1["aH2O"]
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
@@ -126,7 +161,7 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byPercentWt():
 ### This function below could be in an external library that you call in your own program.
 
 def MakeInterpolationFunctionForDensityofH2SO4byPercentWt():
-    Data_File_Name = "03_H2SO4_PercentWt_to_MolarConc.csv"
+    Data_File_Name = "03_H2SO4_PercentWt_to_MolarConc_CRC.csv"
 
     import pandas as pd
     import numpy as np
@@ -150,3 +185,25 @@ def MakeInterpolationFunctionForDensityofH2SO4byPercentWt():
                                           lam=0.1)  ### A factor for the degree of smoothing. Change this to change the smoothness.
 
     return(interpolation)
+
+
+
+
+###################################################
+### Switcher function
+###################################################
+
+
+# This code runs only in python 3.10 or above versions
+def select_interpolator(parameter):
+    match parameter:
+        case "H0":
+            return MakeInterpolationFunctionForH0inH2SO4byPercentWt()
+        case "HR":
+            return MakeInterpolationFunctionForHRinH2SO4byPercentWt()
+        case "aH2O":
+            return MakeInterpolationFunctionForH2OActivityinH2SO4byPercentWt()
+        case "Density":
+            return MakeInterpolationFunctionForDensityofH2SO4byPercentWt()
+        case default:
+            return "FAIL"
