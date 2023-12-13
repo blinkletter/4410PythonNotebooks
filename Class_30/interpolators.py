@@ -46,14 +46,8 @@ def MakeInterpolationFunctionForH0inH2SO4byPercentWt():
 
 def MakeInterpolationFunctionForHRinH2SO4byPercentWt():
     Data_File_Name = "04_Deno_1955_HR_Values.csv"
+#    Data_File_Name = "04_Cook_1975_HR_Values.csv"
 
-    import pandas as pd
-    import numpy as np
-    from scipy.interpolate import make_smoothing_spline               # A function for interpolating a plot using a Bspline algorithm. Returns an interpolation function.
-    
-    #github_location = "https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_30/data/"
-    github_location = "./data/"
-        
     Filename = github_location + Data_File_Name
     
     df = pd.read_csv(Filename, 
@@ -163,13 +157,6 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byPercentWt():
 def MakeInterpolationFunctionForDensityofH2SO4byPercentWt():
     Data_File_Name = "03_H2SO4_PercentWt_to_MolarConc_CRC.csv"
 
-    import pandas as pd
-    import numpy as np
-    from scipy.interpolate import make_smoothing_spline               # A function for interpolating a plot using a Bspline algorithm. Returns an interpolation function.
-    
-    #github_location = "https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_30/data/"
-    github_location = "./data/"
-        
     Filename = github_location + Data_File_Name
     
     df = pd.read_csv(Filename, 
