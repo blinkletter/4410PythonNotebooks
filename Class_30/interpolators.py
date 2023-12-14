@@ -1,3 +1,5 @@
+### IMPORTANT: RUN THIS CODE BLOCK TO LOAD THE INTERPOLATION LIBRARY
+
 ###################################################
 ### Interpolator Functions
 ###################################################
@@ -33,7 +35,7 @@ def MakeInterpolationFunctionForH0inH2SO4byPercentWt():
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
-                                          lam=0.1)   ### A factor for the degree of smoothing. Change this to change the smoothness.
+                                          lam=5)   ### A factor for the degree of smoothing. Change this to change the smoothness.
     
     return(interpolation)
 
@@ -101,7 +103,7 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byMoleFraction():
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
-                                          lam=0)     ### A factor for the degree of smoothing. Change this to change the smoothness.
+                                          lam=5)     ### A factor for the degree of smoothing. Change this to change the smoothness.
     
     return(interpolation)
 
@@ -141,7 +143,7 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byPercentWt():
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
-                                          lam=0.03)  ### A factor for the degree of smoothing. Change this to change the smoothness.
+                                          lam=10)  ### A factor for the degree of smoothing. Change this to change the smoothness.
     
     return(interpolation)
 
@@ -169,7 +171,7 @@ def MakeInterpolationFunctionForDensityofH2SO4byPercentWt():
     
     interpolation = make_smoothing_spline(x, y,     ### The x and y data
                                           w=None,   ### A list of weights for each point (default = None)
-                                          lam=0.1)  ### A factor for the degree of smoothing. Change this to change the smoothness.
+                                          lam=5)  ### A factor for the degree of smoothing. Change this to change the smoothness.
 
     return(interpolation)
 
