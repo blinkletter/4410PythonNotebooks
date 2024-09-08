@@ -8,7 +8,7 @@
 # rates reported  in units of 1E-5 s^-1
 # multiply all rates by 1E-5
 # 
-pH,         k_1,          k_2  
+"pH",        "k_1",       "k_2"
 0,          113,                                
 0.28,        51.4,                               
 0.55,        23.1,        13.1     

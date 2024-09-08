@@ -10,9 +10,9 @@
 # rates reported  in units of log(k/ s^-1)
 # log(k) values with two decimals of precision have been interpolated
 #
-pH,           k_1,            k_2
-0.00,          -2.94733,       -3.19
-0.28,       -3.28922,       -3.54
+"pH",           "k_1",            "k_2"
+0.00,          -2.95,       -3.19
+0.28,       -3.29,       -3.54
 0.55,       -3.63732,       -3.88375
 1.00,        -3.87159,       -4.21124
 1.25,       -4.15755,       -4.47649
