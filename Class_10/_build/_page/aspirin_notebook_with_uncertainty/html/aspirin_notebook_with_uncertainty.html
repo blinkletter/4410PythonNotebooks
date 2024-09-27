@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Aspirin Hydrolysis Curve Fits &#8212; My Jupyter Book</title>
+    <title>Aspirin Hydrolysis Curve Fits &#8212; Aspirin Hydrolysis pH-rate Profile</title>
   
   
   
@@ -153,7 +153,7 @@
   
   
   
-    <p class="title logo__title">My Jupyter Book</p>
+    <p class="title logo__title">Aspirin Hydrolysis pH-rate Profile</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -217,6 +217,52 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/Class_10/aspirin_notebook_with_uncertainty.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
 
 
 
@@ -357,7 +403,7 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="aspirin-hydrolysis-curve-fits">
 <h1>Aspirin Hydrolysis Curve Fits<a class="headerlink" href="#aspirin-hydrolysis-curve-fits" title="Permalink to this heading">#</a></h1>
 <p>the data is from
-“The hydrolysis of aspirin.” L.J. Edwards, <em>Trans. Faraday Soc.</em>, <strong>1950</strong>, <em>46</em>, 723-735. <a class="reference external" href="https://doi.org/10.1039/TF9504600723">https://doi.org/10.1039/TF9504600723</a></p>
+“The hydrolysis of aspirin.” L.J. Edwards, <em>Trans. Faraday Soc.</em>, <strong>1950</strong>, <em>46</em>, 723-735. https://doi.org/10.1039/TF9504600723</p>
 <section id="load-data">
 <h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <p>The data table from the above paper was made into a csv file (<code class="docutils literal notranslate"><span class="pre">Edwards1950.csv</span></code>). The file contains pH and k_obs values. It is read into a dataframe with the pH va;ues as the index series.  Then a <span class="math notranslate nohighlight">\(\log{(K_{obs})}\)</span> series is created and a series for <span class="math notranslate nohighlight">\([H^+]\)</span></p>
@@ -488,7 +534,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/30624e68e8be1826a997aa9b718fa10114dc056c12da637c1aa7fca4f3c0df77.png" src="_images/30624e68e8be1826a997aa9b718fa10114dc056c12da637c1aa7fca4f3c0df77.png" />
+<img alt="_images/7d913ab08117b5f38e6b5117abfca4dba015e800f904510b0c6db54947bc3f66.png" src="_images/7d913ab08117b5f38e6b5117abfca4dba015e800f904510b0c6db54947bc3f66.png" />
 </div>
 </div>
 </section>
@@ -624,7 +670,7 @@ k^A-_HO- = 7970.652+/-666.734
 pKa, k^AH_H2O = 3.55+/-0.08, 0.11874+/-0.00384
 </pre></div>
 </div>
-<img alt="_images/f85ac1d0cda4e657166558fc3e0f31d26c7b6143f2e4d6f6475184cbb733c43d.png" src="_images/f85ac1d0cda4e657166558fc3e0f31d26c7b6143f2e4d6f6475184cbb733c43d.png" />
+<img alt="_images/011a221489f3a6f96c711b67c30507dbe6275c5ed71bec60233e39b077bcc50d.png" src="_images/011a221489f3a6f96c711b67c30507dbe6275c5ed71bec60233e39b077bcc50d.png" />
 </div>
 </div>
 </section>
@@ -771,7 +817,7 @@ kd = (7.56+/-0.41)e+03
 pKa = 3.65+/-0.12
 </pre></div>
 </div>
-<img alt="_images/593349b0de088fefebac43b10044fd642aef3bcec37de485d7b28b7ef92c59b7.png" src="_images/593349b0de088fefebac43b10044fd642aef3bcec37de485d7b28b7ef92c59b7.png" />
+<img alt="_images/490812fc16a8f4b37cea2f9bcfcccdea47ec0984f7d8c294a526299312adb9b0.png" src="_images/490812fc16a8f4b37cea2f9bcfcccdea47ec0984f7d8c294a526299312adb9b0.png" />
 </div>
 </div>
 <section id="residual-plot">
@@ -852,7 +898,7 @@ pKa = 3.65+/-0.12
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/d4c9100aa9631a7b99155eb1f54052525ce1c2d1225f281c8b6eaaa5bb3a3d85.png" src="_images/d4c9100aa9631a7b99155eb1f54052525ce1c2d1225f281c8b6eaaa5bb3a3d85.png" />
+<img alt="_images/af0133fc6d955be61505646364668cad8bc79369aae517f4af49912c424ce2df.png" src="_images/af0133fc6d955be61505646364668cad8bc79369aae517f4af49912c424ce2df.png" />
 </div>
 </div>
 </section>
@@ -1045,7 +1091,7 @@ pKa = 3.65+/-0.12
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/2103b74c8e38477ca75a5a021f20e258f937d058205dbe84f80f3fbc2b8599aa.png" src="_images/2103b74c8e38477ca75a5a021f20e258f937d058205dbe84f80f3fbc2b8599aa.png" />
+<img alt="_images/623e2d17ab47a008dcde9c91ce2b279c60fbcb5feb875f0be5da395be7803a50.png" src="_images/623e2d17ab47a008dcde9c91ce2b279c60fbcb5feb875f0be5da395be7803a50.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[9.93197267e-07]] [0.11557143]
 </pre></div>
 </div>
@@ -1157,7 +1203,7 @@ pKa = 3.65+/-0.12
 Name: d g/cm, dtype: float64
 </pre></div>
 </div>
-<img alt="_images/a3f8adbd991cc573c9ec9c1a79166f944ee0201bebaddd82cb7e71dee1655eb8.png" src="_images/a3f8adbd991cc573c9ec9c1a79166f944ee0201bebaddd82cb7e71dee1655eb8.png" />
+<img alt="_images/85ac8a257b7461680f11d6658491e475963de08e6395f9505e4dd08151ad37fc.png" src="_images/85ac8a257b7461680f11d6658491e475963de08e6395f9505e4dd08151ad37fc.png" />
 </div>
 </div>
 </section>
@@ -1403,9 +1449,7 @@ Name: d g/cm, dtype: float64
 </details>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: plots: File exists
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[Model]]
+[[Model]]
     Model(model)
 [[Fit Statistics]]
     # fitting method   = leastsq
@@ -1437,8 +1481,8 @@ kd = (7.56+/-0.41)e+03
 pKa = 3.65+/-0.14
 </pre></div>
 </div>
-<img alt="_images/eac3fafb9fccaa7b9dfe4f9c9dbc76c3f03328a63c22aa00b4a114f0c62d5ee5.png" src="_images/eac3fafb9fccaa7b9dfe4f9c9dbc76c3f03328a63c22aa00b4a114f0c62d5ee5.png" />
-<img alt="_images/918e81c7f02fdfb8a9808c729794f1dab32ddb70ca4f58871d60cb35c9c64115.png" src="_images/918e81c7f02fdfb8a9808c729794f1dab32ddb70ca4f58871d60cb35c9c64115.png" />
+<img alt="_images/cce97a4e493c152efafe8d1caa2118b1416937498f64b3dd660c2cba51850195.png" src="_images/cce97a4e493c152efafe8d1caa2118b1416937498f64b3dd660c2cba51850195.png" />
+<img alt="_images/ded76d22c899da60d209975017c2b96b89e38792a07edf46ca529603f42cce22.png" src="_images/ded76d22c899da60d209975017c2b96b89e38792a07edf46ca529603f42cce22.png" />
 </div>
 </div>
 <section id="minimal-code">
@@ -1498,7 +1542,7 @@ pKa = 3.65+/-0.14
     C(kb, kc)  = +0.1187
 </pre></div>
 </div>
-<img alt="_images/7114bf3d640059d479931b13ec5bba268c741d8b1918bbfdc3dcece3021a1445.png" src="_images/7114bf3d640059d479931b13ec5bba268c741d8b1918bbfdc3dcece3021a1445.png" />
+<img alt="_images/1680b5be69cf0a879671a16ce3c1e2432d4815530b02eb22938a1050c0a6058d.png" src="_images/1680b5be69cf0a879671a16ce3c1e2432d4815530b02eb22938a1050c0a6058d.png" />
 </div>
 </div>
 </section>
@@ -1584,7 +1628,7 @@ pKa = 3.65+/-0.14
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book community
+By Barry Linkletter
 </p>
 
   </div>
@@ -1594,7 +1638,7 @@ By The Jupyter Book community
 
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2024.
       <br/>
     
   </p>
