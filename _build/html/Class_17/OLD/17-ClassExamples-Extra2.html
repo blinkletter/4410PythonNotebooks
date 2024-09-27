@@ -1,0 +1,817 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Class Discussion Data &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_17/OLD/17-ClassExamples-Extra2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_17/OLD/17-ClassExamples-Extra2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Class_17/OLD/17-ClassExamples-Extra2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class Discussion Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pick-x-and-y-values">Pick x and y-values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-data">Plot the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-data-series">Other Data Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-process-hammett-parameters">Load and process Hammett parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-in-hammett-sigma-values-from-the-data-table">Add in Hammett <span class="math notranslate nohighlight">\(\sigma\)</span> Values from the Data Table</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-discussion-data">
+<h1>Class Discussion Data<a class="headerlink" href="#class-discussion-data" title="Permalink to this heading">#</a></h1>
+<p>The code below will build the data sets from the handout today and plot the information in various forms. We will be exploring data realted to the <strong>Taft</strong> LFER plots.</p>
+<section id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
+<p>The code below build the data set directly from the handout. I set up a list of lists and converted it to a dataframe object. Then I can use the dataframe object and manipulate it just like a spreadsheet.</p>
+<p>First I will enter the <strong>data from tables 1 &amp; 2</strong> in the class handout. I will use the <span class="math notranslate nohighlight">\(pK_a\)</span> values from table 1 and the corresponding rate data from table 2. I’m just going to enter them directly as a matrix right here in this notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">####################################################</span>
+<span class="c1">### Import Libraries and set up global variables ###</span>
+<span class="c1">####################################################</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="n">github_location_data</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/blinkletter/LFER-QSAR/blob/main/data/&quot;</span>
+<span class="n">github_location_styles</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/blinkletter/LFER-QSAR/blob/main/styles/&quot;</span>
+<span class="n">github_download</span> <span class="o">=</span> <span class="s2">&quot;?raw=True&quot;</span>
+
+<span class="c1">#################################################################</span>
+<span class="c1">### a function to fill in sigma for empty spaces in s+ and s- ###</span>
+<span class="c1">#################################################################</span>
+
+<span class="k">def</span> <span class="nf">fill_sigma</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>     
+    <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">][</span><span class="n">z</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_minus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1">######################################</span>
+<span class="c1">### Set Up Dataframe for Reactions ###</span>
+<span class="c1">######################################</span>
+
+<span class="c1"># substituent, pKa, ester rate hydrolysis (M-1 s-1)</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">[[</span><span class="s2">&quot;p-NO2&quot;</span><span class="p">,</span>   <span class="mf">3.45</span><span class="p">,</span>  <span class="mf">32.9</span> <span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;p-CN&quot;</span><span class="p">,</span>    <span class="mf">3.56</span><span class="p">,</span>  <span class="mf">15.7</span> <span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;p-Cl&quot;</span><span class="p">,</span>    <span class="mf">4.00</span><span class="p">,</span>  <span class="mf">2.10</span> <span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span>       <span class="mf">4.20</span><span class="p">,</span>  <span class="mf">0.289</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;p-CH3&quot;</span><span class="p">,</span>   <span class="mf">4.37</span><span class="p">,</span>  <span class="mf">0.172</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;p-OCH3&quot;</span><span class="p">,</span>  <span class="mf">4.47</span><span class="p">,</span>  <span class="mf">0.143</span><span class="p">]]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> <span class="s2">&quot;pKa&quot;</span><span class="p">,</span> <span class="s2">&quot;rate&quot;</span><span class="p">])</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Substituent&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pick-x-and-y-values">
+<h2>Pick x and y-values<a class="headerlink" href="#pick-x-and-y-values" title="Permalink to this heading">#</a></h2>
+<p>We need x and y-values to plot. The code block below will take the two data series in the data set and assign them to the two axes opf the plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################</span>
+<span class="c1">### Get series of data to plot from the dataframe ###</span>
+<span class="c1">#####################################################</span>
+
+
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;pKa&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span>  <span class="n">df</span><span class="p">[</span><span class="s2">&quot;rate&quot;</span><span class="p">]</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;$pK_a$&quot;</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;$k_</span><span class="si">{obs}</span><span class="s2">$ / $M^{-1} min^{-1}$&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-the-data">
+<h2>Plot the Data<a class="headerlink" href="#plot-the-data" title="Permalink to this heading">#</a></h2>
+<p>the code below will plot any x,y pair that is in memory when it is run.  Execute the block above or any of the blocks below to load in different sets of x,y.</p>
+<p>use the <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">True:</span></code> and <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">False:</span></code> flags below to activate or deactivate given blocks of code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flag</span> <span class="o">=</span> <span class="kc">False</span>   <span class="c1"># change flag to True for linear fit and False for basic scatter plot</span>
+
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure and choose a stylesheet     ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">plot_style_file</span> <span class="o">=</span> <span class="s2">&quot;S2_classic2.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">plot_style_file</span> <span class="o">+</span> <span class="n">github_download</span><span class="p">)</span>        <span class="c1"># Set plot style</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+<span class="k">if</span> <span class="n">flag</span><span class="p">:</span>     <span class="c1"># Change flag to True to plot a linear line fit, False to do a scatter plot</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>         
+<span class="c1">#    ax.plot(x, y, color=&#39;black&#39;, zorder=1, linewidth=0.7)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+<span class="c1">#    title=&quot;Initial Rate Log-Log Plot&quot;,       </span>
+          <span class="n">ylabel</span><span class="o">=</span><span class="n">y_label</span><span class="p">,</span> 
+          <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>                
+<span class="c1">#          xlim=[-.9,.9],                  </span>
+<span class="c1">#          ylim=[-1,7]</span>
+         <span class="p">)</span>
+
+
+<span class="c1">############################</span>
+<span class="c1">### Print labels on plot ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="n">flag</span><span class="p">:</span>      <span class="c1"># Change to True to add annotations to the plot </span>
+   <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+       <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>             <span class="c1"># this is the text</span>
+                 <span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">),</span>          <span class="c1"># these are the coordinates to position the label</span>
+                 <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="c1"># how to position the text</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">20</span><span class="p">),</span>  <span class="c1"># distance from text to points (x,y)</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>      <span class="c1"># horizontal alignment can be left, right or center</span>
+
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="c1">#fig.savefig(&quot;plot2.pdf&quot;)   # use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+
+<span class="c1">#####################################</span>
+<span class="c1">### Print the line fit parameters ###</span>
+<span class="c1">#####################################</span>
+
+<span class="k">if</span> <span class="n">flag</span><span class="p">:</span>         <span class="c1"># Change to True to print a linear line fit results</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope = </span><span class="si">{</span><span class="n">linfit</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.1f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept = </span><span class="si">{</span><span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="other-data-series">
+<h2>Other Data Series<a class="headerlink" href="#other-data-series" title="Permalink to this heading">#</a></h2>
+<p>The code in the blocks below adds columns to the dataframe and selects the x,y pairs to highlight various plots. Run one of the blocks below and then run the plotting block above to plot a give x,y data set.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################</span>
+<span class="c1">### Get series of data to plot from the dataframe ###</span>
+<span class="c1">#####################################################</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Ka&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;pKa&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Ka&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;rate&quot;</span><span class="p">]</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;$K_a$&quot;</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;$k_</span><span class="si">{obs}</span><span class="s2">$ / $M^{-1} min^{-1}$&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################</span>
+<span class="c1">### Get series of data to plot from the dataframe ###</span>
+<span class="c1">#####################################################</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;log rate&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;rate&quot;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;pKa&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span>  <span class="n">df</span><span class="p">[</span><span class="s2">&quot;log rate&quot;</span><span class="p">]</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;$pK_a$&quot;</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;$\log{(k_</span><span class="si">{obs}</span><span class="s2">/ M^{-1} min^{-1})}$&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;diff&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;pKa&quot;</span><span class="p">][</span><span class="s2">&quot;H&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;pKa&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;diff&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;log rate&quot;</span><span class="p">]</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;$\Delta pK_a$&quot;</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;$k_</span><span class="si">{obs}</span><span class="s2">$ / $M^{-1} min^{-1}$&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="load-and-process-hammett-parameters">
+<h2>Load and process Hammett parameters<a class="headerlink" href="#load-and-process-hammett-parameters" title="Permalink to this heading">#</a></h2>
+<p>the code below loads the Hammett data from <code class="docutils literal notranslate"><span class="pre">LFER_HanschLeoTaft.csv</span></code> and processes it to remove the fields that we do not need (it is a large data set). I stores the data frame as <code class="docutils literal notranslate"><span class="pre">df2</span></code>.</p>
+<p>You will need to execute this code BEFORE you execute the call to rhe <code class="docutils literal notranslate"><span class="pre">df2</span></code> dataframe in the block above. I placed this code at the bottom to keep it from cluttering the line or discussion above but you must load in the hammett data into <code class="docutils literal notranslate"><span class="pre">df2</span></code> before you can call upon it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;LFER_HanschLeoTaft.csv&quot;</span>
+<span class="c1">#filename = &quot;LFER_Williams.csv&quot;</span>
+
+<span class="n">hdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">github_location_data</span> <span class="o">+</span> <span class="n">filename</span> <span class="o">+</span> <span class="n">github_download</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">########################################################</span>
+<span class="c1">### Fill across sigma values and select substituents ###</span>
+<span class="c1">########################################################</span>
+<span class="n">hdf</span><span class="o">=</span><span class="n">fill_sigma</span><span class="p">(</span><span class="n">hdf</span><span class="p">)</span>
+
+<span class="n">rowlist</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;m-Br&quot;</span><span class="p">,</span> <span class="s2">&quot;p-Br&quot;</span><span class="p">,</span> <span class="s2">&quot;m-CH3&quot;</span><span class="p">,</span> <span class="s2">&quot;p-CH3&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;m-Cl&quot;</span><span class="p">,</span> <span class="s2">&quot;p-Cl&quot;</span><span class="p">,</span> <span class="s2">&quot;p-CN&quot;</span><span class="p">,</span> <span class="s2">&quot;m-COCH3&quot;</span><span class="p">,</span> 
+           <span class="s2">&quot;p-COCH3&quot;</span><span class="p">,</span> <span class="s2">&quot;m-F&quot;</span><span class="p">,</span> <span class="s2">&quot;p-F&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span>
+           <span class="s2">&quot;m-NO2&quot;</span><span class="p">,</span>  <span class="s2">&quot;p-NO2&quot;</span><span class="p">,</span> <span class="s2">&quot;m-OCH3&quot;</span><span class="p">,</span> <span class="s2">&quot;p-OCH3&quot;</span><span class="p">]</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">hdf</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">rowlist</span><span class="p">]</span>
+
+<span class="c1">### Remove unneeded columns</span>
+
+<span class="n">df2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TABLE V&quot;</span><span class="p">,</span> <span class="s2">&quot;TABLE I&quot;</span><span class="p">],</span>
+        <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="c1">#print(df2)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;sigma&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="add-in-hammett-sigma-values-from-the-data-table">
+<h2>Add in Hammett <span class="math notranslate nohighlight">\(\sigma\)</span> Values from the Data Table<a class="headerlink" href="#add-in-hammett-sigma-values-from-the-data-table" title="Permalink to this heading">#</a></h2>
+<p>include published <span class="math notranslate nohighlight">\(\sigma\)</span> values for substituents. Plot <span class="math notranslate nohighlight">\(\log{rate}\)</span> vs. <span class="math notranslate nohighlight">\(\sigma\)</span>. You will need to execute the block at the bottom of this notebook BEFORE using this code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;sigma&quot;</span>
+<span class="c1">#s = &quot;s_plus&quot;</span>
+<span class="c1">#s = &quot;s_minus&quot;</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="n">s</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;log rate&quot;</span><span class="p">]</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;$pK_a$&quot;</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;$\sigma$&quot;</span>
+<span class="c1">#y_label = &quot;$\sigma^+$&quot;</span>
+<span class="c1">#y_label = &quot;$\sigma^-$&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_17/OLD"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pick-x-and-y-values">Pick x and y-values</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-data">Plot the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-data-series">Other Data Series</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-process-hammett-parameters">Load and process Hammett parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-in-hammett-sigma-values-from-the-data-table">Add in Hammett <span class="math notranslate nohighlight">\(\sigma\)</span> Values from the Data Table</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

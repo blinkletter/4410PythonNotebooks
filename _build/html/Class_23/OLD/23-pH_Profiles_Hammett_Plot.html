@@ -1,0 +1,1496 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>pH-rate Data AutoFitter &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_23/OLD/23-pH_Profiles_Hammett_Plot';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_05/Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_23/OLD/23-pH_Profiles_Hammett_Plot.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/Class_23/OLD/23-pH_Profiles_Hammett_Plot.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>pH-rate Data AutoFitter</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-tools-and-read-data-table">Setup Tools and Read Data Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hammett-plots">Hammett Plots</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ph-rate-data-autofitter">
+<h1>pH-rate Data AutoFitter<a class="headerlink" href="#ph-rate-data-autofitter" title="Permalink to this heading">#</a></h1>
+<p>This workbook contains the code and imports the data from multiple files and fits the data to the model..</p>
+<p>The data being pklotted is from ‘On the Rearrangement in Dioxane/Water of (<em>Z</em>)-Arylhydrazones of 5-Amino-3-benzoyl-1,2,4-oxadiazole into (2-Aryl-5-phenyl-2<em>H</em>-1,2,3-triazol-4-yl)ureas: Substituent Effects on the Different Reaction Pathways.” F. D’Anna, V. Frenna, G. Macaluso, S. Marullo, S. Morganti, V. Pace, D. Spinelli, R. Spisani, C. Tavani, <em>J. Org. Chem.</em>, <strong>2006</strong>, <em>71</em>, 5616-5624. https://doi.org/10.1021/jo0605849</p>
+<p>The data is found in tables within the supplementary material at https://ndownloader.figstatic.com/files/4775281</p>
+<section id="setup-tools-and-read-data-table">
+<h2>Setup Tools and Read Data Table<a class="headerlink" href="#setup-tools-and-read-data-table" title="Permalink to this heading">#</a></h2>
+<p>Here the data table is read in and processed. Also the libraries are imported and any functions defined</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="n">github_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_23/data/&quot;</span>
+<span class="c1">#github_location = &quot;./data/&quot;</span>
+<span class="n">github_location_styles</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+<span class="n">github_location_LFER_tables</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">pH</span><span class="p">,</span> <span class="n">Ka</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">kOH</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">kH2O</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">kH</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    model(x, Ka, kOH, kH2O, kH)</span>
+<span class="sd">    pH is an array of pH values</span>
+<span class="sd">    returns an array of log(k_obs) values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">KW</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">)</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH</span><span class="p">)</span>
+    <span class="n">k_obs</span> <span class="o">=</span> <span class="p">(</span><span class="n">kOH</span> <span class="o">*</span> <span class="p">(</span><span class="n">KW</span><span class="o">/</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kH2O</span> <span class="o">+</span> <span class="n">kH</span> <span class="o">*</span> <span class="p">(</span><span class="n">H</span><span class="o">/</span><span class="n">Ka</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">Ka</span><span class="o">/</span><span class="p">(</span><span class="n">Ka</span> <span class="o">+</span> <span class="n">H</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">k_obs</span><span class="p">))</span>
+
+
+<span class="n">data_files</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1b-data2.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1c-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1d-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1e-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1f-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1g-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1h-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1i-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1j-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1k-data.csv&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;1l-data.csv&quot;</span>
+              <span class="p">)</span>
+
+<span class="n">substituent_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;p-OCH3&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;m-CH3&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;p-CH3&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;m-Cl&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;p-Cl&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;m-Br&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;p-Br&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;p-CN&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;m-NO2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;p-NO2&quot;</span><span class="p">]</span>
+
+<span class="n">result_file_name</span> <span class="o">=</span> <span class="s2">&quot;results1.csv&quot;</span>
+
+<span class="n">n</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">list_iter</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">molecule_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">file_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Ka_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kOH_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kH2O_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kH_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Ka_sd_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kOH_sd_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kH2O_sd_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">kH_sd_list</span> <span class="o">=</span> <span class="p">[]</span>
+
+
+<span class="k">for</span> <span class="n">datafile_name</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">:</span>
+    
+    <span class="n">molecule_code</span> <span class="o">=</span> <span class="n">datafile_name</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">github_location</span> <span class="o">+</span> <span class="n">datafile_name</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;pS+&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+    <span class="c1">#########################################################</span>
+    <span class="c1">### Determine scale from column header name           ###</span>
+    <span class="c1">#########################################################</span>
+    
+    <span class="k">if</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;k(A,R)x10^5&quot;</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;k(A,R)x10^5&quot;</span>
+        <span class="n">colname</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">factor</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**-</span><span class="mi">5</span>
+    <span class="k">elif</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;k(A,R)x10^4&quot;</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;k(A,R)x10^4&quot;</span>
+        <span class="n">colname</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">factor</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**-</span><span class="mi">4</span>
+    
+    <span class="c1">###############################</span>
+    <span class="c1">### Calculations            ###</span>
+    <span class="c1">###############################</span>
+
+
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;log_k&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">*</span> <span class="n">factor</span><span class="p">)</span>
+
+    <span class="c1">###############################</span>
+    <span class="c1">### Curve Fit to model      ###</span>
+    <span class="c1">###############################</span>
+
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;log_k&quot;</span><span class="p">]</span>
+
+    <span class="n">lower_bounds</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]</span>            <span class="c1"># lower bounds for Ka, kOH, kH2O, kH</span>
+    <span class="n">upper_bounds</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">10000</span><span class="p">]</span>           <span class="c1"># upper bounds for Ka, kOH, kH2O, kH</span>
+    <span class="n">bounds_list</span> <span class="o">=</span> <span class="p">(</span><span class="n">lower_bounds</span><span class="p">,</span> <span class="n">upper_bounds</span><span class="p">)</span>
+
+
+    <span class="n">parameters</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bounds</span> <span class="o">=</span> <span class="n">bounds_list</span><span class="p">)</span>  <span class="c1"># Curve fit the model to the x,y data using bounding limits</span>
+
+
+    <span class="p">[</span><span class="n">Ka</span><span class="p">,</span> <span class="n">kOH</span><span class="p">,</span> <span class="n">kH2O</span><span class="p">,</span> <span class="n">kH</span><span class="p">]</span> <span class="o">=</span> <span class="n">parameters</span>
+    <span class="n">perr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
+
+    <span class="c1">#######################################################</span>
+    <span class="c1">### Print out Parameters and standard deviations    ###</span>
+    <span class="c1">#######################################################</span>
+    <span class="k">if</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Compound </span><span class="si">{</span><span class="n">molecule_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ka = </span><span class="si">{</span><span class="n">Ka</span><span class="si">:</span><span class="s2">0.2G</span><span class="si">}</span><span class="s2"> pm </span><span class="si">{</span><span class="n">perr</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">0.2G</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kOH = </span><span class="si">{</span><span class="n">kOH</span><span class="si">:</span><span class="s2">0.3G</span><span class="si">}</span><span class="s2"> pm </span><span class="si">{</span><span class="n">perr</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">0.3G</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kH2O = </span><span class="si">{</span><span class="n">kH2O</span><span class="si">:</span><span class="s2">0.3G</span><span class="si">}</span><span class="s2"> pm </span><span class="si">{</span><span class="n">perr</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">:</span><span class="s2">0.3G</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kH = </span><span class="si">{</span><span class="n">kH</span><span class="si">:</span><span class="s2">0.3G</span><span class="si">}</span><span class="s2"> pm </span><span class="si">{</span><span class="n">perr</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="si">:</span><span class="s2">0.3G</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pKa = </span><span class="si">{</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">Ka</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">list_iter</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">file_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">datafile_name</span><span class="p">)</span>
+    <span class="n">molecule_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">molecule_code</span><span class="p">)</span>
+    <span class="n">Ka_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Ka</span><span class="p">)</span>
+    <span class="n">kOH_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kOH</span><span class="p">)</span>
+    <span class="n">kH2O_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kH2O</span><span class="p">)</span>
+    <span class="n">kH_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kH</span><span class="p">)</span>
+    <span class="n">Ka_sd_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">perr</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">kOH_sd_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">perr</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">kH2O_sd_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">perr</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+    <span class="n">kH_sd_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">perr</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+
+
+    <span class="n">step</span> <span class="o">=</span> <span class="mf">0.1</span>
+    <span class="c1">#x1 = np.arange(np.min(x), np.max(x)+step, step)</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">14</span> <span class="o">+</span> <span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>   <span class="c1"># make an array of points to calculate y-values from</span>
+    <span class="n">y1</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">Ka</span><span class="p">,</span> <span class="n">kOH</span><span class="p">,</span> <span class="n">kH2O</span><span class="p">,</span> <span class="n">kH</span><span class="p">)</span>     <span class="c1"># Calculate those y-values using the model</span>
+
+    <span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+    
+    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+    <span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+    
+    <span class="c1">############################</span>
+    <span class="c1">### Set labels and scale ###</span>
+    <span class="c1">############################</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+    <span class="c1">#    title=&quot;pH rate profilr&quot;,       </span>
+              <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+              <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pS^+$&quot;</span><span class="p">,</span>                
+              <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">14</span><span class="p">],</span>                  
+              <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+             <span class="p">)</span>
+    
+    <span class="c1">#########################################</span>
+    <span class="c1">### Plot the data                     ###</span>
+    <span class="c1">#########################################</span>
+    
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mf">3.8</span><span class="p">,</span><span class="mf">11.5</span><span class="p">],</span><span class="o">-</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">colors</span> <span class="o">=</span> <span class="s2">&quot;lightgray&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>  <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>  <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>  <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+    
+    
+    <span class="c1">#########################################</span>
+    <span class="c1">### Plot the line fit.                ###</span>
+    <span class="c1">#########################################</span>
+    
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="n">molecule_code</span><span class="o">+</span><span class="s2">&quot;  &quot;</span><span class="o">+</span><span class="n">substituent_list</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> 
+
+
+    <span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot&quot;</span><span class="o">+</span> <span class="n">molecule_code</span> <span class="o">+</span><span class="s2">&quot;.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="c1">#    plt.show()                 # output the combined plot plots</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span>
+
+
+    
+
+<span class="c1">##############################################</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Substituent&#39;</span><span class="p">:</span><span class="n">substituent_list</span><span class="p">,</span>
+                           <span class="s1">&#39;iter&#39;</span><span class="p">:</span><span class="n">list_iter</span><span class="p">,</span> 
+                           <span class="s1">&#39;file&#39;</span><span class="p">:</span><span class="n">file_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;molecule&#39;</span><span class="p">:</span><span class="n">molecule_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;Ka&#39;</span><span class="p">:</span><span class="n">Ka_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;kOH&#39;</span><span class="p">:</span><span class="n">kOH_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;kH2O&#39;</span><span class="p">:</span><span class="n">kH2O_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;kH&#39;</span><span class="p">:</span><span class="n">kH_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;Ka_sd&#39;</span><span class="p">:</span><span class="n">Ka_sd_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;kOH_sd&#39;</span><span class="p">:</span><span class="n">kOH_sd_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;kH2O_sd&#39;</span><span class="p">:</span><span class="n">kH2O_sd_list</span><span class="p">,</span> 
+                           <span class="s1">&#39;kH_sd&#39;</span><span class="p">:</span><span class="n">kH_sd_list</span><span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">result_file_name</span><span class="p">,</span> <span class="n">float_format</span> <span class="o">=</span><span class="s2">&quot;</span><span class="si">%.4G</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Compound 1b
+Ka = 0.56 pm 0.1
+kOH = 1.12 pm 0.0401
+kH2O = 5.66E-06 pm 2.95E-07
+kH = 0.00163 pm 0.000204
+pKa = 0.25
+Compound 1c
+Ka = 0.47 pm 0.078
+kOH = 2.18 pm 0.0632
+kH2O = 1.24E-05 pm 4.12E-07
+kH = 0.00233 pm 0.000304
+pKa = 0.33
+Compound 1d
+Ka = 0.59 pm 0.09
+kOH = 1.37 pm 0.0398
+kH2O = 8.78E-06 pm 3.29E-07
+kH = 0.00207 pm 0.000252
+pKa = 0.23
+Compound 1e
+Ka = 0.45 pm 0.056
+kOH = 1.56 pm 0.0396
+kH2O = 1.2E-05 pm 3.42E-07
+kH = 0.00197 pm 0.000182
+pKa = 0.34
+Compound 1f
+Ka = 1 pm 0.3
+kOH = 10.7 pm 0.402
+kH2O = 2.54E-06 pm 1.37E-07
+kH = 0.000777 pm 0.000187
+pKa = -0.01
+Compound 1g
+Ka = 0.81 pm 0.23
+kOH = 6.31 pm 0.281
+kH2O = 3.82E-06 pm 2.27E-07
+kH = 0.000963 pm 0.000228
+pKa = 0.09
+Compound 1h
+Ka = 0.96 pm 0.26
+kOH = 11.6 pm 0.438
+kH2O = 2.42E-06 pm 1.25E-07
+kH = 0.000689 pm 0.000152
+pKa = 0.02
+Compound 1i
+Ka = 0.97 pm 0.34
+kOH = 7.73 pm 0.352
+kH2O = 3.29E-06 pm 2.02E-07
+kH = 0.000961 pm 0.000276
+pKa = 0.01
+Compound 1j
+Ka = 1.1 pm 0.37
+kOH = 144 pm 5.78
+kH2O = 8.25E-07 pm 6.53E-08
+kH = 0.000222 pm 6.18E-05
+pKa = -0.04
+Compound 1k
+Ka = 1.4 pm 0.63
+kOH = 75.3 pm 3.56
+kH2O = 9.37E-07 pm 7.17E-08
+kH = 0.000299 pm 0.00012
+pKa = -0.13
+Compound 1l
+Ka = 2 pm 3.8
+kOH = 635 pm 35.5
+kH2O = 4.71E-07 pm 5.35E-08
+kH = 0.000228 pm 0.000408
+pKa = -0.30
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Substituent</th>
+      <th>iter</th>
+      <th>file</th>
+      <th>molecule</th>
+      <th>Ka</th>
+      <th>kOH</th>
+      <th>kH2O</th>
+      <th>kH</th>
+      <th>Ka_sd</th>
+      <th>kOH_sd</th>
+      <th>kH2O_sd</th>
+      <th>kH_sd</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>H</td>
+      <td>0</td>
+      <td>1b-data2.csv</td>
+      <td>1b</td>
+      <td>0.559570</td>
+      <td>1.121821</td>
+      <td>5.657170e-06</td>
+      <td>0.001633</td>
+      <td>0.099705</td>
+      <td>0.040081</td>
+      <td>2.947418e-07</td>
+      <td>0.000204</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>p-OCH3</td>
+      <td>1</td>
+      <td>1c-data.csv</td>
+      <td>1c</td>
+      <td>0.468178</td>
+      <td>2.176537</td>
+      <td>1.244626e-05</td>
+      <td>0.002334</td>
+      <td>0.077796</td>
+      <td>0.063239</td>
+      <td>4.121480e-07</td>
+      <td>0.000304</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>m-CH3</td>
+      <td>2</td>
+      <td>1d-data.csv</td>
+      <td>1d</td>
+      <td>0.591199</td>
+      <td>1.367986</td>
+      <td>8.775740e-06</td>
+      <td>0.002069</td>
+      <td>0.090153</td>
+      <td>0.039806</td>
+      <td>3.291872e-07</td>
+      <td>0.000252</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>p-CH3</td>
+      <td>3</td>
+      <td>1e-data.csv</td>
+      <td>1e</td>
+      <td>0.452471</td>
+      <td>1.563831</td>
+      <td>1.197328e-05</td>
+      <td>0.001968</td>
+      <td>0.055863</td>
+      <td>0.039574</td>
+      <td>3.418705e-07</td>
+      <td>0.000182</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>m-Cl</td>
+      <td>4</td>
+      <td>1f-data.csv</td>
+      <td>1f</td>
+      <td>1.023844</td>
+      <td>10.732163</td>
+      <td>2.539285e-06</td>
+      <td>0.000777</td>
+      <td>0.297195</td>
+      <td>0.401754</td>
+      <td>1.372109e-07</td>
+      <td>0.000187</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>p-Cl</td>
+      <td>5</td>
+      <td>1g-data.csv</td>
+      <td>1g</td>
+      <td>0.807553</td>
+      <td>6.305972</td>
+      <td>3.822435e-06</td>
+      <td>0.000963</td>
+      <td>0.231589</td>
+      <td>0.281435</td>
+      <td>2.267198e-07</td>
+      <td>0.000228</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>m-Br</td>
+      <td>6</td>
+      <td>1h-data.csv</td>
+      <td>1h</td>
+      <td>0.959064</td>
+      <td>11.644248</td>
+      <td>2.417489e-06</td>
+      <td>0.000689</td>
+      <td>0.260561</td>
+      <td>0.437624</td>
+      <td>1.245552e-07</td>
+      <td>0.000152</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>p-Br</td>
+      <td>7</td>
+      <td>1i-data.csv</td>
+      <td>1i</td>
+      <td>0.973985</td>
+      <td>7.725533</td>
+      <td>3.286769e-06</td>
+      <td>0.000961</td>
+      <td>0.336623</td>
+      <td>0.352477</td>
+      <td>2.020910e-07</td>
+      <td>0.000276</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>p-CN</td>
+      <td>8</td>
+      <td>1j-data.csv</td>
+      <td>1j</td>
+      <td>1.100969</td>
+      <td>143.937412</td>
+      <td>8.246206e-07</td>
+      <td>0.000222</td>
+      <td>0.368725</td>
+      <td>5.779481</td>
+      <td>6.531463e-08</td>
+      <td>0.000062</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>m-NO2</td>
+      <td>9</td>
+      <td>1k-data.csv</td>
+      <td>1k</td>
+      <td>1.356778</td>
+      <td>75.301965</td>
+      <td>9.372255e-07</td>
+      <td>0.000299</td>
+      <td>0.625847</td>
+      <td>3.557652</td>
+      <td>7.173111e-08</td>
+      <td>0.000120</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>p-NO2</td>
+      <td>10</td>
+      <td>1l-data.csv</td>
+      <td>1l</td>
+      <td>2.000000</td>
+      <td>635.157081</td>
+      <td>4.713661e-07</td>
+      <td>0.000228</td>
+      <td>3.764381</td>
+      <td>35.480639</td>
+      <td>5.354204e-08</td>
+      <td>0.000408</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="hammett-plots">
+<h2>Hammett Plots<a class="headerlink" href="#hammett-plots" title="Permalink to this heading">#</a></h2>
+<p>read in the data set created above and Hammett parameters.  Now we pick x and y values and plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#################################################################</span>
+<span class="c1">### a function to fill in sigma for empty spaces in s+ and s- ###</span>
+<span class="c1">#################################################################</span>
+<span class="k">def</span> <span class="nf">fill_sigma</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>     
+    <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">][</span><span class="n">z</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_minus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">Data_Set</span> <span class="o">=</span> <span class="n">result_file_name</span>
+
+<span class="c1">#Filename = github_location + Data_Set</span>
+<span class="n">Filename</span> <span class="o">=</span> <span class="n">Data_Set</span>
+
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Filename</span><span class="p">,</span>
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">LFER_Data</span> <span class="o">=</span> <span class="s2">&quot;LFER_HanschLeoTaft.csv&quot;</span>   <span class="c1"># Choose which set of Hammett parameters you prefer</span>
+<span class="c1">#LFER_Data = &quot;LFER_Williams.csv&quot;</span>
+
+<span class="n">Filename</span> <span class="o">=</span> <span class="n">github_location_LFER_tables</span> <span class="o">+</span> <span class="n">LFER_Data</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Filename</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+<span class="c1">#display(df)</span>
+
+<span class="c1">########################################################</span>
+<span class="c1">### Fill across sigma values and select substituents ###</span>
+<span class="c1">########################################################</span>
+
+<span class="n">df2</span> <span class="o">=</span> <span class="n">fill_sigma</span><span class="p">(</span><span class="n">df2</span><span class="p">)</span>
+<span class="c1">#display(df2)</span>
+
+<span class="c1">###############################</span>
+<span class="c1">### Remove unneeded columns ###</span>
+<span class="c1">###############################</span>
+ 
+<span class="n">df2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TABLE V&quot;</span><span class="p">,</span> <span class="s2">&quot;TABLE I&quot;</span><span class="p">],</span>    <span class="c1">#Trim &quot;LFER_HanschLeoTaft.csv&quot; data</span>
+<span class="c1">#df2.drop(labels = [&quot;Page&quot;],                   #Trim &quot;LFER_Williams.csv&quot;&quot; data</span>
+        <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="c1">#print(df2)</span>
+<span class="c1">#df2.sort_values(by=[&#39;sigma&#39;], inplace=True)</span>
+<span class="c1">#display(df2)</span>
+<span class="c1">#display(df1)</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df2</span><span class="p">,</span> <span class="n">df1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sigma</th>
+      <th>s_plus</th>
+      <th>s_minus</th>
+      <th>Unnamed: 0</th>
+      <th>iter</th>
+      <th>file</th>
+      <th>molecule</th>
+      <th>Ka</th>
+      <th>kOH</th>
+      <th>kH2O</th>
+      <th>kH</th>
+      <th>Ka_sd</th>
+      <th>kOH_sd</th>
+      <th>kH2O_sd</th>
+      <th>kH_sd</th>
+    </tr>
+    <tr>
+      <th>Substituent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>m-Br</th>
+      <td>0.39</td>
+      <td>0.39</td>
+      <td>0.39</td>
+      <td>6</td>
+      <td>6</td>
+      <td>1h-data.csv</td>
+      <td>1h</td>
+      <td>0.9591</td>
+      <td>11.640</td>
+      <td>2.417000e-06</td>
+      <td>0.000690</td>
+      <td>0.26060</td>
+      <td>0.43760</td>
+      <td>1.246000e-07</td>
+      <td>0.000152</td>
+    </tr>
+    <tr>
+      <th>p-Br</th>
+      <td>0.23</td>
+      <td>0.15</td>
+      <td>0.25</td>
+      <td>7</td>
+      <td>7</td>
+      <td>1i-data.csv</td>
+      <td>1i</td>
+      <td>0.9740</td>
+      <td>7.726</td>
+      <td>3.287000e-06</td>
+      <td>0.000960</td>
+      <td>0.33660</td>
+      <td>0.35250</td>
+      <td>2.021000e-07</td>
+      <td>0.000276</td>
+    </tr>
+    <tr>
+      <th>m-CH3</th>
+      <td>-0.07</td>
+      <td>-0.07</td>
+      <td>-0.07</td>
+      <td>2</td>
+      <td>2</td>
+      <td>1d-data.csv</td>
+      <td>1d</td>
+      <td>0.5912</td>
+      <td>1.368</td>
+      <td>8.776000e-06</td>
+      <td>0.002069</td>
+      <td>0.09015</td>
+      <td>0.03981</td>
+      <td>3.292000e-07</td>
+      <td>0.000252</td>
+    </tr>
+    <tr>
+      <th>p-CH3</th>
+      <td>-0.17</td>
+      <td>-0.31</td>
+      <td>-0.17</td>
+      <td>3</td>
+      <td>3</td>
+      <td>1e-data.csv</td>
+      <td>1e</td>
+      <td>0.4525</td>
+      <td>1.564</td>
+      <td>1.197000e-05</td>
+      <td>0.001968</td>
+      <td>0.05586</td>
+      <td>0.03957</td>
+      <td>3.419000e-07</td>
+      <td>0.000182</td>
+    </tr>
+    <tr>
+      <th>m-Cl</th>
+      <td>0.37</td>
+      <td>0.37</td>
+      <td>0.37</td>
+      <td>4</td>
+      <td>4</td>
+      <td>1f-data.csv</td>
+      <td>1f</td>
+      <td>1.0240</td>
+      <td>10.730</td>
+      <td>2.539000e-06</td>
+      <td>0.000777</td>
+      <td>0.29720</td>
+      <td>0.40180</td>
+      <td>1.372000e-07</td>
+      <td>0.000187</td>
+    </tr>
+    <tr>
+      <th>p-Cl</th>
+      <td>0.23</td>
+      <td>0.11</td>
+      <td>0.19</td>
+      <td>5</td>
+      <td>5</td>
+      <td>1g-data.csv</td>
+      <td>1g</td>
+      <td>0.8076</td>
+      <td>6.306</td>
+      <td>3.822000e-06</td>
+      <td>0.000963</td>
+      <td>0.23160</td>
+      <td>0.28140</td>
+      <td>2.267000e-07</td>
+      <td>0.000228</td>
+    </tr>
+    <tr>
+      <th>p-CN</th>
+      <td>0.66</td>
+      <td>0.66</td>
+      <td>1.00</td>
+      <td>8</td>
+      <td>8</td>
+      <td>1j-data.csv</td>
+      <td>1j</td>
+      <td>1.1010</td>
+      <td>143.900</td>
+      <td>8.246000e-07</td>
+      <td>0.000222</td>
+      <td>0.36870</td>
+      <td>5.77900</td>
+      <td>6.531000e-08</td>
+      <td>0.000062</td>
+    </tr>
+    <tr>
+      <th>H</th>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1b-data2.csv</td>
+      <td>1b</td>
+      <td>0.5596</td>
+      <td>1.122</td>
+      <td>5.657000e-06</td>
+      <td>0.001633</td>
+      <td>0.09971</td>
+      <td>0.04008</td>
+      <td>2.947000e-07</td>
+      <td>0.000204</td>
+    </tr>
+    <tr>
+      <th>m-NO2</th>
+      <td>0.71</td>
+      <td>0.71</td>
+      <td>0.71</td>
+      <td>9</td>
+      <td>9</td>
+      <td>1k-data.csv</td>
+      <td>1k</td>
+      <td>1.3570</td>
+      <td>75.300</td>
+      <td>9.372000e-07</td>
+      <td>0.000299</td>
+      <td>0.62580</td>
+      <td>3.55800</td>
+      <td>7.173000e-08</td>
+      <td>0.000120</td>
+    </tr>
+    <tr>
+      <th>p-NO2</th>
+      <td>0.78</td>
+      <td>0.79</td>
+      <td>1.27</td>
+      <td>10</td>
+      <td>10</td>
+      <td>1l-data.csv</td>
+      <td>1l</td>
+      <td>2.0000</td>
+      <td>635.200</td>
+      <td>4.714000e-07</td>
+      <td>0.000228</td>
+      <td>3.76400</td>
+      <td>35.48000</td>
+      <td>5.354000e-08</td>
+      <td>0.000408</td>
+    </tr>
+    <tr>
+      <th>p-OCH3</th>
+      <td>-0.27</td>
+      <td>-0.78</td>
+      <td>-0.26</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1c-data.csv</td>
+      <td>1c</td>
+      <td>0.4682</td>
+      <td>2.177</td>
+      <td>1.245000e-05</td>
+      <td>0.002334</td>
+      <td>0.07780</td>
+      <td>0.06324</td>
+      <td>4.121000e-07</td>
+      <td>0.000304</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="k">def</span> <span class="nf">Report</span><span class="p">(</span><span class="n">comment</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">comment</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope = </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">-.3f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">stderr</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept = </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">-.3f</span><span class="si">}</span><span class="s2"> +/- </span><span class="si">{</span><span class="n">result</span><span class="o">.</span><span class="n">intercept_stderr</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;rsq = </span><span class="si">{</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">rvalue</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">-.3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p = </span><span class="si">{</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span><span class="si">:</span><span class="s2">-.3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="n">result_copy</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>  <span class="c1"># copy the data set into a new data structure so the original will not change</span>
+
+<span class="n">sigmatype</span> <span class="o">=</span> <span class="s2">&quot;s_minus&quot;</span>   <span class="c1"># &quot;sigma&quot;, &quot;s_plus&quot;, or &quot;s_minus&quot;</span>
+<span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;kH&quot;</span>  <span class="c1"># &quot;Ka&quot;, &quot;kOH&quot;, &quot;kH2O&quot;, &quot;kH&quot;</span>
+
+
+<span class="c1">#x = result_copy[sigmatype]  </span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">result_copy</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span><span class="o">+</span><span class="mf">0.39</span><span class="o">*</span><span class="p">(</span><span class="n">result_copy</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">result_copy</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">])</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">result_copy</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+
+
+
+<span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style = &quot;S2_classic2.mplstyle&quot;</span>
+<span class="n">style_name</span> <span class="o">=</span> <span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">style_name</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_plus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^+$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_minus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^-$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;sigma&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma$&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;$\sigma + r(\sigma^--\sigma)$, $r = 0.39$&quot;</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+<span class="c1">#    title=&quot;Yukawa-Tsuno Plot&quot;,       </span>
+          <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+          <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>                
+<span class="c1">#          xlim=[-.9,.9],                  </span>
+<span class="c1">#          ylim=[-3.7,-2.7]</span>
+         <span class="p">)</span>
+
+
+<span class="c1">##############################</span>
+
+<span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">result_copy</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">],</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">result_copy</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">],</span><span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">#print(&quot;Closed circles&quot;)</span>
+<span class="n">Report</span><span class="p">(</span><span class="n">column</span><span class="p">,</span> <span class="n">linfit</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plotYK.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kH
+slope = -0.923 +/- 0.047
+intercept = -2.818 +/- 0.023
+rsq = 0.977
+p = 1.08e-08
+</pre></div>
+</div>
+<img alt="../../_images/69ca93780a2a91442239f136e901c868911a928ab957abfd4dbf1e2cda7f0522.png" src="../../_images/69ca93780a2a91442239f136e901c868911a928ab957abfd4dbf1e2cda7f0522.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YUKAWA-TSUNO DETERMINATION</span>
+
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize_scalar</span>
+
+<span class="n">df3</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">column</span> <span class="o">=</span> <span class="s2">&quot;kH&quot;</span>  <span class="c1"># &quot;Ka&quot;, &quot;kOH&quot;, &quot;kH2O&quot;, &quot;kH&quot;</span>
+<span class="n">y</span> <span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df3</span><span class="p">[</span><span class="n">column</span><span class="p">])</span>
+
+
+<span class="k">def</span> <span class="nf">RSQ_function</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>    <span class="c1"># returns the RSQ for linefits using the given Yukawa-Tsuno r factor</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df3</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">df3</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">])</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="c1">##########################################################</span>
+<span class="c1">### Plot the value of -RSQ as the value of r is varied ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style_file = &quot;S2_classic2.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$-R^2$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Yukawa-Tsuno $r$ value&quot;</span><span class="p">)</span>
+
+<span class="n">rsq_range</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">r_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">r_range</span><span class="p">:</span>
+    <span class="n">rsq</span> <span class="o">=</span> <span class="n">RSQ_function</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">rsq_range</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rsq</span><span class="p">)</span>
+    
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_range</span><span class="p">,</span><span class="n">rsq_range</span><span class="p">)</span>
+
+<span class="c1">#fig.savefig(&quot;plot.pdf&quot;)   # use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Determine optimal r value to minimize -RSQ ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">r_opt</span> <span class="o">=</span> <span class="n">minimize_scalar</span><span class="p">(</span><span class="n">RSQ_function</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The optimal value for r is </span><span class="si">{</span><span class="n">r_opt</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> for rsq = </span><span class="si">{</span><span class="n">r_opt</span><span class="p">[</span><span class="s1">&#39;fun&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">0.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/6140ed1699064bd228bf45e7731f8998465db95053dc7af86dcbce7f0a52c3b1.png" src="../../_images/6140ed1699064bd228bf45e7731f8998465db95053dc7af86dcbce7f0a52c3b1.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The optimal value for r is 0.390 for rsq = -0.97712
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_23/OLD"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-tools-and-read-data-table">Setup Tools and Read Data Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hammett-plots">Hammett Plots</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

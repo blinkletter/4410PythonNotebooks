@@ -1,0 +1,748 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Group Increments - Handout Discussion - Problems 2 to 4 &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Group Increments" href="Group_Increments_ClassExercises.html" />
+    <link rel="prev" title="Group Increments Handout Discussion - Problems 5" href="Group_Increments_Class_Handout_Discussion-Problem5.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Group Increments - Handout Discussion - Problems 2 to 4</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-the-data">Manipulating the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handout-problem-2">Handout Problem 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handout-problem-3">Handout Problem 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-headings">Section headings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handout-problem-4">Handout Problem 4</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="group-increments-handout-discussion-problems-2-to-4">
+<h1>Group Increments - Handout Discussion - Problems 2 to 4<a class="headerlink" href="#group-increments-handout-discussion-problems-2-to-4" title="Permalink to this heading">#</a></h1>
+<p>After exploring the class exercise notebook, here is a notebook that contains my code for exploring the questions in tha handout. Everything is cut and paste from the class exercise notebook with changes as needed.</p>
+<p>We begin with the following code will import the data and call the required libraries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>   <span class="c1"># let the displayn command print many rows</span>
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;Group_Increments.csv&quot;</span>    <span class="c1"># This is the data file in the GitHub repository</span>
+
+<span class="c1">############################</span>
+<span class="c1">### Set global variables ###</span>
+<span class="c1">############################</span>
+
+<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/data/&quot;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/images/&quot;</span>
+
+<span class="n">github_data_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+<span class="n">github_styles_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="n">github_data_location</span> <span class="o">+</span> <span class="n">data_file</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The data file name is </span><span class="si">{</span><span class="n">data_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span>    <span class="c1"># create pandas dataframe from data file</span>
+                  <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>           <span class="c1"># data is separated by commas</span>
+                  <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>         <span class="c1"># use the column with &quot;group&quot; as a header for the index</span>
+                  <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span>             <span class="c1"># ignore lines in the file that are comments</span>
+                  <span class="n">skipinitialspace</span> <span class="o">=</span> <span class="kc">True</span>    <span class="c1"># ignore extra spaces</span>
+                 <span class="p">)</span> 
+
+<span class="c1">#display(df1.head())     # display first five rows at head of Pandas dataframe</span>
+<span class="c1">#display(df1)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The data file name is https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/Group_Increments.csv
+</pre></div>
+</div>
+</div>
+</div>
+<section id="manipulating-the-data">
+<h2>Manipulating the Data<a class="headerlink" href="#manipulating-the-data" title="Permalink to this heading">#</a></h2>
+<p>The data table is in units of kcal/mole. We usually use kJ/mole so let us convert the numbers to that unit and add a new column. We will then extract the new data series out of the dataframe. It will still be indexed by “group”. let us grab just the series that is in kJ/mole and then we can access individual values using the index. Examine the following code…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">90</span>      <span class="c1"># num,ber of rows to display.  I want it all this time.</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1">#replace n with the number of rows you want to see completely</span>
+
+<span class="n">df1</span><span class="p">[</span><span class="s2">&quot;dHfkJ&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;dHf&quot;</span><span class="p">]</span><span class="o">*</span><span class="mf">4.18</span>        <span class="c1"># add a series in units of Kj/mole</span>
+<span class="c1">#display(df1)</span>
+
+<span class="n">i</span><span class="o">=</span><span class="n">df1</span><span class="p">[</span><span class="s2">&quot;dHfkJ&quot;</span><span class="p">]</span>             <span class="c1"># extract a series of group increments in kJ/mole as &quot;i&quot;</span>
+<span class="c1">#display(i.head())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="handout-problem-2">
+<h2>Handout Problem 2<a class="headerlink" href="#handout-problem-2" title="Permalink to this heading">#</a></h2>
+<p>“Calculate the <span class="math notranslate nohighlight">\(\Delta H^{\circ}_f\)</span> for benzene. Compare to experimental values. Were you close? Did you use the correct group increments?”</p>
+<p>See NIST website for experimental values at https://webbook.nist.gov/chemistry/</p>
+<p>The code is all below and hopefull will explain itself. Observe how there are three similar blocks of code for each case where I just copied and pasted them and made changes as needed.</p>
+<p>Data for Heats of formation</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Compound</p></th>
+<th class="head text-center"><p>Heat of Formation <span class="math notranslate nohighlight">\(\Delta H^{\circ}_f\)</span>  <span class="math notranslate nohighlight">\(/ \frac{kJ}{mole}\)</span></p></th>
+<th class="head text-left"><p>Source</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Benzene</p></td>
+<td class="text-center"><p>+82.9</p></td>
+<td class="text-left"><p>https://webbook.nist.gov/cgi/inchi/InChI=1S/C6H6/c1-2-4-6-5-3-1/h1-6H</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Benzene</p></td>
+<td class="text-center"><p>+82.6</p></td>
+<td class="text-left"><p>“Thermochemical Data of Organic Compounds”, J.B. Pedley, R.D. Naylor, S.P. Kirby, <em>Chapman and Hall, New York</em>, <strong>1986</strong>, page 91</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="results">
+<h3>Results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h3>
+<p>The calculated values are very close to the observed. using the Benson group increment for a benzene CH group gave the correct value as expected.</p>
+<p>Note that the code used was exactly the same as in the case of problem #1. I just changed the values and hit shift-return.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Benzene</span>
+
+<span class="n">measuredHf</span> <span class="o">=</span> <span class="o">+</span><span class="mf">82.9</span>     <span class="c1"># Value from NIST database</span>
+
+<span class="n">CbH</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">&quot;Cb-H&quot;</span><span class="p">]</span>       <span class="c1"># increment for CH2 groups</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Benzene&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----&quot;</span><span class="p">)</span>
+
+<span class="sd">&#39;&#39;&#39;  # Commenting the whole block below out of the code. Delete the triple quotes to resore it.</span>
+<span class="sd">print(f&quot;The group increment for Cb-H is {CbH:+.2f}&quot;)</span>
+<span class="sd">print(&quot;-----&quot;)</span>
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="n">Hf</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">CbH</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the calculated delta Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the experimental delta Hf is </span><span class="si">{</span><span class="n">measuredHf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-----&quot;</span><span class="p">)</span>
+
+<span class="n">diff</span> <span class="o">=</span> <span class="n">measuredHf</span>  <span class="o">-</span> <span class="n">Hf</span>
+
+<span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the difference is </span><span class="si">{</span><span class="n">diff</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Benzene
+-----
+the calculated delta Hf is +82.76 kJ/mole
+the experimental delta Hf is +82.90 kJ/mole
+-----
+the difference is +0.14 kJ/mole
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="handout-problem-3">
+<h2>Handout Problem 3<a class="headerlink" href="#handout-problem-3" title="Permalink to this heading">#</a></h2>
+<p>Calculate the <span class="math notranslate nohighlight">\(\Delta H^{\circ}_f\)</span> for benzene the wrong way by …</p>
+<p>And off you go with your assignment activity. take note of a few items in this text block. You can make equations and typeset math using commands between “$” symbols and include formatting. Examine the examples below.</p>
+<section id="section-headings">
+<h3>Section headings<a class="headerlink" href="#section-headings" title="Permalink to this heading">#</a></h3>
+<p>using the # symbol you can create sections headings. See the markdown code for this text to see how its done.</p>
+<p>You can make <strong>bold text</strong> and <em>italic text</em>. Can you make <em><strong>bold italics</strong></em>? Yes you can.</p>
+</section>
+<section id="math">
+<h3>Math<a class="headerlink" href="#math" title="Permalink to this heading">#</a></h3>
+<p>We can include typeset math and units like so: The energy is <span class="math notranslate nohighlight">\(-13.8 \frac{kJ}{mole}\)</span>. The area of a circle is <span class="math notranslate nohighlight">\(A = \pi r^2\)</span>.</p>
+<p>We can show math as a “display equation” such as…</p>
+<div class="math notranslate nohighlight">
+\[\nu = \frac{1}{2 \pi c}\sqrt{\frac{k}{\mu}}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Benzene modelled as unconjugated double bonds</span>
+
+<span class="c1"># copy the code above and make some changes. </span>
+<span class="c1"># Steal the wheel, never reinvent the wheel. And always give credit.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<p>Below are some places that I found data used in this exercise. If you find useful tables or databases please share with the class.</p>
+<hr>
+<p>Heats of combustion from CRC handbook:
+https://hbcp-chemnetbase-com.proxy.library.upei.ca/faces/documents/05_05/05_05_0001.xhtml</p>
+<p>Heats of Formation from Argonne National laboratory:
+https://atct.anl.gov/Thermochemical%20Data/version%201.122r/index.php</p>
+<p>NIST Webbook:
+https://webbook.nist.gov/chemistry/</p>
+<p>See also : “Chemical calculations ; an introduction to the use of mathematics in chemistry”, Sidney W. Benson, <em>Wiley &amp; Sons</em>, <strong>1971</strong>, UPEI library Stacks (2nd floor) QD42.B453 1971</p>
+<p>and</p>
+<p>“<a class="reference external" href="https://moodle31.upei.ca/mod/resource/view.php?id=759268">Thermochemical Data of Organic Compounds</a>”, J.B. Pedley, R.D. Naylor, S.P. Kirby, <em>Chapman and Hall, New York</em>, <strong>1986</strong>, 1-792 (pirated from the web - honestly, the only legitimate copy that I could find within a library system was in Australia). - There was one error/omission in table 2.4 that I corrected using data from this book.</p>
+<p>“Organic Compounds – Physical and Thermochemical Data”.  J.G. Speight, <em>Rules of Thumb for Petroleum Engineers, John Wiley &amp; Sons</em>, <strong>2017</strong>. 539-545.  https://ebookcentral.proquest.com/lib/upei/detail.action?docID=4812517</p>
+</section>
+<section id="handout-problem-4">
+<h2>Handout Problem 4<a class="headerlink" href="#handout-problem-4" title="Permalink to this heading">#</a></h2>
+<p>They key to answering problem 4 is to consider a reaction that affects double bonds but has a very different outcome in benzene compared to an alkene. I suggest discussing electrophilic bromination of cyclohexene and benzene. If you need to include images in a notebook they will have to be included using HTML tags. Below is an example where I pulled an image from one of my web resources.</p>
+<a class="centre reference internal image-reference" href="https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_05/images/cyclohexanes.png"><img alt="cyclohexanes" class="centre" src="https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_05/images/cyclohexanes.png" style="width: 500px;" /></a>
+<p>You can easily use a local file as the address. If it all falls apart answer question 4 with pen and paper. We will perfect your Jupyter notebook skills as we move forward in this course.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Group_Increments_Class_Handout_Discussion-Problem5.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Group Increments Handout Discussion - Problems 5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Group_Increments_ClassExercises.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Group Increments</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-the-data">Manipulating the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handout-problem-2">Handout Problem 2</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results">Results</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handout-problem-3">Handout Problem 3</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#section-headings">Section headings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#math">Math</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handout-problem-4">Handout Problem 4</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Activity of water (\(a_{H_2O}\)) vs. \(\text{\%wt }{H_2SO_4}\) &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_30/01B-ActivityOfWaterinH2SO4byX';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_30/01B-ActivityOfWaterinH2SO4byX.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Class_30/01B-ActivityOfWaterinH2SO4byX.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Activity of water (a_{H_2O}) vs. \text{\%wt }{H_2SO_4}</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="activity-of-water-a-h-2o-vs-text-wt-h-2so-4">
+<h1>Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(\text{\%wt }{H_2SO_4}\)</span><a class="headerlink" href="#activity-of-water-a-h-2o-vs-text-wt-h-2so-4" title="Permalink to this heading">#</a></h1>
+<p>In this notebook we will plot activity of water vs <span class="math notranslate nohighlight">\(H_2SO_4\)</span> concentration (%wt) and (\mol fraction). It will create interpolation functions that can be used to convert %wt, mol fraction, moles/L and molality (moles/Kg of <span class="math notranslate nohighlight">\(\rm H_2O\)</span>).</p>
+<p>The activity data is from “The Thermodynamic Properties of Aqueous Sulfuric Acid Solutions and Hydrates from 15 to 300°K.” W. F. Giauque, E. W. Hornung, J. E. Kunzler, and T. R. Rubin, <em>J. Am. Chem. Soc.</em>, <strong>1960</strong>, <em>82</em>, 62-70. https://doi.org/10.1021/ja01486a014</p>
+<p>Note: The water activity is for its activity as a material. In its standard state <span class="math notranslate nohighlight">\(a_{H_2O} = 1\)</span>. As impurities are added this will reduce. The value is actually the “effective mole fraction” of water. i.e. it behaves as the mole fraction <span class="math notranslate nohighlight">\(a_{H_2O}\)</span> compared to pure water.</p>
+<p>A discussion of values can be found at “Activity and Activity Coefficient of Water in Aqueous Solutions and Their Relationships with Solution Structure Parameters.”, O. Miyawaki, A. Saito, T. Matsuo, K. Nakamura, <em>Bioscience, Biotechnology, and Biochemistry</em>, <strong>1997</strong>, <em>61</em>, 466-469, https://doi.org/10.1271/bbb.61.466</p>
+<p>The activity coefficient of water can be calculated as <span class="math notranslate nohighlight">\(\gamma_{H_2O} = a_{H_2O}/X_{H_2O}\)</span> where <span class="math notranslate nohighlight">\(X_{H_2O}\)</span> is the actual mole fraction of water.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##############################################################</span>
+<span class="c1">### Set up libraries and global variables</span>
+<span class="c1">##############################################################</span>
+
+<span class="n">Data_File_Name</span> <span class="o">=</span> <span class="s2">&quot;01_Giauque_Table9_activityH2OinH2SO4.csv&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="kn">from</span> <span class="nn">statsmodels.nonparametric.smoothers_lowess</span> <span class="kn">import</span> <span class="n">lowess</span>     <span class="c1"># A function for interpolating a plot using the locally weighed scatterplot smoothing method. Returns smoothed x,y points</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">CubicSpline</span>                         <span class="c1"># A function for interpolating a plot using the cubic spline method. Returns an interpolation function.</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">interp1d</span>                            <span class="c1"># A function for interpolating a plot using the connect-the-dots method. Returns an interpolation function.</span>
+<span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">make_smoothing_spline</span>               <span class="c1"># A function for interpolating a plot using a Bspline algorithm. Returns an interpolation function.</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">PathPatch</span>
+<span class="kn">from</span> <span class="nn">matplotlib.path</span> <span class="kn">import</span> <span class="n">Path</span>
+
+
+<span class="c1">#github_location = &quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_30/data/&quot;</span>
+<span class="n">github_location</span> <span class="o">=</span> <span class="s2">&quot;./data/&quot;</span>
+<span class="n">github_H0_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_08/data/H0_data/&quot;</span>
+<span class="n">github_location_styles</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+<span class="n">github_location_LFER_tables</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+
+<span class="n">molwtH2SO4</span> <span class="o">=</span> <span class="mf">98.08</span>
+<span class="n">molwtH20</span> <span class="o">=</span> <span class="mf">18.0</span>
+<span class="n">densityH2SO4</span> <span class="o">=</span> <span class="mf">1.83</span>
+<span class="n">densityH2O</span> <span class="o">=</span> <span class="mf">1.000</span>
+
+<span class="c1">### interpolation = interp1d(x1, y1, kind=&#39;linear&#39;)</span>
+<span class="c1">### interpolation = CubicSpline(x1, y1)</span>
+<span class="c1">### interpolation = scipy.interpolate.make_smoothing_spline(x1, y1, w=None, lam=0.03)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##############################################################</span>
+<span class="c1">### Import the data and perform calculations</span>
+<span class="c1">##############################################################</span>
+
+<span class="n">Filename</span> <span class="o">=</span> <span class="n">github_location</span> <span class="o">+</span> <span class="n">Data_File_Name</span>
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Filename</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+<span class="c1">#                 index_col=&quot;Substituent&quot;, </span>
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">#display(df1)</span>
+
+<span class="n">molal</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;conc H2SO4 / m&quot;</span><span class="p">]</span>
+<span class="n">mass_add_to_1_kg_water</span> <span class="o">=</span> <span class="n">molal</span> <span class="o">*</span> <span class="n">molwtH2SO4</span>
+<span class="n">total_mass_solution</span> <span class="o">=</span> <span class="n">mass_add_to_1_kg_water</span> <span class="o">+</span> <span class="mi">1000</span>
+<span class="n">percent_H2SO4</span> <span class="o">=</span> <span class="n">mass_add_to_1_kg_water</span> <span class="o">/</span> <span class="n">total_mass_solution</span> <span class="o">*</span> <span class="mi">100</span>
+
+<span class="n">df1</span><span class="p">[</span><span class="s2">&quot;%H2SO4&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">percent_H2SO4</span>
+<span class="n">df1</span><span class="p">[</span><span class="s2">&quot;mole fraction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">molal</span> <span class="o">/</span> <span class="p">(</span><span class="n">molal</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="n">molwtH20</span><span class="p">)</span>
+
+<span class="c1">#display(df1)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###################################################</span>
+<span class="c1">### Get the data</span>
+<span class="c1">###################################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;mole fraction&quot;</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;a_H2O&quot;</span><span class="p">]</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### Interpolate the data</span>
+<span class="c1">###################################################</span>
+
+<span class="c1">### Using a smoothing interpolation function that returns a Bspline function</span>
+
+<span class="n">interpolation</span> <span class="o">=</span> <span class="n">make_smoothing_spline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>      <span class="c1">### The x and y data</span>
+                                      <span class="n">w</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>    <span class="c1">### A list of weights for each point (default = None)</span>
+                                      <span class="n">lam</span><span class="o">=</span><span class="mf">0.00</span><span class="p">)</span>  <span class="c1">### A factor for the degree of smoothing. Change this to change the smoothness.</span>
+<span class="n">step</span> <span class="o">=</span> <span class="mf">0.01</span>
+<span class="n">x_smooth</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">step</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+<span class="n">y_smooth</span> <span class="o">=</span> <span class="n">interpolation</span><span class="p">(</span><span class="n">x_smooth</span><span class="p">)</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### Set zoom range for second plot</span>
+<span class="c1">###################################################</span>
+
+<span class="n">zoom_xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mf">0.2</span><span class="p">]</span>                  
+<span class="n">zoom_ylim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### Set up labels for plots</span>
+<span class="c1">###################################################</span>
+
+<span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;mole fraction $H_2SO_4$&quot;</span>
+<span class="n">y_label</span> <span class="o">=</span> <span class="s2">&quot;$a_</span><span class="si">{H_2O}</span><span class="s2">$&quot;</span>
+
+<span class="n">Title0</span> <span class="o">=</span> <span class="s2">&quot;$a_</span><span class="si">{H_2O}</span><span class="s2">$ vs. mole fraction $H_2SO_4$&quot;</span>
+<span class="n">Title1</span> <span class="o">=</span> <span class="s2">&quot;Expanded Region&quot;</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### Create figure for plot</span>
+<span class="c1">###################################################</span>
+
+<span class="n">style</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style = &quot;S2_classic2.mplstyle&quot;</span>
+<span class="n">style_name</span> <span class="o">=</span> <span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">style_name</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+
+<span class="c1">###########################</span>
+<span class="c1">### Set up rectangle for box patch</span>
+<span class="c1">###########################</span>
+
+<span class="n">vertices</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">codes</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="n">codes</span> <span class="o">=</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">MOVETO</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">LINETO</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="n">Path</span><span class="o">.</span><span class="n">CLOSEPOLY</span><span class="p">]</span>
+<span class="n">vertices</span> <span class="o">=</span> <span class="p">[(</span><span class="n">zoom_xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">zoom_ylim</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> 
+            <span class="p">(</span><span class="n">zoom_xlim</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">zoom_ylim</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> 
+            <span class="p">(</span><span class="n">zoom_xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zoom_ylim</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span> 
+            <span class="p">(</span><span class="n">zoom_xlim</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">zoom_ylim</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> 
+            <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
+
+<span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">vertices</span><span class="p">,</span> <span class="n">codes</span><span class="p">)</span>
+<span class="n">pathpatch0</span> <span class="o">=</span> <span class="n">PathPatch</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">###################################################</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### Make the first plot (plot 0)</span>
+<span class="c1">###################################################</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+          <span class="n">title</span> <span class="o">=</span> <span class="n">Title0</span><span class="p">,</span>       
+          <span class="n">ylabel</span><span class="o">=</span><span class="n">y_label</span><span class="p">,</span> 
+          <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>                
+<span class="c1">#          xlim=[-.9,.9],                  </span>
+<span class="c1">#          ylim=[-3.7,-2.7]</span>
+       <span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># ax[0].axvline(x=30, ymin=0.1, ymax = 0.9, linewidth = 0.5, color = &quot;lightgray&quot;, zorder = 0)   # A vertical line highlight</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+              <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> 
+              <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> 
+              <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> 
+              <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> 
+              <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> 
+              <span class="n">zorder</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">pathpatch0</span><span class="p">)</span>   <span class="c1"># add the box to highlight the zoom area</span>
+
+<span class="c1">#ax[0].plot(x, y, &quot;-&quot;, color = &quot;black&quot;, linewidth=0.7, zorder = 1)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_smooth</span><span class="p">,</span> <span class="n">y_smooth</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+
+<span class="c1">###################################################</span>
+<span class="c1">### Make the second plot (plot 1)</span>
+<span class="c1">###################################################</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+          <span class="n">title</span> <span class="o">=</span> <span class="n">Title1</span><span class="p">,</span>       
+          <span class="n">ylabel</span><span class="o">=</span><span class="n">y_label</span><span class="p">,</span> 
+          <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>                
+          <span class="n">xlim</span><span class="o">=</span><span class="n">zoom_xlim</span><span class="p">,</span>      <span class="c1">### Set axis limits to zoom in         </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="n">zoom_ylim</span>
+       <span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># ax[1].axvline(x=30, ymin=0.1, ymax = 0.9, linewidth = 0.5, color = &quot;lightgray&quot;, zorder = 0)   # A vertical line highlight</span>
+
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+              <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> 
+              <span class="n">s</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> 
+              <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span><span class="p">,</span> 
+              <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> 
+              <span class="n">linewidths</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> 
+              <span class="n">zorder</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="c1">#ax[1].plot(x, y, &quot;-&quot;, color = &quot;black&quot;, linewidth=0.7, zorder = 1)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_smooth</span><span class="p">,</span> <span class="n">y_smooth</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/8e43251ee3a6d4e66b458a40b57f7f8b574b6043d8e675cb9fa055967599debb.png" src="../_images/8e43251ee3a6d4e66b458a40b57f7f8b574b6043d8e675cb9fa055967599debb.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###################################################</span>
+<span class="c1">### Create Interpolation Function</span>
+<span class="c1">###################################################</span>
+
+<span class="c1"># The activity of water in 0.01 mole fraction H2SO4 is 0.983</span>
+
+<span class="c1">### This function below could be in an external library that you call in your own program.</span>
+
+<span class="k">def</span> <span class="nf">MakeInterpolationFunctionForH2OActivityinH2SO4byMoleFraction</span><span class="p">():</span>
+    <span class="n">Data_File_Name</span> <span class="o">=</span> <span class="s2">&quot;01_Giauque_Table9_activityH2OinH2SO4.csv&quot;</span>
+
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+    <span class="kn">from</span> <span class="nn">scipy.interpolate</span> <span class="kn">import</span> <span class="n">make_smoothing_spline</span>               <span class="c1"># A function for interpolating a plot using a Bspline algorithm. Returns an interpolation function.</span>
+    
+    <span class="c1">#github_location = &quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_30/data/&quot;</span>
+    <span class="n">github_location</span> <span class="o">=</span> <span class="s2">&quot;./data/&quot;</span>
+    
+    <span class="n">molwtH2SO4</span> <span class="o">=</span> <span class="mf">98.08</span><span class="p">;</span> <span class="n">molwtH20</span> <span class="o">=</span> <span class="mf">18.0</span><span class="p">;</span> <span class="n">densityH2SO4</span> <span class="o">=</span> <span class="mf">1.83</span><span class="p">;</span> <span class="n">densityH2O</span> <span class="o">=</span> <span class="mf">1.000</span>
+    
+    <span class="n">Filename</span> <span class="o">=</span> <span class="n">github_location</span> <span class="o">+</span> <span class="n">Data_File_Name</span>
+    
+    <span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">Filename</span><span class="p">,</span> 
+                     <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                     <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                     <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+    
+    <span class="n">molal</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;conc H2SO4 / m&quot;</span><span class="p">]</span>
+    <span class="n">mass_add_to_1_kg_water</span> <span class="o">=</span> <span class="n">molal</span> <span class="o">*</span> <span class="n">molwtH2SO4</span>
+    <span class="n">total_mass_solution</span> <span class="o">=</span> <span class="n">mass_add_to_1_kg_water</span> <span class="o">+</span> <span class="mi">1000</span>
+    <span class="n">percent_H2SO4</span> <span class="o">=</span> <span class="n">mass_add_to_1_kg_water</span> <span class="o">/</span> <span class="n">total_mass_solution</span> <span class="o">*</span> <span class="mi">100</span>
+    
+    <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;%H2SO4&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">percent_H2SO4</span>
+    <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;mole fraction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">molal</span> <span class="o">/</span> <span class="p">(</span><span class="n">molal</span> <span class="o">+</span> <span class="mi">1000</span><span class="o">/</span><span class="n">molwtH20</span><span class="p">)</span>
+    
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;mole fraction&quot;</span><span class="p">]</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;a_H2O&quot;</span><span class="p">]</span>
+    
+    <span class="n">interpolation</span> <span class="o">=</span> <span class="n">make_smoothing_spline</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span>      <span class="c1">### The x and y data</span>
+                                          <span class="n">w</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>    <span class="c1">### A list of weights for each point (default = None)</span>
+                                          <span class="n">lam</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>     <span class="c1">### A factor for the degree of smoothing. Change this to change the smoothness.</span>
+    
+    <span class="k">return</span><span class="p">(</span><span class="n">interpolation</span><span class="p">)</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### call the function to create an interpolator for activity H2O in H2SO4</span>
+<span class="c1">###################################################</span>
+
+<span class="n">interpolator</span> <span class="o">=</span> <span class="n">MakeInterpolationFunctionForH2OActivityinH2SO4byMoleFraction</span><span class="p">()</span>
+
+<span class="c1">###################################################</span>
+<span class="c1">### An example of using the inerpolation function that you just created</span>
+<span class="c1">###################################################</span>
+
+<span class="n">X_H2SO4</span> <span class="o">=</span> <span class="mf">0.01</span>
+
+<span class="n">H2Oactivity</span> <span class="o">=</span> <span class="n">interpolator</span><span class="p">(</span><span class="n">X_H2SO4</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The activity of water in </span><span class="si">{</span><span class="n">X_H2SO4</span><span class="si">}</span><span class="s2"> mole fraction H2SO4 is </span><span class="si">{</span><span class="n">H2Oactivity</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The activity of water in 0.01 mole fraction H2SO4 is 0.983
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_30"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

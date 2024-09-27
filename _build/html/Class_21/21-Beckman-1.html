@@ -1,0 +1,1169 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Beckmann rate Data &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_21/21-Beckman-1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_21/21-Beckman-1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Class_21/21-Beckman-1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Beckmann rate Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-tools-and-read-substituent-data-table">Setup Tools and Read Substituent Data Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-experimental-data-for-acid-hydrolysis">Read Experimental Data for Acid Hydrolysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-data-sets">Combine Data Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations">Calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-and-curve-fits">Plot and Curve Fits</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="beckmann-rate-data">
+<h1>Beckmann rate Data<a class="headerlink" href="#beckmann-rate-data" title="Permalink to this heading">#</a></h1>
+<p>This workbook contains the code and imports the data to explore the Beckmann hammett plot.</p>
+<p>the data being pklotted is from…</p>
+<p>“Hammett’s Sigma Constants in Certain Electrophilic Reactions” D.E. Pearson, J.F. Baxter, and J.C. Martin, <em>The Journal of Organic Chemistry</em> <strong>1952</strong>, <em>17</em>, 1511-1518  https://doi.org/10.1021/jo50011a019
+“The Question of Hyperconjugation or of Bulk Effect in the Beckmann Rearrangement.” D.E. Pearson, J.D. Bruton, <em>The Journal of Organic Chemistry</em>, <strong>1954</strong>, <em>19</em>, 957-963.  https://doi.org/10.1021/jo01371a013</p>
+<section id="setup-tools-and-read-substituent-data-table">
+<h2>Setup Tools and Read Substituent Data Table<a class="headerlink" href="#setup-tools-and-read-substituent-data-table" title="Permalink to this heading">#</a></h2>
+<p>Here the data table for Steric substitutent constants is read in and processed. Also the libraries are imported and any functions defined</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="n">github_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_21/data/&quot;</span>
+<span class="n">github_location_styles</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+<span class="n">github_location_LFER_tables</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+
+
+<span class="c1">#################################################################</span>
+<span class="c1">### a function to fill in sigma for empty spaces in s+ and s- ###</span>
+<span class="c1">#################################################################</span>
+
+<span class="k">def</span> <span class="nf">fill_sigma</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>     
+    <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">][</span><span class="n">z</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_minus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+
+<span class="c1">#LFER_file = &quot;Taft_Es_Williams.csv&quot;   </span>
+<span class="c1">#LFER_file = &quot;LFER_HanschLeoTaft.csv&quot;   </span>
+<span class="n">LFER_file</span> <span class="o">=</span> <span class="s2">&quot;LFER_Williams.csv&quot;</span>   <span class="c1">### This had values for a few ortho substituents</span>
+
+<span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">github_location_LFER_tables</span> <span class="o">+</span> <span class="n">LFER_file</span><span class="p">,</span>
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">#display(data_set)</span>
+
+<span class="c1">########################################################</span>
+<span class="c1">### Fill across sigma values and select substituents ###</span>
+<span class="c1">########################################################</span>
+
+<span class="n">data_set</span><span class="o">=</span><span class="n">fill_sigma</span><span class="p">(</span><span class="n">data_set</span><span class="p">)</span>
+<span class="c1">#display(data_set)</span>
+
+<span class="c1">###############################</span>
+<span class="c1">### Remove unneeded columns ###</span>
+<span class="c1">###############################</span>
+
+<span class="k">if</span> <span class="n">LFER_file</span> <span class="o">==</span> <span class="s2">&quot;LFER_HanschLeoTaft.csv&quot;</span><span class="p">:</span>
+    <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TABLE V&quot;</span><span class="p">,</span> <span class="s2">&quot;TABLE I&quot;</span><span class="p">],</span>      <span class="c1">#Trim &quot;LFER_HanschLeoTaft.csv&quot; data</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">LFER_file</span> <span class="o">==</span> <span class="s2">&quot;LFER_Williams.csv&quot;</span><span class="p">:</span>
+    <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Page&quot;</span><span class="p">],</span>                   <span class="c1">#Trim &quot;LFER_Williams.csv&quot;&quot; data</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: No filename&quot;</span><span class="p">)</span>
+
+<span class="c1">#######################################</span>
+<span class="c1">### Sort by Steric Size and display ###</span>
+<span class="c1">#######################################</span>
+
+<span class="c1">#data_set.sort_values(by=[&#39;sigma&#39;], inplace=True)</span>
+<span class="c1">#data_set.sort_values(by=[&quot;E&#39;(s)&quot;], inplace=True)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">data_set</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sigma</th>
+      <th>s_plus</th>
+      <th>s_minus</th>
+    </tr>
+    <tr>
+      <th>Substituent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>m-Br</th>
+      <td>0.39</td>
+      <td>0.39</td>
+      <td>0.39</td>
+    </tr>
+    <tr>
+      <th>p-Br</th>
+      <td>0.23</td>
+      <td>0.15</td>
+      <td>0.25</td>
+    </tr>
+    <tr>
+      <th>m-C6H5</th>
+      <td>0.06</td>
+      <td>0.06</td>
+      <td>0.06</td>
+    </tr>
+    <tr>
+      <th>p-C6H5</th>
+      <td>-0.01</td>
+      <td>0.02</td>
+      <td>-0.18</td>
+    </tr>
+    <tr>
+      <th>m-CCCH3</th>
+      <td>0.10</td>
+      <td>0.10</td>
+      <td>0.10</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>o-I</th>
+      <td>1.34</td>
+      <td>1.34</td>
+      <td>1.34</td>
+    </tr>
+    <tr>
+      <th>p-C(CH3)3</th>
+      <td>-0.20</td>
+      <td>-0.26</td>
+      <td>-0.13</td>
+    </tr>
+    <tr>
+      <th>m-C(CH3)3</th>
+      <td>-0.10</td>
+      <td>-0.10</td>
+      <td>-0.10</td>
+    </tr>
+    <tr>
+      <th>3,5-CH3</th>
+      <td>-0.20</td>
+      <td>-0.20</td>
+      <td>-0.20</td>
+    </tr>
+    <tr>
+      <th>3,4,5-CH3</th>
+      <td>-0.40</td>
+      <td>-0.46</td>
+      <td>-0.33</td>
+    </tr>
+  </tbody>
+</table>
+<p>71 rows × 3 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="read-experimental-data-for-acid-hydrolysis">
+<h2>Read Experimental Data for Acid Hydrolysis<a class="headerlink" href="#read-experimental-data-for-acid-hydrolysis" title="Permalink to this heading">#</a></h2>
+<p>Here the data from the publication is read in. It had been saved in a csv file. the data is from…</p>
+<p>“The activation energy of organic reactions. Part III. The kinetics of acid hydrolysis of esters.” E.W. Timm, &amp; C.N. Hinshelwood, J. Chem. Soc., 1938, 862-869. https://doi.org/10.1039/jr9380000862</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">############################################</span>
+<span class="c1">### Read in data from literature example ###</span>
+<span class="c1">############################################</span>
+
+<span class="n">datafile</span> <span class="o">=</span> <span class="s2">&quot;21-Beckmann_3.csv&quot;</span>
+
+<span class="n">Beckmann_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">github_location</span> <span class="o">+</span> <span class="n">datafile</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+<span class="c1">#display(Beckmann_data.head())</span>
+
+<span class="c1">###</span>
+<span class="c1">### Note: The values of the rate constants are in units of 10^(-6) s^-1</span>
+<span class="c1">###</span>
+
+<span class="c1">###############################</span>
+<span class="c1">### Remove unneeded columns ###</span>
+<span class="c1">###############################</span>
+
+<span class="n">Beckmann_data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;ref&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>  <span class="c1"># remove unwanted columns</span>
+
+<span class="c1">###############################</span>
+<span class="c1">### calculations            ###</span>
+<span class="c1">###############################</span>
+
+<span class="n">Beckmann_data</span><span class="p">[</span><span class="s2">&quot;log_k&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="n">Beckmann_data</span><span class="p">[</span><span class="s2">&quot;kobs&quot;</span><span class="p">])</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">Beckmann_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>kobs</th>
+      <th>log_k</th>
+    </tr>
+    <tr>
+      <th>Substituent</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p-CH3</th>
+      <td>2.1010</td>
+      <td>-2.677574</td>
+    </tr>
+    <tr>
+      <th>p-C(CH3)3</th>
+      <td>2.0120</td>
+      <td>-2.696372</td>
+    </tr>
+    <tr>
+      <th>H</th>
+      <td>1.1270</td>
+      <td>-2.948076</td>
+    </tr>
+    <tr>
+      <th>p-Cl</th>
+      <td>0.7140</td>
+      <td>-3.146302</td>
+    </tr>
+    <tr>
+      <th>p-OCH3</th>
+      <td>13.2900</td>
+      <td>-1.876475</td>
+    </tr>
+    <tr>
+      <th>p-NO2</th>
+      <td>0.0310</td>
+      <td>-4.508638</td>
+    </tr>
+    <tr>
+      <th>m-NO2</th>
+      <td>0.0458</td>
+      <td>-4.339135</td>
+    </tr>
+    <tr>
+      <th>m-CH3</th>
+      <td>1.7630</td>
+      <td>-2.753748</td>
+    </tr>
+    <tr>
+      <th>3,5-CH3</th>
+      <td>2.3770</td>
+      <td>-2.623971</td>
+    </tr>
+    <tr>
+      <th>3,4,5-CH3</th>
+      <td>3.7290</td>
+      <td>-2.428408</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="combine-data-sets">
+<h2>Combine Data Sets<a class="headerlink" href="#combine-data-sets" title="Permalink to this heading">#</a></h2>
+<p>Both data sets are indexed by “Substituent”. The code below will combine the two data sets according to “Substituent” and take the intersection of the sets.</p>
+</section>
+<section id="calculations">
+<h2>Calculations<a class="headerlink" href="#calculations" title="Permalink to this heading">#</a></h2>
+<p>We need the log of the rate. Also we will convert the rate to SI units. The current units are in <span class="math notranslate nohighlight">\(10^{-4} s^{-1}\)</span>. We will convert to <span class="math notranslate nohighlight">\(s^{-1}\)</span> by multiplying by <span class="math notranslate nohighlight">\(10^4\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##################################################</span>
+<span class="c1">### Combine data sets using the index column.  ###</span>
+<span class="c1">### Data lines that share an index column will ###</span>
+<span class="c1">### be combined, all other ignored.            ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">combined_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">Beckmann_data</span><span class="p">,</span> <span class="n">data_set</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+<span class="c1">#display(combined_data_acid)</span>
+
+<span class="c1">#########################################################################</span>
+<span class="c1">### Perform calculations on columns and add new columns with results  ###</span>
+<span class="c1">#########################################################################</span>
+
+<span class="c1">#combined_data[&quot;k&quot;] = combined_data[&quot;k&quot;] * 10**(-6)</span>
+<span class="c1">##combined_data[&quot;log_k&quot;] = np.log10(combined_data[&quot;k&quot;])</span>
+
+<span class="c1">#combined_data.drop(labels = [&quot;o-NO2&quot;,&quot;o-Cl&quot;,&quot;o-CH3&quot;], axis = 0, inplace = True)  # remove the &quot;o-NO2&quot; data point.</span>
+<span class="c1">#combined_data.drop(labels = [&quot;p-OH&quot;], axis = 0, inplace = True)  # remove the &quot;o-NO2&quot; data point.</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">combined_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>kobs</th>
+      <th>log_k</th>
+      <th>sigma</th>
+      <th>s_plus</th>
+      <th>s_minus</th>
+    </tr>
+    <tr>
+      <th>Substituent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p-CH3</th>
+      <td>2.1010</td>
+      <td>-2.677574</td>
+      <td>-0.14</td>
+      <td>-0.31</td>
+      <td>-0.17</td>
+    </tr>
+    <tr>
+      <th>p-C(CH3)3</th>
+      <td>2.0120</td>
+      <td>-2.696372</td>
+      <td>-0.20</td>
+      <td>-0.26</td>
+      <td>-0.13</td>
+    </tr>
+    <tr>
+      <th>H</th>
+      <td>1.1270</td>
+      <td>-2.948076</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>p-Cl</th>
+      <td>0.7140</td>
+      <td>-3.146302</td>
+      <td>0.23</td>
+      <td>0.11</td>
+      <td>0.19</td>
+    </tr>
+    <tr>
+      <th>p-OCH3</th>
+      <td>13.2900</td>
+      <td>-1.876475</td>
+      <td>-0.27</td>
+      <td>-0.78</td>
+      <td>-0.26</td>
+    </tr>
+    <tr>
+      <th>p-NO2</th>
+      <td>0.0310</td>
+      <td>-4.508638</td>
+      <td>0.78</td>
+      <td>0.78</td>
+      <td>1.24</td>
+    </tr>
+    <tr>
+      <th>m-NO2</th>
+      <td>0.0458</td>
+      <td>-4.339135</td>
+      <td>0.72</td>
+      <td>0.72</td>
+      <td>0.72</td>
+    </tr>
+    <tr>
+      <th>m-CH3</th>
+      <td>1.7630</td>
+      <td>-2.753748</td>
+      <td>-0.06</td>
+      <td>-0.06</td>
+      <td>-0.06</td>
+    </tr>
+    <tr>
+      <th>3,5-CH3</th>
+      <td>2.3770</td>
+      <td>-2.623971</td>
+      <td>-0.20</td>
+      <td>-0.20</td>
+      <td>-0.20</td>
+    </tr>
+    <tr>
+      <th>3,4,5-CH3</th>
+      <td>3.7290</td>
+      <td>-2.428408</td>
+      <td>-0.40</td>
+      <td>-0.46</td>
+      <td>-0.33</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="plot-and-curve-fits">
+<h2>Plot and Curve Fits<a class="headerlink" href="#plot-and-curve-fits" title="Permalink to this heading">#</a></h2>
+<p>The code below will extract the x,y data for our plots and perform the linear fit to the hammett equation. I have decided to put boths ets of data on the same plot for comparison sake. You will see exactly what i have done by examining the code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#####################################################</span>
+<span class="c1">### Get series of data to plot from the dataframe ###</span>
+<span class="c1">#####################################################</span>
+
+<span class="c1">#x = combined_data[&quot;sigma&quot;]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">combined_data</span><span class="p">[</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span>
+<span class="c1">#x = combined_data[&quot;sigma&quot;]+0.70*(combined_data[&quot;s_plus&quot;]-combined_data[&quot;sigma&quot;])  # Yukawa Tsuno</span>
+
+<span class="n">y</span> <span class="o">=</span>  <span class="n">combined_data</span><span class="p">[</span><span class="s2">&quot;log_k&quot;</span><span class="p">]</span>
+
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+<span class="kn">import</span> <span class="nn">matplotlib</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+<span class="c1">#ax.plot(x, y, color=&#39;black&#39;, zorder=1, linewidth=0.7)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>  <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">,</span>  <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span>  <span class="n">edgecolors</span> <span class="o">=</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">fit</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fit</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>   <span class="c1">#Set to True to see bounds of sigma and sigma plus values</span>
+    <span class="n">x1</span> <span class="o">=</span> <span class="n">combined_data</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+    <span class="n">x2</span> <span class="o">=</span> <span class="n">combined_data</span><span class="p">[</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span>
+
+    <span class="c1">#ax.scatter(x1,y, s=64, marker=&quot;|&quot;, color=&quot;white&quot;, zorder=1)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1">#ax.scatter(x2,y, s=64, marker=&quot;|&quot;, color=&quot;white&quot;, zorder=1)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+
+
+
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="c1">#xlabel_string = &quot;$\sigma$&quot;</span>
+<span class="c1">#xlabel_string = &quot;$\sigma^+$&quot;</span>
+<span class="n">xlabel_string</span> <span class="o">=</span> <span class="s2">&quot;$\sigma + r(\sigma^+-\sigma)$, $r = 0.7$&quot;</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span>
+<span class="c1">#    title=&quot;Hammett Plot&quot;,       </span>
+          <span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+          <span class="n">xlabel</span><span class="o">=</span><span class="n">xlabel_string</span><span class="p">,</span>                
+          <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>                  
+<span class="c1">#          ylim=[-6,-1]</span>
+         <span class="p">)</span>
+
+
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>    <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">x_place</span><span class="p">,</span><span class="n">y_place</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">combined_data</span><span class="o">.</span><span class="n">index</span><span class="p">),</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="c1"># this is the text</span>
+                    <span class="p">(</span><span class="n">x_place</span><span class="p">,</span><span class="n">y_place</span><span class="p">),</span> <span class="c1"># these are the coordinates to position the label</span>
+                    <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="c1"># how to position the text</span>
+                    <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span> <span class="c1"># distance from text to points (x,y)</span>
+                    <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span> <span class="c1"># horizontal alignment can be left, right or center</span>
+
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot1.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+<span class="c1">#make_axes_area_auto_adjustable(ax)</span>
+<span class="c1">#####################################</span>
+<span class="c1">### Print the line fit parameters ###</span>
+<span class="c1">#####################################</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Beckmann (open circles)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope  = </span><span class="si">{</span><span class="n">linfit</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept = </span><span class="si">{</span><span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">linfit</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/3f2981cc7a951edb6b500fabfbf1bc27e12699e17c1349975c817023f1c6af21.png" src="../_images/3f2981cc7a951edb6b500fabfbf1bc27e12699e17c1349975c817023f1c6af21.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Beckmann (open circles)
+slope  = -1.66
+intercept = -3.076
+RSQ = 0.974
+LinregressResult(slope=-1.6620232431236355, intercept=-3.0763228505055062, rvalue=-0.9871477281836689, pvalue=1.175394987834875e-07, stderr=0.0951294481583788, intercept_stderr=0.04427557940079958)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">minimize_scalar</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">combined_data</span>
+
+<span class="k">def</span> <span class="nf">RSQ_function</span><span class="p">(</span><span class="n">r</span><span class="p">):</span>    <span class="c1"># returns the RSQ for linefits using the given Yukawa-Tsuno r factor</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span><span class="o">+</span><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">])</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="c1">##########################################################</span>
+<span class="c1">### Plot the value of -RSQ as the value of r is varied ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style_file = &quot;S2_classic2.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$-R^2$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Yukawa-Tsuno $r$ value&quot;</span><span class="p">)</span>
+
+<span class="n">rsq_range</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">r_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.01</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">r_range</span><span class="p">:</span>
+    <span class="n">rsq</span> <span class="o">=</span> <span class="n">RSQ_function</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+    <span class="n">rsq_range</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rsq</span><span class="p">)</span>
+    
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_range</span><span class="p">,</span><span class="n">rsq_range</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Determine optimal r value to minimize -RSQ ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">r_opt</span> <span class="o">=</span> <span class="n">minimize_scalar</span><span class="p">(</span><span class="n">RSQ_function</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The optimal value for r is </span><span class="si">{</span><span class="n">r_opt</span><span class="p">[</span><span class="s1">&#39;x&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2"> for rsq = </span><span class="si">{</span><span class="n">r_opt</span><span class="p">[</span><span class="s1">&#39;fun&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">0.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/f56ad8511ba4b353819bd5024e88297a4cd519986247995a8e5b8e92cdbeede9.png" src="../_images/f56ad8511ba4b353819bd5024e88297a4cd519986247995a8e5b8e92cdbeede9.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The optimal value for r is 0.727 for rsq = -0.97965
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span><span class="o">+</span><span class="mf">0.325</span><span class="o">*</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sigma&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_21"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-tools-and-read-substituent-data-table">Setup Tools and Read Substituent Data Table</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-experimental-data-for-acid-hydrolysis">Read Experimental Data for Acid Hydrolysis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#combine-data-sets">Combine Data Sets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations">Calculations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-and-curve-fits">Plot and Curve Fits</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

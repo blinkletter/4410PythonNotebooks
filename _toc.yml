@@ -4,20 +4,36 @@
 format: jb-book
 root: start
 parts:
-    - caption: Basics
+    - caption: Thermochemistry
       chapters:
-        - file: 01_PlotBasics.ipynb
-        - file: 02-CubicSpline.ipynb
-    - caption: Curve Fits and Error
+        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problem1.ipynb
+        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problem5.ipynb
+        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.ipynb
+        - file: Class_05/Group_Increments_ClassExercises.ipynb
+        - file: Class_06/AValueClasshandoutDiscussion.ipynb
+    - caption: Acid and Bases
       chapters:
-        - file: 03-Eyring_Exercises_Intro.md
-        - file: 03A-Eyring_Exercises_1_simple.ipynb
-        - file: 03B-Eyring_Exercises_2_curvefit.ipynb
-        - file: 03C-Eyring_Exercises_3_LMfit.ipynb
-        - file: 03D-Eyring_Exercises_4_pandas.ipynb
-        - file: 03E-Eyring_Exercises_5_Bootstrap.ipynb
-        - file: 03F_Final_Plots.ipynb
-    - caption: Style and Extras
+        - file: Class_08/Correlations.ipynb
+        - file: Class_08/CurveSmoothAndInterpolate.ipynb
+        - file: Class_08/H0_Data.ipynb
+        - file: Class_08/HNO3_Acidity_Function_Calcs.ipynb
+        - file: Class_08/HNO3_Acidity_Function.ipynb
+        - file: Class_08/LookAheadToKinetics.ipynb
+        - file: Class_08/Question5_13.ipynb    
+    - caption: Aspirin Hydrolysis
       chapters:
-        - file: 04-Styling.ipynb
-        - file: 04-QRCode.ipynb
+        - file: Class_10/aspirin_notebook_with_uncertainty.ipynb
+    - caption: Kirby Enzyme Models
+      chapters:
+        - file: Class_11/01-Kirby2_PlotEqsFromPaper.ipynb
+        - file: Class_11/02-Kirby2_PlotEqsFromPaper.ipynb
+        - file: Class_11/03-Kirby2_PlotEqsFromPaper.ipynb
+        - file: Class_11/04-Kirby2_PlotEqsFromPaper.ipynb
+        - file: Class_11/05-Kirby2_DataAnalysis.ipynb
+        - file: Class_11/06-Kirby2_DataAnalysis.ipynb
+        - file: Class_11/04X-Kirby2_PlotEqsFromPaper.ipynb
+    - caption: Extras
+      chapters:
+        - file: Class_09/CatenaryCurve.ipynb
+
+

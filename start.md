@@ -1,0 +1,30 @@
+# Chem 4410 Python
+
+This webbook contains the *Python* notebooks used to analyze and plot data and perform other calculations in examples presented during the Chem 4410 Physical Organic Chemistry course. It is presented here as a place to conveniently archive the notebooks and provide access to the code via Google Colab.
+
+## Table of Contents
+
+Below are links to the various notebooks or notebook collections associated with this course. Steal this code and use whatever pieces you find useful. Never re-invent a wheel. You are a chemist, not a programmer. 
+
+
+
+## Tips and Troubles
+
+Computers always have errors. Mostly the errors will be my fault but you can fix them.
+
+### A Note About Errors
+
+Many of the notebooks will produce errors on Google Colab. There could be several reasons for this:
+
+ 1. Required pakages are not available in Colab. Look for command such as `!pip install package` in the first code block. They may be commented out. Remove the comment character `#` and run the notebook again to install the packages in the Colab environment.
+ 2. Folders may be missing. If a folder such as `plots` is not present then commands that save files to that folder will fail. Look for commands such as `!mkdir folder` and ensure that they are not commeneted out.
+ 3. Setup switch is set wrong. Many notebooks begin with a flag such as `github = True`. If this flas is set to `False` then the notebook will set global variables such as text strings describing file locations to values for local access. Ensure that the flag is set to `True`, if it is present, so that the file locations are accessed via the github repository. Google colab cannot access files on your computer, only files via websites such as github.
+ 4. The notebook is not set up for Colab. In some cases the notebook may not have been set up for Google Colab and will only work on a local computer. This can easily be fixed by writing in the github addresses from other notebooks that do work on Colab. Please let the instructor know if your can't get a notebook working on Colabd so that we can update it.
+
+ All of the notebooks are intended to run via Colab as long as dependancies are installed and the global variables are declared for accessing github as a file location rather than a local folder. If a notebook cannot run afetr checking and correcting the above issues please let the instructor know.
+
+ ### A Note About Files
+
+ As described above all files loaded in by the notebooks are generally accessed via the github repository. However, files saved by notebooks are saved to the `Files` directory of the Colab environment. They can be accessed by clicking on the files icon (left-side toolbar of the website). There you can download them if you want to keep them.
+
+ Files will not be saved by Colab. Any files that you want to keep should be downloaded.
