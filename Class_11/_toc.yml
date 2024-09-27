@@ -1,0 +1,14 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: start
+chapters:
+  - file: 01-Kirby2_PlotEqsFromPaper.ipynb
+  - file: 02-Kirby2_PlotEqsFromPaper.ipynb
+  - file: 03-Kirby2_PlotEqsFromPaper.ipynb
+  - file: 04-Kirby2_PlotEqsFromPaper.ipynb
+  - file: 05-Kirby2_DataAnalysis.ipynb
+  - file: 06-Kirby2_DataAnalysis.ipynb
+  - file: 04X-Kirby2_PlotEqsFromPaper.ipynb
+  

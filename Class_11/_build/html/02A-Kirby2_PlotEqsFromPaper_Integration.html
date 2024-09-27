@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>3A: Integrating the Rate Laws - Rough Work &#8212; Aspirin Hydrolysis pH-rate Profile</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '02A-Kirby2_PlotEqsFromPaper_Integration';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Aspirin Hydrolysis pH-rate Profile</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="start.html">
+                    Exploration of Aspirin Hydrolysis
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/Class_11/02A-Kirby2_PlotEqsFromPaper_Integration.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/02A-Kirby2_PlotEqsFromPaper_Integration.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>3A: Integrating the Rate Laws - Rough Work</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analytical-integration-and-plotting-using-sympy">Analytical Integration and plotting using SymPy</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="a-integrating-the-rate-laws-rough-work">
+<h1>3A: Integrating the Rate Laws - Rough Work<a class="headerlink" href="#a-integrating-the-rate-laws-rough-work" title="Permalink to this heading">#</a></h1>
+<section id="analytical-integration-and-plotting-using-sympy">
+<h2>Analytical Integration and plotting using SymPy<a class="headerlink" href="#analytical-integration-and-plotting-using-sympy" title="Permalink to this heading">#</a></h2>
+<p>In this code we see an example of using the tools in <em>SciPy</em> to integrate the rate laws for the system and get the integrated equations for the concentrations of reactant, intermediate and product with time.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>     
+<span class="n">k1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;k1&#39;</span><span class="p">)</span>  
+<span class="n">k2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;k2&#39;</span><span class="p">)</span>  
+<span class="n">At</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;A_t&#39;</span><span class="p">)</span> 
+<span class="n">A0</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;A_0&#39;</span><span class="p">)</span> 
+<span class="n">It</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;I_t&#39;</span><span class="p">)</span> 
+<span class="n">Pt</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;P_t&#39;</span><span class="p">)</span>  
+
+<span class="n">xt</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;x_t&#39;</span><span class="p">)</span>    <span class="c1"># create x as a &#39;function&#39;, not a variable</span>
+
+<span class="n">lhs</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Derivative</span><span class="p">(</span><span class="n">At</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="c1"># Using Derivative function to get differential of A(t) w.r.t. t</span>
+                            <span class="c1"># could not used At.diff(t) because It is not a function </span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="o">-</span><span class="n">k1</span> <span class="o">*</span> <span class="n">At</span>
+
+<span class="n">diffeq</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">)</span>   <span class="c1"># create a sympy differential equation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The initial differential equation is...&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">diffeq</span><span class="p">)</span>             
+
+<span class="n">diffeq</span> <span class="o">=</span> <span class="n">diffeq</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">At</span><span class="p">,</span> <span class="n">A0</span> <span class="o">-</span> <span class="n">xt</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>    <span class="c1"># substitute At for A0-x</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After substituting the differential equation is...&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">diffeq</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The integrated equation starting at x=0 when t=0 is...&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">diffeq</span><span class="p">,</span> <span class="n">ics</span><span class="o">=</span><span class="p">{</span><span class="n">xt</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mi">0</span><span class="p">})</span>     <span class="c1"># Solve the differential equation. </span>
+                                            <span class="c1"># Initial condition is x(t) = 0 when t = 0</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Collecting some terms and substiting for x gives...&quot;</span><span class="p">)</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">xt</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">A0</span> <span class="o">-</span> <span class="n">At</span><span class="p">)</span>              <span class="c1"># substitute x for A0 - At</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">lhs</span><span class="o">-</span><span class="n">A0</span><span class="p">),</span><span class="o">-</span><span class="p">(</span><span class="n">A</span><span class="o">.</span><span class="n">rhs</span><span class="o">-</span><span class="n">A0</span><span class="p">))</span>   <span class="c1"># subtract A0 from both sides and flip sign</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The initial differential equation is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{d}{d t} A_{t} = - A_{t} k_{1}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After substituting the differential equation is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{\partial}{\partial t} \left(A_{0} - x_{t}{\left(t \right)}\right) = - k_{1} \left(A_{0} - x_{t}{\left(t \right)}\right)\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The integrated equation starting at x=0 when t=0 is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x_{t}{\left(t \right)} = A_{0} - A_{0} e^{- k_{1} t}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting some terms and substiting for x gives...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle A_{t} = A_{0} e^{- k_{1} t}\]</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lhs</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Derivative</span><span class="p">(</span><span class="n">It</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span> <span class="c1"># Using Derivative function to get differential of I(t) w.r.t. t</span>
+                            <span class="c1"># could not used At.diff(t) because It is not a function </span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="n">k1</span> <span class="o">*</span> <span class="n">A</span><span class="o">.</span><span class="n">rhs</span> <span class="o">-</span> <span class="n">k2</span> <span class="o">*</span> <span class="n">It</span>
+
+<span class="n">diffeq</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">lhs</span><span class="p">,</span> <span class="n">rhs</span><span class="p">)</span>   <span class="c1"># create a sympy differential equation</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The initial differential equation is...&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">diffeq</span><span class="p">)</span>             
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;After substituting the differential equation is...&quot;</span><span class="p">)</span>
+<span class="n">diffeq</span> <span class="o">=</span> <span class="n">diffeq</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">It</span><span class="p">,</span> <span class="n">xt</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>    <span class="c1"># substitute I for x</span>
+<span class="n">display</span><span class="p">(</span><span class="n">diffeq</span><span class="p">)</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The integrated equation starting at x=0 when t=0 is...&quot;</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">dsolve</span><span class="p">(</span><span class="n">diffeq</span><span class="p">,</span> <span class="n">ics</span><span class="o">=</span><span class="p">{</span><span class="n">xt</span><span class="p">(</span><span class="mi">0</span><span class="p">):</span> <span class="mi">0</span><span class="p">})</span>     <span class="c1"># Solve the differential equation. </span>
+                                                <span class="c1"># Initial condition is x(t) = 0 when t = 0</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Collecting some terms and substiting for x gives...&quot;</span><span class="p">)</span>
+<span class="n">simplified</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">rhs</span><span class="p">,(</span><span class="n">A0</span><span class="o">*</span><span class="n">k1</span><span class="o">/</span><span class="p">(</span><span class="n">k1</span><span class="o">-</span><span class="n">k2</span><span class="p">)))</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">lhs</span><span class="p">,</span><span class="n">simplified</span><span class="p">)</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">I</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">xt</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">It</span><span class="p">)</span>              <span class="c1"># substitute x for I</span>
+<span class="n">display</span><span class="p">(</span><span class="n">I</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The initial differential equation is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{d}{d t} I_{t} = A_{0} k_{1} e^{- k_{1} t} - I_{t} k_{2}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>After substituting the differential equation is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{d}{d t} x_{t}{\left(t \right)} = A_{0} k_{1} e^{- k_{1} t} - k_{2} x_{t}{\left(t \right)}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The integrated equation starting at x=0 when t=0 is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle x_{t}{\left(t \right)} = \frac{A_{0} k_{1} e^{- k_{2} t}}{k_{1} - k_{2}} - \frac{A_{0} k_{1} e^{- k_{1} t}}{k_{1} - k_{2}}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting some terms and substiting for x gives...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle I_{t} = \frac{A_{0} k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}}\]</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lhs</span> <span class="o">=</span> <span class="n">Pt</span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">A0</span> <span class="o">-</span> <span class="mi">2</span><span class="o">*</span><span class="n">A</span><span class="o">.</span><span class="n">rhs</span> <span class="o">-</span> <span class="n">I</span><span class="o">.</span><span class="n">rhs</span>   
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Mass balance gives the following expression for P(t)&quot;</span><span class="p">)</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">lhs</span><span class="p">,</span><span class="n">rhs</span><span class="p">)</span>            <span class="c1"># Mass balance equation</span>
+<span class="n">display</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;collect A0&quot;</span><span class="p">)</span>
+<span class="n">rhs</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">P</span><span class="o">.</span><span class="n">rhs</span><span class="p">,</span><span class="n">A0</span><span class="p">)</span>
+<span class="n">P</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">Pt</span><span class="p">,</span><span class="n">rhs</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">P</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;equation for each species&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">I</span><span class="p">,</span><span class="n">P</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mass balance gives the following expression for P(t)
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle P_{t} = - \frac{A_{0} k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}} + 2 A_{0} - 2 A_{0} e^{- k_{1} t}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>collect A0
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle P_{t} = A_{0} \left(- \frac{k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}} + 2 - 2 e^{- k_{1} t}\right)\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>equation for each species
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle A_{t} = A_{0} e^{- k_{1} t}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle I_{t} = \frac{A_{0} k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle P_{t} = A_{0} \left(- \frac{k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}} + 2 - 2 e^{- k_{1} t}\right)\]</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Model that explains absorbance</span>
+
+<span class="n">eA</span><span class="p">,</span> <span class="n">eI</span><span class="p">,</span> <span class="n">eP</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\epsilon_A \epsilon_I \epsilon_P&#39;</span><span class="p">)</span>
+<span class="n">Abs0</span><span class="p">,</span> <span class="n">AbsA</span><span class="p">,</span> <span class="n">AbsI</span><span class="p">,</span> <span class="n">AbsP</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;Abs_0, Abs_A, Abs_I, Abs_P&#39;</span><span class="p">)</span>
+<span class="n">Abst</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;Abs_t&#39;</span><span class="p">)</span>    
+
+
+<span class="n">AbsA</span> <span class="o">=</span> <span class="n">eA</span> <span class="o">*</span> <span class="n">At</span>
+<span class="n">AbsI</span> <span class="o">=</span> <span class="n">eI</span> <span class="o">*</span> <span class="n">It</span>
+<span class="n">AbsP</span> <span class="o">=</span> <span class="n">eP</span> <span class="o">*</span> <span class="n">Pt</span>
+
+<span class="n">AbsA_expr</span> <span class="o">=</span> <span class="n">AbsA</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">At</span><span class="p">,</span> <span class="n">A</span><span class="o">.</span><span class="n">rhs</span><span class="p">),</span> 
+                  <span class="p">(</span><span class="n">A0</span><span class="p">,</span> <span class="n">Abs0</span><span class="o">/</span><span class="n">eA</span><span class="p">)])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">AbsA_expr</span><span class="p">)</span>
+
+<span class="n">AbsI_expr</span> <span class="o">=</span> <span class="n">AbsI</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">It</span><span class="p">,</span> <span class="n">I</span><span class="o">.</span><span class="n">rhs</span><span class="p">),</span> 
+                  <span class="p">(</span><span class="n">A0</span><span class="p">,</span> <span class="n">Abs0</span><span class="o">/</span><span class="n">eA</span><span class="p">)])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">AbsI_expr</span><span class="p">)</span>
+
+<span class="n">AbsP_expr</span> <span class="o">=</span> <span class="n">AbsP</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">Pt</span><span class="p">,</span> <span class="n">P</span><span class="o">.</span><span class="n">rhs</span><span class="p">),</span> 
+                  <span class="p">(</span><span class="n">A0</span><span class="p">,</span> <span class="n">Abs0</span><span class="o">/</span><span class="n">eA</span><span class="p">)])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">AbsP_expr</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Model for change in absorbance with time is...&quot;</span><span class="p">)</span>
+<span class="n">Abst_expr</span> <span class="o">=</span> <span class="n">AbsA_expr</span> <span class="o">+</span> <span class="n">AbsI_expr</span> <span class="o">+</span> <span class="n">AbsP_expr</span>
+<span class="n">Abst_expr</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">collect</span><span class="p">(</span><span class="n">Abst_expr</span><span class="p">,</span> <span class="n">Abs0</span><span class="p">)</span>
+
+<span class="n">Absmodel</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Eq</span><span class="p">(</span><span class="n">Abst</span><span class="p">,</span> <span class="n">Abst_expr</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Absmodel</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle Abs_{0} e^{- k_{1} t}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{Abs_{0} \epsilon_{I} k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{\epsilon_{A} \left(k_{1} - k_{2}\right)}\]</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \frac{Abs_{0} \epsilon_{P} \left(- \frac{k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}} + 2 - 2 e^{- k_{1} t}\right)}{\epsilon_{A}}\]</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model for change in absorbance with time is...
+</pre></div>
+</div>
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle Abs_{t} = Abs_{0} \left(e^{- k_{1} t} + \frac{\epsilon_{I} k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{\epsilon_{A} \left(k_{1} - k_{2}\right)} + \frac{\epsilon_{P} \left(- \frac{k_{1} \left(e^{- k_{2} t} - e^{- k_{1} t}\right)}{k_{1} - k_{2}} + 2 - 2 e^{- k_{1} t}\right)}{\epsilon_{A}}\right)\]</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### Plot the model </span>
+<span class="c1">### This is exactly the same code as used on notebook 01 and 02.</span>
+
+<span class="c1">## Plot the function for Abst and its components</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+
+<span class="n">time</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># 100 data points between 0 and 1E5 seconds</span>
+<span class="n">k1_value</span> <span class="o">=</span> <span class="mf">2E-3</span>
+<span class="n">k2_value</span> <span class="o">=</span> <span class="mf">2E-4</span>
+<span class="n">Abs0_value</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">eA_value</span> <span class="o">=</span> <span class="mi">1</span>       <span class="c1"># use ratio so that eI/eA = 0.6 for example</span>
+<span class="n">eI_value</span> <span class="o">=</span> <span class="mf">0.3</span>
+<span class="n">eP_value</span> <span class="o">=</span> <span class="mf">0.6</span>
+
+<span class="c1"># Create dictionaries contains substitution for each term</span>
+<span class="n">subs_dict_At</span> <span class="o">=</span> <span class="p">{</span> 
+                <span class="n">k1</span><span class="p">:</span> <span class="n">k1_value</span><span class="p">,</span> 
+                <span class="n">Abs0</span><span class="p">:</span> <span class="n">Abs0_value</span>
+                <span class="p">}</span>
+<span class="n">subs_dict_It</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">k1</span><span class="p">:</span> <span class="n">k1_value</span><span class="p">,</span>
+                <span class="n">k2</span><span class="p">:</span> <span class="n">k2_value</span><span class="p">,</span>
+                <span class="n">Abs0</span><span class="p">:</span> <span class="n">Abs0_value</span><span class="p">,</span>
+                <span class="n">eA</span><span class="p">:</span> <span class="n">eA_value</span><span class="p">,</span>
+                <span class="n">eI</span><span class="p">:</span> <span class="n">eI_value</span><span class="p">,</span>
+                <span class="p">}</span>
+<span class="n">subs_dict_Pt</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="n">k1</span><span class="p">:</span> <span class="n">k1_value</span><span class="p">,</span>
+                <span class="n">k2</span><span class="p">:</span> <span class="n">k2_value</span><span class="p">,</span>
+                <span class="n">Abs0</span><span class="p">:</span> <span class="n">Abs0_value</span><span class="p">,</span>
+                <span class="n">eA</span><span class="p">:</span> <span class="n">eA_value</span><span class="p">,</span>
+                <span class="n">eP</span><span class="p">:</span> <span class="n">eP_value</span><span class="p">,</span>
+                <span class="p">}</span>
+<span class="n">subs_dict_Abst</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="n">k1</span><span class="p">:</span> <span class="n">k1_value</span><span class="p">,</span>
+                  <span class="n">k2</span><span class="p">:</span> <span class="n">k2_value</span><span class="p">,</span>
+                  <span class="n">Abs0</span><span class="p">:</span> <span class="n">Abs0_value</span><span class="p">,</span>
+                  <span class="n">eA</span><span class="p">:</span> <span class="n">eA_value</span><span class="p">,</span>
+                  <span class="n">eI</span><span class="p">:</span> <span class="n">eI_value</span><span class="p">,</span>
+                  <span class="n">eP</span><span class="p">:</span> <span class="n">eP_value</span><span class="p">,</span>
+                  <span class="p">}</span>
+
+<span class="c1"># plot each term using the values established above</span>
+<span class="n">t_range</span> <span class="o">=</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10000</span><span class="p">]</span>
+<span class="n">p1</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">AbsA_expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subs_dict_At</span><span class="p">),</span><span class="n">t_range</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">p2</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">AbsI_expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subs_dict_It</span><span class="p">),</span><span class="n">t_range</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">p3</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">AbsP_expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subs_dict_Pt</span><span class="p">),</span><span class="n">t_range</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">p4</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Abst_expr</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subs_dict_Abst</span><span class="p">),</span><span class="n">t_range</span><span class="p">,</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>   <span class="c1"># add all plots to p1</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">p3</span><span class="p">)</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">p4</span><span class="p">)</span>
+
+<span class="c1"># Outout the combined plot</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>           <span class="c1"># display settings for p1</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">xlabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;time $/s$&quot;</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">ylabel</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;Absorbance&quot;</span>
+
+<span class="n">p1</span><span class="o">.</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;All values&quot;</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">ylim</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span><span class="kc">None</span><span class="p">]</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;p1_2.pdf&quot;</span><span class="p">)</span>   <span class="c1"># save and show p1</span>
+<span class="c1">#p1.show()          # show p1</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="_images/30d03995b39759005b9b9ba3b5e60bd66ae7d489bf7945332e13d7844ee8e671.png" src="_images/30d03995b39759005b9b9ba3b5e60bd66ae7d489bf7945332e13d7844ee8e671.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analytical-integration-and-plotting-using-sympy">Analytical Integration and plotting using SymPy</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
