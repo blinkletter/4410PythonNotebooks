@@ -489,12 +489,12 @@ $<span class="math notranslate nohighlight">\( \nu = k_1 [A]\)</span>$</p>
 <span class="c1">### Environment Setup and Global Variables</span>
 <span class="c1">#######################</span>
 
-<span class="n">github</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">github</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="o">!</span>mkdir<span class="w"> </span>plots
 
-<span class="c1">#!pip install uncertainties</span>
-<span class="c1">#!pip install lmfit</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>uncertainties
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>lmfit
 
 <span class="k">if</span> <span class="n">github</span><span class="p">:</span>
     <span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_11/data/&quot;</span>
