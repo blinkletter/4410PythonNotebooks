@@ -458,6 +458,7 @@ document.write(`
 
 <span class="n">github</span> <span class="o">=</span> <span class="kc">True</span>
 
+<span class="o">!</span>mkdir<span class="w"> </span>data
 <span class="o">!</span>mkdir<span class="w"> </span>plots
 <span class="o">!</span>mkdir<span class="w"> </span>plots/stacking
 <span class="o">!</span>mkdir<span class="w"> </span>plots/fits
@@ -1937,7 +1938,7 @@ log(k2) = -0.048+/-0.016
     <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mf">0.085</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;k1 = </span><span class="si">{</span><span class="n">k1_fit</span><span class="si">:</span><span class="s2">0.3e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">10000</span><span class="p">,</span><span class="mf">0.065</span><span class="p">,</span><span class="sa">f</span><span class="s2">&quot;k2 = </span><span class="si">{</span><span class="n">k2_fit</span><span class="si">:</span><span class="s2">0.3e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./data/Kirby2002/Abs_t_pH_ALL.csv&quot;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s2">&quot;Kirby2002/Abs_t_pH_ALL.csv&quot;</span><span class="p">,</span> <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">comment</span><span class="o">=</span><span class="s2">&quot;#&quot;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 
 <span class="n">time_column</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>    <span class="c1"># get the column label for the first column (time)</span>
