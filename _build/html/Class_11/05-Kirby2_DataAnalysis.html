@@ -532,11 +532,13 @@ document.write(`
 \end{split}\]</div>
 <p>From this we derived the integrated rate laws and created equations that describe the concentration of each species w.r.t. time.</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}
-\begin{align*}\\\begin{split}\left[A\right]_t &amp;= \left[A\right]_0 e^{-kt} \\
+\[\begin{split}
+\begin{align*}
+\left[A\right]_t &amp;= \left[A\right]_0 e^{-kt} \\
 \left[I \right]_t &amp;= \left[A\right]_{0} \frac{ k_{1} }{k_{1} - k_{2}}\left(e^{- k_{2} t} - e^{- k_{1} t}\right) \\
-\left[ P\right]_{t} &amp;= \left[A\right]_{0} \left[ 2 - 2 e^{- k_{1} t} - \frac{ k_{1} }{k_{1} - k_{2}}\left(e^{- k_{2} t} - e^{- k_{1} t}\right)\right] \\\end{split}\\\end{align*}
-\end{aligned}\end{align} \]</div>
+\left[ P\right]_{t} &amp;= \left[A\right]_{0} \left[ 2 - 2 e^{- k_{1} t} - \frac{ k_{1} }{k_{1} - k_{2}}\left(e^{- k_{2} t} - e^{- k_{1} t}\right)\right] 
+\end{align*}
+\end{split}\]</div>
 <p>And we can obtain the absorbance contribution from each species using the initial absorbance (<span class="math notranslate nohighlight">\(Abs_0\)</span>) and the molar extinction coefficients for each species (<span class="math notranslate nohighlight">\(\epsilon_A\)</span>, <span class="math notranslate nohighlight">\(\epsilon_I\)</span>, and <span class="math notranslate nohighlight">\(\epsilon_P\)</span>)</p>
 <div class="math notranslate nohighlight">
 \[\text{Abs}_t = \text{Abs}_0 \left\{ e^{-k_1 t}
