@@ -517,13 +517,13 @@ document.write(`
 \[\text{I} \overset{k_2}{\longrightarrow} \text{P}\]</div>
 <p>…we can easily derive the integrated rate equations that describe the concentrations of all three species over time. These are available in any physical chemistry book (and are also derived using <em>Python</em> code is the latter part of this notebook) and are presented below…</p>
 <div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\begin{split}
+\[\begin{split}
 \begin{align*}
 \dfrac{d\left[A\right]_t}{dt} &amp;= -k_1 \left[A\right]_t \\
 \dfrac{d\left[I\right]_t}{dt} &amp;= k_1 \left[A\right]_t - k_2 \left[I\right]_t \\
-\dfrac{d\left[P\right]_t}{dt} &amp;= k_1 \left[A\right]_t + k_2 \left[I\right]_t\\\end{split}\\
+\dfrac{d\left[P\right]_t}{dt} &amp;= k_1 \left[A\right]_t + k_2 \left[I\right]_t\\
 \end{align*}
-\end{aligned}\end{align} \]</div>
+\end{split}\]</div>
 <section id="performing-the-integration">
 <h3>Performing the Integration<a class="headerlink" href="#performing-the-integration" title="Permalink to this heading">#</a></h3>
 <p>In the code below we establish a function that returns the rates of appearance of each of the three species give the time, concentrations at that moment in time and the two rate constants. Then we set values for all the parameters (<span class="math notranslate nohighlight">\(k_1\)</span>, <span class="math notranslate nohighlight">\(k_2\)</span> and initial concentrations for A, I and P)</p>
