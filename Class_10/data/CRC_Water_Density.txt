@@ -6,7 +6,7 @@
 # found at https://library.upei.ca/chem
 # search water and density
 # temp in degree Celsius, density in g/cm^3
-"row" "temp"  "density"
+"row"	"temp"	"density"
 1	0.1	0.9998495
 2	0.2	0.9998560
 3	0.3	0.9998624
