@@ -1,4 +1,6 @@
 # https://www.usgs.gov/special-topics/water-science-school/science/water-density
+# data from public outreach of US Geological survey
+#
 "temp degC", "d g/cm"
 0,            0.99987
 4.0,          1.00000

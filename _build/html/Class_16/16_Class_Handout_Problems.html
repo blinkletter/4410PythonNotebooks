@@ -1,0 +1,1598 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Class Handout: Interpretting Table 1 and Discussion &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_16/16_Class_Handout_Problems';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Curved Plot Example" href="16-EstroneSyn.html" />
+    <link rel="prev" title="Class handout Questions and Discussion" href="16_Class_Handout_Problems_OLd.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_4_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_5_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_6_Plots.html"><span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\sigma ^+\)</span> Plots</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_7_Plots_with_YukawaTsuno.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_7_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table1and2_ClassExamples.html">Class Discussion Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 2</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_15/15-BrownOkamoto_Python_Notebook.html">The Browm-Okamoto Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_15/15-YukawaTsunoFitNotebook.html">Yukawa-Tsuno Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Class_Handout_Problems_OLd.html">Class handout Questions and Discussion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Class Handout: Interpretting Table 1 and Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16-EstroneSyn.html">Curved Plot Example</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table1and3.html">Taft Plot Investigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table3.html">Taft Plot Investigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table4and5.html">Taft Plot Investigations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_21/21-Beckman-1.html">Beckmann rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_21/21-Beckman-2.html">Beckmann rate Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-1b_calculator.html">Calculating <span class="math notranslate nohighlight">\(k_{A,R}\)</span> for 1b</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-AutoFit.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure2Paper_Hammett_Acid_Rate.html">Figure 4: Hammett Plot for pH = 11.5 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure3Paper_Hammett_Uncat_Rate.html">Figure 4: Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure4Paper_Hammett_Acid_Rate.html">Figure 4: Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Acid_Rate.html">Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Base_Rate.html">Hammett Plot for pH = 11.5 (<span class="math notranslate nohighlight">\(\log{k_{OH^-}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Water_Rate.html">Hammett Plot for pH = 3.8 (<span class="math notranslate nohighlight">\(\log{k_{H_2O}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_profile_fit.html">pH-rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_Profiles_AutoFit_kHKa.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_Profiles_AutoFit.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pHprofilefor1f.html">pH-rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-ResultsTableCalculations.html">Calculations for Results Tables</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/01A-ActivityOfWaterinH2SO4byWt.html">Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(X_{H_2SO_4}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/01B-ActivityOfWaterinH2SO4byX.html">Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(\text{\%wt }{H_2SO_4}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/02_H2SO4_PercentWt_to_H0.html">Combined <span class="math notranslate nohighlight">\(H_0\)</span> Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/03_H2SO4_Percent_Density_Molarity.html">Combined <span class="math notranslate nohighlight">\(\% H_2SO_4\)</span> Table for Density and Molarity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/03_H2SO4_PercentWt_to_MolarConc.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/04_Cook_1975_HR_Values_Smooth.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/04_H0_HR_Comparison.html">Comparison of <span class="math notranslate nohighlight">\(H-0\)</span> data and <span class="math notranslate nohighlight">\(H_R\)</span> data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/interpolators_check.html">Interpolation Tools Quality Check</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-interpolators.html">Interpolation of data tables</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 3 Yates</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig5-HRH0.html">A Plot of <span class="math notranslate nohighlight">\(H_R\)</span> vs. <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig5-HRH0%2BinterpolatorsH0HR-Patches.html">A Plot of <span class="math notranslate nohighlight">\(H_R\)</span> vs. <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig6-MeOAc.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig7-MeOAc.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig8-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(a_{H_2O}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig10-rate_vs_gammaH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\gamma [H_2O]\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig13-rate_vs_gammaH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\gamma [H_2O]\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig15-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig20-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig23-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-FigX-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_16/16_Class_Handout_Problems.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Class_16/16_Class_Handout_Problems.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Class Handout: Interpretting Table 1 and Discussion</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-1-hammett-plot">Figure #1: Hammett Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-2-plotting-the-residuals">Figure 2: Plotting the Residuals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-3-two-hammett-plots">Figure 3: Two Hammett Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-4-adding-the-hammett-plots-together">Figure 4: Adding the Hammett Plots Together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-5-plotting-residuals-for-figure-4-plot">Figure 5: Plotting Residuals for Figure 4 Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-6-fitting-the-addition-model-directly-to-the-data">Figure 6: Fitting the Addition Model Directly to the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-7-plotting-the-residuals-for-the-addition-model">Figure 7: Plotting the Residuals for the Addition Model</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="class-handout-interpretting-table-1-and-discussion">
+<h1>Class Handout: Interpretting Table 1 and Discussion<a class="headerlink" href="#class-handout-interpretting-table-1-and-discussion" title="Permalink to this heading">#</a></h1>
+<p>In table 1 of the class handout we have data from a paper that reports the rates of solvolysis of benzyltosylates in acetic acid. The Hammett plot of that data shows two competing mechansims. Lets plot the data and see if we get the same results as the authors.</p>
+<p>“Acetolysis reactivities of substituted benzyl and polycyclic arylmethyl p- toluenesulfonates. Correlations with SCF-π and CNDO MO methods.” A. Streitwieser Jr., e. al., <em>J. Am. Chem. Soc.</em>, <strong>1970</strong>, <em>92</em>, 5141-5150 https://doi.org/10.1021/ja00720a025</p>
+<p>The code below will take the data set and LFER parameters available via github and create a dataframe with the Hammett plot data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="n">github_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_16/data/&quot;</span>
+<span class="n">github_location_styles</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+<span class="n">github_location_LFER_tables</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+
+<span class="n">sigmatype</span> <span class="o">=</span> <span class="s2">&quot;s_plus&quot;</span>    <span class="c1"># change to &quot;sigma&quot;, &quot;s_plus&quot;, or &quot;s_minus&quot;</span>
+
+
+<span class="c1">###################################################################</span>
+<span class="c1">### a function to fill in sigma for empty spaces in s+ and s-   ###</span>
+<span class="c1">###################################################################</span>
+
+<span class="k">def</span> <span class="nf">fill_sigma</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>     
+    <span class="k">for</span> <span class="n">z</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_plus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;s_minus&quot;</span><span class="p">][</span><span class="n">z</span><span class="p">]):</span>
+            <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;s_minus&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">z</span><span class="p">,</span><span class="s2">&quot;sigma&quot;</span><span class="p">]</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+
+<span class="c1">#LFER_file = &quot;LFER_HanschLeoTaft.csv&quot;</span>
+<span class="n">LFER_file</span> <span class="o">=</span> <span class="s2">&quot;LFER_Williams.csv&quot;</span>
+
+<span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">github_location_LFER_tables</span> <span class="o">+</span> <span class="n">LFER_file</span><span class="p">,</span>
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+
+<span class="c1">########################################################</span>
+<span class="c1">### Fill across sigma values and select substituents ###</span>
+<span class="c1">########################################################</span>
+
+<span class="n">data_set</span><span class="o">=</span><span class="n">fill_sigma</span><span class="p">(</span><span class="n">data_set</span><span class="p">)</span>
+
+<span class="c1">### Remove unneeded columns</span>
+<span class="k">if</span> <span class="n">LFER_file</span> <span class="o">==</span> <span class="s2">&quot;LFER_HanschLeoTaft.csv&quot;</span><span class="p">:</span>
+    <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TABLE V&quot;</span><span class="p">,</span> <span class="s2">&quot;TABLE I&quot;</span><span class="p">],</span>      <span class="c1">#Trim &quot;LFER_HanschLeoTaft.csv&quot; data</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">LFER_file</span> <span class="o">==</span> <span class="s2">&quot;LFER_Williams.csv&quot;</span><span class="p">:</span>
+    <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Page&quot;</span><span class="p">],</span>                   <span class="c1">#Trim &quot;LFER_Williams.csv&quot;&quot; data</span>
+    <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ERROR: No filename&quot;</span><span class="p">)</span>
+
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read table 1 data. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;Table_1_data.csv&quot;</span>
+
+<span class="n">table_data_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">github_location</span> <span class="o">+</span> <span class="n">data_file</span><span class="p">,</span>
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;Substituent&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">### Join the two dataframes according to the index column (Substituent)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">table_data_df</span><span class="p">,</span> <span class="n">data_set</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="n">sigmatype</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>    <span class="c1"># sort according to sigma so we can pick the left-most and right-most points more easily</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;k&quot;</span><span class="p">])</span>
+
+
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>k</th>
+      <th>sigma</th>
+      <th>s_plus</th>
+      <th>s_minus</th>
+      <th>logk</th>
+    </tr>
+    <tr>
+      <th>Substituent</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>p-CH3</th>
+      <td>96.3000</td>
+      <td>-0.14</td>
+      <td>-0.31</td>
+      <td>-0.17</td>
+      <td>1.983626</td>
+    </tr>
+    <tr>
+      <th>p-F</th>
+      <td>4.1900</td>
+      <td>0.06</td>
+      <td>-0.07</td>
+      <td>-0.03</td>
+      <td>0.622214</td>
+    </tr>
+    <tr>
+      <th>m-CH3</th>
+      <td>4.5400</td>
+      <td>-0.06</td>
+      <td>-0.06</td>
+      <td>-0.06</td>
+      <td>0.657056</td>
+    </tr>
+    <tr>
+      <th>H</th>
+      <td>1.7100</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.232996</td>
+    </tr>
+    <tr>
+      <th>p-Cl</th>
+      <td>0.8620</td>
+      <td>0.23</td>
+      <td>0.11</td>
+      <td>0.19</td>
+      <td>-0.064493</td>
+    </tr>
+    <tr>
+      <th>m-Cl</th>
+      <td>0.0871</td>
+      <td>0.37</td>
+      <td>0.37</td>
+      <td>0.37</td>
+      <td>-1.059982</td>
+    </tr>
+    <tr>
+      <th>m-CF3</th>
+      <td>0.0446</td>
+      <td>0.46</td>
+      <td>0.46</td>
+      <td>0.46</td>
+      <td>-1.350665</td>
+    </tr>
+    <tr>
+      <th>p-CF3</th>
+      <td>0.0277</td>
+      <td>0.53</td>
+      <td>0.53</td>
+      <td>0.65</td>
+      <td>-1.557520</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="figure-1-hammett-plot">
+<h2>Figure #1: Hammett Plot<a class="headerlink" href="#figure-1-hammett-plot" title="Permalink to this heading">#</a></h2>
+<p>The rest of this notebook creates the plots presented in the analysis of the data in table 1.</p>
+<p>We now have the data with substituent parameters and have calculated log(k). Let us plot the Hammett plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="c1">############################################</span>
+<span class="c1">### Pick the x and y data for the plot   ###</span>
+<span class="c1">############################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">sigmatype</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span>
+
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style_file = &quot;S2_classic2.mplstyle&quot;</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_plus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^+$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_minus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^-$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;sigma&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma$&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">2.1</span><span class="p">]</span>
+      <span class="p">)</span>
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    
+    <span class="n">fitx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">fitx</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fitx</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope = </span><span class="si">{</span><span class="n">linfit</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept = </span><span class="si">{</span><span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p value = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for slope = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for intercept = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+
+<span class="c1">############################</span>
+<span class="c1">### Print labels on plot ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>      <span class="c1"># Change to True to add annotations to the plot </span>
+   <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+       <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>             <span class="c1"># this is the text</span>
+                 <span class="p">(</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span><span class="p">),</span>          <span class="c1"># these are the coordinates to position the label</span>
+                 <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="c1"># how to position the text</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># distance from text to points (x,y)</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>      <span class="c1"># horizontal alignment can be left, right or center</span>
+
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slope = -4.0341
+intercept = 0.452
+RSQ = 0.983654
+p value = 0.000001
+stderr for slope = 0.212303
+stderr for intercept = 0.452295
+</pre></div>
+</div>
+<img alt="../_images/db216e6da17416f8d7ca6fe047bc9fa79767a1d955bf9a3ea0f130ec9b566a73.png" src="../_images/db216e6da17416f8d7ca6fe047bc9fa79767a1d955bf9a3ea0f130ec9b566a73.png" />
+</div>
+</div>
+</section>
+<section id="figure-2-plotting-the-residuals">
+<h2>Figure 2: Plotting the Residuals<a class="headerlink" href="#figure-2-plotting-the-residuals" title="Permalink to this heading">#</a></h2>
+<p>You should always eyeball a plot of the resuduals for any line fit. It may appear to fit well but if we see a systematic variation (high on the ends, low in the middle or an s-curve, etc.) then we should suspect that our model is not capturing all the information.</p>
+<p>The code below will create a residual plot that we can examine.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###########################################################</span>
+<span class="c1">### Plot the residuals for product B vs. time in ax[1]  ###</span>
+<span class="c1">###########################################################</span>
+
+
+<span class="n">model_y</span> <span class="o">=</span> <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+
+<span class="c1">### Calculate R^2 for First order fit</span>
+<span class="n">residuals</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">model_y</span>
+<span class="n">ss_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">residuals</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ss_tot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">ss_res</span> <span class="o">/</span> <span class="n">ss_tot</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style_file = &quot;S2_classic2.mplstyle&quot;</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Residual value&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.4</span><span class="p">,</span><span class="mf">0.4</span><span class="p">]</span>      
+      <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1">### Plot the residuals </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="s2">&quot;w-&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>   <span class="c1"># a white thick line to erase background</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="s2">&quot;k-&quot;</span><span class="p">)</span>                  <span class="c1"># the thin black line that connects the dots</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">residuals</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>    <span class="c1"># white border around each point</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">residuals</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># the points</span>
+
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9836540187689897
+</pre></div>
+</div>
+<img alt="../_images/5260df8f96b4268f62a814c8da64f0475db6fa64bc6a728fe32383a277380c98.png" src="../_images/5260df8f96b4268f62a814c8da64f0475db6fa64bc6a728fe32383a277380c98.png" />
+</div>
+</div>
+</section>
+<section id="figure-3-two-hammett-plots">
+<h2>Figure 3: Two Hammett Plots<a class="headerlink" href="#figure-3-two-hammett-plots" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### This will pick the section of the plot with the HIGHER sigma values</span>
+<span class="n">top4x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>     <span class="c1"># Python numbers arrays from 0. This will slice of positions 0,1,2 and 3.</span>
+<span class="n">top4y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1">### This will pick the section of the plot with the LOWER sigma values</span>
+<span class="n">bot3x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>     <span class="c1"># This will slice of positipns 5,6 and 7.</span>
+<span class="n">bot3y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1">###################################################</span>
+<span class="c1">### Plot the line fits across the full range.   ###</span>
+<span class="c1">###################################################</span>
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">bot3x</span><span class="p">,</span><span class="n">bot3y</span><span class="p">)</span>
+    
+    <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">top4x</span><span class="p">,</span><span class="n">top4y</span><span class="p">)</span>
+
+    <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">linfit_bot</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">bot3x</span><span class="p">,</span><span class="n">bot3y</span><span class="p">)</span>
+    <span class="n">linfit_top</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">top4x</span><span class="p">,</span><span class="n">top4y</span><span class="p">)</span>
+
+    <span class="n">linerange_bot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">bot3x</span><span class="p">)</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">bot3x</span><span class="p">)))</span>
+    <span class="n">linerange_top</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">top4x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">top4x</span><span class="p">)</span><span class="o">+</span><span class="mf">0.068</span><span class="p">))</span>
+
+    <span class="n">fity_bot</span> <span class="o">=</span> <span class="n">linfit_bot</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">linerange_bot</span> <span class="o">+</span> <span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">fity_top</span> <span class="o">=</span> <span class="n">linfit_top</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">linerange_top</span> <span class="o">+</span> <span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">linerange_bot</span><span class="p">,</span> <span class="n">fity_bot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">linerange_top</span><span class="p">,</span> <span class="n">fity_top</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">linerange_bot</span><span class="p">,</span> <span class="n">fity_bot</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">linerange_top</span><span class="p">,</span> <span class="n">fity_top</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope1 = </span><span class="si">{</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept1 = </span><span class="si">{</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ_1 = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p value = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for slope = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for intercept = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope1 = </span><span class="si">{</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept1 = </span><span class="si">{</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ_1 = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p value = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for slope = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for intercept = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+   
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_plus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^+$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_minus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^-$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;sigma&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma$&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">2.1</span><span class="p">]</span>
+      
+      <span class="p">)</span>
+
+<span class="c1">############################</span>
+<span class="c1">### Print labels on plot ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>      <span class="c1"># Change to True to add annotations to the plot </span>
+   <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+       <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>             <span class="c1"># this is the text</span>
+                 <span class="p">(</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span><span class="p">),</span>          <span class="c1"># these are the coordinates to position the label</span>
+                 <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="c1"># how to position the text</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># distance from text to points (x,y)</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>      <span class="c1"># horizontal alignment can be left, right or center</span>
+
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slope1 = -3.1152
+intercept1 = 0.090
+RSQ_1 = 0.999379
+p value = 0.015869
+stderr for slope = 0.077667
+stderr for intercept = 0.089511
+
+slope1 = -5.5757
+intercept1 = 0.261
+RSQ_1 = 0.996892
+p value = 0.001555
+stderr for slope = 0.220153
+stderr for intercept = 0.260646
+</pre></div>
+</div>
+<img alt="../_images/b8d6256730b77518325380a192423df15d6db73e417becc2fc776f0a085d9234.png" src="../_images/b8d6256730b77518325380a192423df15d6db73e417becc2fc776f0a085d9234.png" />
+</div>
+</div>
+</section>
+<section id="figure-4-adding-the-hammett-plots-together">
+<h2>Figure 4: Adding the Hammett Plots Together<a class="headerlink" href="#figure-4-adding-the-hammett-plots-together" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### This will pick the section of the plot with the HIGHER sigma values</span>
+<span class="n">top4x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>     <span class="c1"># Python numbers arrays from 0. This will slice of positions 0,1,2 and 3.</span>
+<span class="n">top4y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="c1">### This will pick the section of the plot with the LOWER sigma values</span>
+<span class="n">bot3x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>     <span class="c1"># This will slice of positipns 5,6 and 7.</span>
+<span class="n">bot3y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1">###################################################</span>
+<span class="c1">### Plot the line fits across the full range.   ###</span>
+<span class="c1">###################################################</span>
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">bot3x</span><span class="p">,</span><span class="n">bot3y</span><span class="p">)</span>
+    
+    <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">top4x</span><span class="p">,</span><span class="n">top4y</span><span class="p">)</span>
+
+    <span class="n">fity</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">linfit_bot</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">bot3x</span><span class="p">,</span><span class="n">bot3y</span><span class="p">)</span>
+    <span class="n">linfit_top</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">top4x</span><span class="p">,</span><span class="n">top4y</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope1 = </span><span class="si">{</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept1 = </span><span class="si">{</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ_1 = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p value = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for slope = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for intercept = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope1 = </span><span class="si">{</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">slope</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept1 = </span><span class="si">{</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;RSQ_1 = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">rvalue</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;p value = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">pvalue</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for slope = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stderr for intercept = </span><span class="si">{</span><span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+    <span class="c1">###############################################################################</span>
+    <span class="c1">### Sum the rate constants and take the log for the total rate calculation ####</span>
+    <span class="c1">###############################################################################</span>
+
+
+    <span class="n">k_bot_calc</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span>
+    <span class="n">k_top_calc</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span>
+
+    <span class="n">total_k</span> <span class="o">=</span> <span class="n">k_top_calc</span> <span class="o">+</span> <span class="n">k_bot_calc</span>
+    <span class="n">total_y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">total_k</span><span class="p">)</span>
+
+    <span class="n">xrange</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">k_bot_calc</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">linfit_bot</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">xrange</span> <span class="o">+</span> <span class="n">linfit_bot</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span>
+    <span class="n">k_top_calc</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">**</span> <span class="p">(</span><span class="n">linfit_top</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">xrange</span> <span class="o">+</span> <span class="n">linfit_top</span><span class="o">.</span><span class="n">intercept</span><span class="p">)</span>
+    <span class="n">total_k</span> <span class="o">=</span> <span class="n">k_top_calc</span> <span class="o">+</span> <span class="n">k_bot_calc</span>
+    <span class="n">total_y_curve</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">total_k</span><span class="p">)</span>
+
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span> <span class="n">total_y_curve</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>   <span class="c1"># Plot model line a smooth curve</span>
+<span class="c1">#    ax.plot(x, total_y, color=&#39;black&#39;, zorder=1, linewidth=0.7)             # Plot model line using data points only</span>
+
+    <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span>
+
+    <span class="n">rsq</span> <span class="o">=</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">total_y</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The R^2 value for curve is </span><span class="si">{</span><span class="n">rsq</span><span class="o">.</span><span class="n">statistic</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+   
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_plus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^+$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_minus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^-$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;sigma&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma$&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">2.1</span><span class="p">]</span>
+      
+      <span class="p">)</span>
+
+<span class="c1">############################</span>
+<span class="c1">### Print labels on plot ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>      <span class="c1"># Change to True to add annotations to the plot </span>
+   <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+       <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>             <span class="c1"># this is the text</span>
+                 <span class="p">(</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span><span class="p">),</span>          <span class="c1"># these are the coordinates to position the label</span>
+                 <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="c1"># how to position the text</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># distance from text to points (x,y)</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>      <span class="c1"># horizontal alignment can be left, right or center</span>
+
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total_y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slope1 = -3.1152
+intercept1 = 0.090
+RSQ_1 = 0.999379
+p value = 0.015869
+stderr for slope = 0.077667
+stderr for intercept = 0.089511
+
+slope1 = -5.5757
+intercept1 = 0.261
+RSQ_1 = 0.996892
+p value = 0.001555
+stderr for slope = 0.220153
+stderr for intercept = 0.260646
+The R^2 value for curve is 0.9934
+</pre></div>
+</div>
+<img alt="../_images/ae1cff9517daa9a2c820fa3163da7afb40a37dfe22c307002f1fa611e5c5a380.png" src="../_images/ae1cff9517daa9a2c820fa3163da7afb40a37dfe22c307002f1fa611e5c5a380.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Substituent
+p-CH3    2.036950
+p-F      0.813377
+m-CH3    0.765448
+H        0.484484
+p-Cl     0.000952
+m-Cl    -0.990397
+m-CF3   -1.298373
+p-CF3   -1.530700
+Name: s_plus, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="figure-5-plotting-residuals-for-figure-4-plot">
+<h2>Figure 5: Plotting Residuals for Figure 4 Plot<a class="headerlink" href="#figure-5-plotting-residuals-for-figure-4-plot" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###########################################################</span>
+<span class="c1">### Plot the residuals for log[toal k_obs] vs sigma+    ###</span>
+<span class="c1">###########################################################</span>
+
+
+<span class="c1"># y is experimental data</span>
+<span class="c1"># total_y is the calculated results from the model of adding the two hammett plots together</span>
+
+<span class="c1">### Calculate R^2 for First order fit</span>
+<span class="n">residuals</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">total_y</span>
+<span class="n">ss_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">residuals</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ss_tot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">ss_res</span> <span class="o">/</span> <span class="n">ss_tot</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style_file = &quot;S2_classic2.mplstyle&quot;</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Residual value&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.3</span><span class="p">,</span><span class="mf">0.1</span><span class="p">]</span>      
+      <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1">### Plot the residuals </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="s2">&quot;w-&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>   <span class="c1"># a white thick line to erase background</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="s2">&quot;k-&quot;</span><span class="p">)</span>                  <span class="c1"># the thin black line that connects the dots</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">residuals</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>    <span class="c1"># white border around each point</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">residuals</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># the points</span>
+
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9874913382916204
+</pre></div>
+</div>
+<img alt="../_images/4594df8d2d3677ee30bd16a41f0035def9681275987223a0bfd67f2b396a18c6.png" src="../_images/4594df8d2d3677ee30bd16a41f0035def9681275987223a0bfd67f2b396a18c6.png" />
+</div>
+</div>
+</section>
+<section id="figure-6-fitting-the-addition-model-directly-to-the-data">
+<h2>Figure 6: Fitting the Addition Model Directly to the Data<a class="headerlink" href="#figure-6-fitting-the-addition-model-directly-to-the-data" title="Permalink to this heading">#</a></h2>
+<p>In the block of code below we create a function that defines the model of adding the two Hammett plots together and then fit this model to the data. That’s it, that’s all you have to do. The next code block creates the plot but all the math was done in the little block below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="k">def</span> <span class="nf">addingHammett</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">rho1</span><span class="p">,</span> <span class="n">int1</span><span class="p">,</span> <span class="n">rho2</span><span class="p">,</span> <span class="n">int2</span><span class="p">):</span>
+    <span class="n">y_rx1</span> <span class="o">=</span> <span class="n">rho1</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">int1</span>
+    <span class="n">y_rx2</span> <span class="o">=</span> <span class="n">rho2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="n">int2</span>
+    <span class="n">y_combined</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">y_rx1</span><span class="o">+</span><span class="mi">10</span><span class="o">**</span><span class="n">y_rx2</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">y_combined</span><span class="p">)</span>
+
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">addingHammett</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([-3.31973284,  0.18296918, -6.92265847, -0.24124637]),
+ array([[ 0.15798601, -0.07224732,  0.5020673 ,  0.17747184],
+        [-0.07224732,  0.0344847 , -0.24163292, -0.08498979],
+        [ 0.5020673 , -0.24163292,  1.91826268,  0.64323784],
+        [ 0.17747184, -0.08498979,  0.64323784,  0.22337577]]))
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xrange</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+
+<span class="n">rho1</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">rho2</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">c2</span> <span class="o">=</span> <span class="n">popt</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="n">rho1_err</span> <span class="o">=</span> <span class="n">pcov</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">c1_err</span> <span class="o">=</span> <span class="n">pcov</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">rho2_err</span> <span class="o">=</span> <span class="n">pcov</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">c2_err</span> <span class="o">=</span> <span class="n">pcov</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+
+    
+<span class="c1">#ax.plot(x, y, color=&#39;black&#39;, zorder=1, linewidth=0.7)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="kc">True</span><span class="p">:</span>   <span class="c1"># Flag to run or not. True = run this section, False = skip it</span>
+    <span class="n">fitybot</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">linerangebot</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+<span class="c1">#    ax.plot(linerangebot, fitybot, color=&#39;black&#39;, zorder=1, linewidth=0.7)</span>
+    <span class="n">ybot</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">xrange</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope1 = </span><span class="si">{</span><span class="n">rho1</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept1 = </span><span class="si">{</span><span class="n">c1</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope1 STDEV = </span><span class="si">{</span><span class="p">(</span><span class="n">rho1_err</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept1 STDEV = </span><span class="si">{</span><span class="p">(</span><span class="n">c1_err</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">()</span>
+    
+    <span class="n">linfit</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">top4x</span><span class="p">,</span><span class="n">top4y</span><span class="p">)</span>
+    <span class="n">linerangetop</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">top4x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">top4x</span><span class="p">)</span><span class="o">+</span><span class="mf">0.068</span><span class="p">))</span>
+
+    <span class="n">fitytop</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">linerangetop</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+<span class="c1">#    ax.plot(linerangetop, fitytop, color=&#39;black&#39;, zorder=1, linewidth=0.7)</span>
+    <span class="n">ytop</span> <span class="o">=</span> <span class="n">linfit</span><span class="o">.</span><span class="n">slope</span> <span class="o">*</span> <span class="n">xrange</span> <span class="o">+</span> <span class="n">linfit</span><span class="o">.</span><span class="n">intercept</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope2 = </span><span class="si">{</span><span class="n">rho2</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept2 = </span><span class="si">{</span><span class="n">c2</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;slope2 STDEV = </span><span class="si">{</span><span class="p">(</span><span class="n">rho2_err</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;intercept2 STDEV = </span><span class="si">{</span><span class="p">(</span><span class="n">c2_err</span><span class="p">)</span><span class="si">:</span><span class="s2">0.6f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">ysum</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="n">ytop</span><span class="o">+</span><span class="mi">10</span><span class="o">**</span><span class="n">ybot</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span> <span class="n">rho1</span><span class="o">*</span><span class="n">xrange</span> <span class="o">+</span> <span class="n">c1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span> <span class="n">rho2</span><span class="o">*</span><span class="n">xrange</span> <span class="o">+</span> <span class="n">c2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span> <span class="n">rho2</span><span class="o">*</span><span class="n">xrange</span> <span class="o">+</span> <span class="n">c2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span> <span class="n">addingHammett</span><span class="p">(</span><span class="n">xrange</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">pearsonr</span>
+
+    <span class="n">rsq</span> <span class="o">=</span> <span class="n">pearsonr</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">addingHammett</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The R^2 value for curve is </span><span class="si">{</span><span class="n">rsq</span><span class="o">.</span><span class="n">statistic</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">0.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_plus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^+$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;s_minus&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma^-$&quot;</span>
+<span class="k">elif</span> <span class="n">sigmatype</span> <span class="o">==</span> <span class="s2">&quot;sigma&quot;</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;$\sigma$&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x_label</span> <span class="o">=</span> <span class="s2">&quot;ERROR&quot;</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{total}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">1.7</span><span class="p">,</span><span class="mf">2.1</span><span class="p">]</span>
+      
+      <span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+<span class="c1">############################</span>
+<span class="c1">### Print labels on plot ###</span>
+<span class="c1">############################</span>
+
+<span class="k">if</span> <span class="kc">False</span><span class="p">:</span>      <span class="c1"># Change to True to add annotations to the plot </span>
+   <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+   <span class="k">for</span> <span class="n">name</span><span class="p">,</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">names</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+       <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>             <span class="c1"># this is the text</span>
+                 <span class="p">(</span><span class="n">x_loc</span><span class="p">,</span><span class="n">y_loc</span><span class="p">),</span>          <span class="c1"># these are the coordinates to position the label</span>
+                 <span class="n">textcoords</span><span class="o">=</span><span class="s2">&quot;offset points&quot;</span><span class="p">,</span> <span class="c1"># how to position the text</span>
+                 <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span><span class="o">-</span><span class="mi">0</span><span class="p">),</span>  <span class="c1"># distance from text to points (x,y)</span>
+                 <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>      <span class="c1"># horizontal alignment can be left, right or center</span>
+
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>slope1 = -3.3197
+intercept1 = 0.183
+slope1 STDEV = 0.157986
+intercept1 STDEV = 0.034485
+
+slope2 = -6.9227
+intercept2 = -0.241
+slope2 STDEV = 1.918263
+intercept2 STDEV = 0.223376
+The R^2 value for curve is 0.9852
+</pre></div>
+</div>
+<img alt="../_images/c6f097d093f0a3d3bfe9141fb78f483cbb52377d7bce9adfeef0e907216d35ec.png" src="../_images/c6f097d093f0a3d3bfe9141fb78f483cbb52377d7bce9adfeef0e907216d35ec.png" />
+</div>
+</div>
+</section>
+<section id="figure-7-plotting-the-residuals-for-the-addition-model">
+<h2>Figure 7: Plotting the Residuals for the Addition Model<a class="headerlink" href="#figure-7-plotting-the-residuals-for-the-addition-model" title="Permalink to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">###########################################################</span>
+<span class="c1">### Plot the residuals for log[toal k_obs] vs sigma+    ###</span>
+<span class="c1">###########################################################</span>
+
+
+<span class="c1"># y is experimental data</span>
+<span class="c1"># total_y is the calculated results from the model of adding the two hammett plots together</span>
+
+<span class="n">total_y</span> <span class="o">=</span> <span class="n">addingHammett</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">popt</span><span class="p">)</span>
+
+<span class="c1">### Calculate R^2 for First order fit</span>
+<span class="n">residuals</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">total_y</span>
+<span class="n">ss_res</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">residuals</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ss_tot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">y</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">r_squared</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">ss_res</span> <span class="o">/</span> <span class="n">ss_tot</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">r_squared</span><span class="p">)</span>
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">style_file</span> <span class="o">=</span> <span class="s2">&quot;tufte.mplstyle&quot;</span>
+<span class="c1">#style_file = &quot;S2_classic2.mplstyle&quot;</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_location_styles</span> <span class="o">+</span> <span class="n">style_file</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+<span class="n">ax</span><span class="o">.</span><span class="n">margins</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">.07</span><span class="p">,</span> <span class="n">tight</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>      <span class="c1"># add 7% empty space around outside of plot area   </span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Residual value&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="n">x_label</span><span class="p">,</span>
+<span class="c1">#          xlim=[-.4,.6],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">]</span>      
+      <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+
+<span class="c1">### Plot the residuals </span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="s2">&quot;w-&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>   <span class="c1"># a white thick line to erase background</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">residuals</span><span class="p">,</span> <span class="s2">&quot;k-&quot;</span><span class="p">)</span>                  <span class="c1"># the thin black line that connects the dots</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">residuals</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>    <span class="c1"># white border around each point</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">residuals</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># the points</span>
+
+
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plot.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9983708781409706
+</pre></div>
+</div>
+<img alt="../_images/8204e9e4c5848dc181ef391c86bdc012e9b9ec605a1a6542a45c89c869594c97.png" src="../_images/8204e9e4c5848dc181ef391c86bdc012e9b9ec605a1a6542a45c89c869594c97.png" />
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_16"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="16_Class_Handout_Problems_OLd.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Class handout Questions and Discussion</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="16-EstroneSyn.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Curved Plot Example</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-1-hammett-plot">Figure #1: Hammett Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-2-plotting-the-residuals">Figure 2: Plotting the Residuals</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-3-two-hammett-plots">Figure 3: Two Hammett Plots</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-4-adding-the-hammett-plots-together">Figure 4: Adding the Hammett Plots Together</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-5-plotting-residuals-for-figure-4-plot">Figure 5: Plotting Residuals for Figure 4 Plot</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-6-fitting-the-addition-model-directly-to-the-data">Figure 6: Fitting the Addition Model Directly to the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figure-7-plotting-the-residuals-for-the-addition-model">Figure 7: Plotting the Residuals for the Addition Model</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

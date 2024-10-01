@@ -1,0 +1,1798 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Aspirin Hydrolysis Curve Fits &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_10/aspirin_notebook_with_uncertainty';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1: The Literature Equation" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html" />
+    <link rel="prev" title="Chapter 5, Question 13" href="../Class_08/Question5_13.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_05/Group_Increments_ClassExercises.html">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_4_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_5_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_6_Plots.html"><span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\sigma ^+\)</span> Plots</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_7_Plots_with_YukawaTsuno.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_7_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table1and2_ClassExamples.html">Class Discussion Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_15/15-BrownOkamoto_Python_Notebook.html">The Browm-Okamoto Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_15/15-YukawaTsunoFitNotebook.html">Yukawa-Tsuno Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_16/16_Class_Handout_Problems_OLd.html">Class handout Questions and Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_16/16_Class_Handout_Problems.html">Class Handout: Interpretting Table 1 and Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_16/16-EstroneSyn.html">Curved Plot Example</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table1and3.html">Taft Plot Investigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table3.html">Taft Plot Investigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table4and5.html">Taft Plot Investigations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_21/21-Beckman-1.html">Beckmann rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_21/21-Beckman-2.html">Beckmann rate Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-1b_calculator.html">Calculating <span class="math notranslate nohighlight">\(k_{A,R}\)</span> for 1b</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-AutoFit.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure2Paper_Hammett_Acid_Rate.html">Figure 4: Hammett Plot for pH = 11.5 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure3Paper_Hammett_Uncat_Rate.html">Figure 4: Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure4Paper_Hammett_Acid_Rate.html">Figure 4: Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Acid_Rate.html">Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Base_Rate.html">Hammett Plot for pH = 11.5 (<span class="math notranslate nohighlight">\(\log{k_{OH^-}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Water_Rate.html">Hammett Plot for pH = 3.8 (<span class="math notranslate nohighlight">\(\log{k_{H_2O}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_profile_fit.html">pH-rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_Profiles_AutoFit_kHKa.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_Profiles_AutoFit.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pHprofilefor1f.html">pH-rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-ResultsTableCalculations.html">Calculations for Results Tables</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/01A-ActivityOfWaterinH2SO4byWt.html">Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(X_{H_2SO_4}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/01B-ActivityOfWaterinH2SO4byX.html">Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(\text{\%wt }{H_2SO_4}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/02_H2SO4_PercentWt_to_H0.html">Combined <span class="math notranslate nohighlight">\(H_0\)</span> Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/03_H2SO4_Percent_Density_Molarity.html">Combined <span class="math notranslate nohighlight">\(\% H_2SO_4\)</span> Table for Density and Molarity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/03_H2SO4_PercentWt_to_MolarConc.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/04_Cook_1975_HR_Values_Smooth.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/04_H0_HR_Comparison.html">Comparison of <span class="math notranslate nohighlight">\(H-0\)</span> data and <span class="math notranslate nohighlight">\(H_R\)</span> data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/interpolators_check.html">Interpolation Tools Quality Check</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-interpolators.html">Interpolation of data tables</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 3 Yates</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig5-HRH0.html">A Plot of <span class="math notranslate nohighlight">\(H_R\)</span> vs. <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig5-HRH0%2BinterpolatorsH0HR-Patches.html">A Plot of <span class="math notranslate nohighlight">\(H_R\)</span> vs. <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig6-MeOAc.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig7-MeOAc.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig8-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(a_{H_2O}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig10-rate_vs_gammaH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\gamma [H_2O]\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig13-rate_vs_gammaH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\gamma [H_2O]\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig15-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig20-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig23-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-FigX-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_10/aspirin_notebook_with_uncertainty.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Class_10/aspirin_notebook_with_uncertainty.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Aspirin Hydrolysis Curve Fits</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aspirin Hydrolysis Curve Fits</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-data">Plot the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-components-of-the-ph-rate-profile">The Components of the pH-rate Profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curve-fitting-the-model">Curve Fitting the Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residual-plot">Residual Plot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-rate-plot">Buffer Rate Plot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-kw-at-17-degrees">calculation Kw at 17 degrees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-lmfit">Using LMFit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-code">Minimal Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="aspirin-hydrolysis-curve-fits">
+<h1>Aspirin Hydrolysis Curve Fits<a class="headerlink" href="#aspirin-hydrolysis-curve-fits" title="Permalink to this heading">#</a></h1>
+<p>the data is from
+“The hydrolysis of aspirin.” L.J. Edwards, <em>Trans. Faraday Soc.</em>, <strong>1950</strong>, <em>46</em>, 723-735. https://doi.org/10.1039/TF9504600723</p>
+<section id="load-data">
+<h2>Load Data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
+<p>The data table from the above paper was made into a csv file (<code class="docutils literal notranslate"><span class="pre">Edwards1950.csv</span></code>). The file contains pH and k_obs values. It is read into a dataframe with the pH va;ues as the index series.  Then a <span class="math notranslate nohighlight">\(\log{(K_{obs})}\)</span> series is created and a series for <span class="math notranslate nohighlight">\([H^+]\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ch">#!pip install uncertainties</span>
+<span class="c1">#!pip install lmfit</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+<span class="kn">import</span> <span class="nn">uncertainties</span> <span class="k">as</span> <span class="nn">un</span>               <span class="c1"># tool set for handling uncertainties</span>
+<span class="kn">from</span> <span class="nn">uncertainties</span> <span class="kn">import</span> <span class="n">unumpy</span> <span class="k">as</span> <span class="n">unp</span>  <span class="c1"># a replacement for numpy </span>
+
+<span class="o">!</span>mkdir<span class="w"> </span>plots
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Set global variables. Set flag accordingly</span>
+<span class="c1">################################################################################</span>
+
+<span class="c1">#github = True  </span>
+<span class="n">github</span> <span class="o">=</span> <span class="kc">False</span>  
+
+<span class="k">if</span> <span class="n">github</span><span class="p">:</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/data/&quot;</span>
+    <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/images/&quot;</span>
+    <span class="n">github_data_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+    <span class="n">github_styles_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;../Class_10/data/&quot;</span>
+    <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&quot;../Class_10/images/&quot;</span>
+    <span class="n">github_data_location</span> <span class="o">=</span> <span class="s2">&quot;/Users/blink/github/LFER-QSAR/data/&quot;</span>
+    <span class="n">github_styles_location</span> <span class="o">=</span> <span class="s2">&quot;/Users/blink/github/LFER-QSAR/styles/&quot;</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s2">&quot;Edwards1950.csv&quot;</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;pH&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Process data  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;k_obs&quot;</span><span class="p">])</span>        <span class="c1"># get log(K) from K</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>                   <span class="c1"># get [H] from pH</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># one value was out of order, sort to fix.</span>
+
+<span class="c1">#display(df)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: plots: File exists
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="plot-the-data">
+<h2>Plot the Data<a class="headerlink" href="#plot-the-data" title="Permalink to this heading">#</a></h2>
+<p>Below is code that will plot the log-log plot for the pH-rate profile. We will plot <span class="math notranslate nohighlight">\(\log{k_{obs}}\)</span> vs. <span class="math notranslate nohighlight">\(pH\)</span></p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
+<span class="c1">### Choose x and y for plot</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">])</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side and choose a stylesheet</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="c1">#plt.style.use(github_styles_location + &quot;S2_classic2.mplstyle&quot;)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Plot the data    </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+   
+<span class="c1">################################################################################</span>
+<span class="c1">### Set labels and scale </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pH$&quot;</span><span class="p">,</span>
+       <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">13</span><span class="p">],</span>                  
+       <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>     
+      <span class="p">)</span>
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)      # add 7% empty space around outside of plot area   </span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Output the final plot </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/01_plot_pH.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                            <span class="c1"># output the plot to the screen</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/7d913ab08117b5f38e6b5117abfca4dba015e800f904510b0c6db54947bc3f66.png" src="../_images/7d913ab08117b5f38e6b5117abfca4dba015e800f904510b0c6db54947bc3f66.png" />
+</div>
+</div>
+</section>
+<section id="the-components-of-the-ph-rate-profile">
+<h2>The Components of the pH-rate Profile<a class="headerlink" href="#the-components-of-the-ph-rate-profile" title="Permalink to this heading">#</a></h2>
+<p>There are at least three, perhaps four, reactions that contribute to the observed rate constant, <span class="math notranslate nohighlight">\(k_{obs}\)</span>. In the plot below we will fit each to the region of the plot that applies and find the values of the individual rate constants in piecemeal fashion. See the discussion document for more information.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
+<span class="c1">### Choose x and y for plot</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">])</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Functions that define each component&#39;s rate constant</span>
+<span class="c1">################################################################################</span>
+
+<span class="k">def</span> <span class="nf">genbase</span><span class="p">(</span><span class="n">pH_list</span><span class="p">,</span> <span class="n">pKa</span><span class="p">,</span> <span class="n">kobs</span><span class="p">):</span> <span class="c1"># fit the intramolecular general base-catalyzed rate</span>
+<span class="c1">#    Ka = 10**(-3.6)</span>
+    <span class="n">Ka</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pKa</span><span class="p">)</span>
+    <span class="n">H_list</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH_list</span><span class="p">)</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="n">Ka</span><span class="o">/</span><span class="p">(</span><span class="n">Ka</span> <span class="o">+</span> <span class="n">H_list</span><span class="p">)</span><span class="o">*</span><span class="n">kobs</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">genacid</span><span class="p">(</span><span class="n">pH_list</span><span class="p">,</span> <span class="n">pKa</span><span class="p">,</span> <span class="n">kobs</span><span class="p">):</span> <span class="c1"># fit the water rate (kinetically indistiguishable from GA)</span>
+    <span class="n">Ka</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pKa</span><span class="p">)</span>
+    <span class="n">H_list</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH_list</span><span class="p">)</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">H_list</span><span class="o">/</span><span class="p">(</span><span class="n">Ka</span> <span class="o">+</span> <span class="n">H_list</span><span class="p">)</span><span class="o">*</span><span class="n">kobs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">specificacid</span><span class="p">(</span><span class="n">pH_list</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>   <span class="c1"># fit the specific acid-catalyzed rate </span>
+    <span class="n">H_list</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH_list</span><span class="p">)</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">H_list</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>    
+    
+<span class="k">def</span> <span class="nf">specificbase</span><span class="p">(</span><span class="n">pH_list</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>  <span class="c1"># fit the specific base-catalyzed rate</span>
+    <span class="n">H_list</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH_list</span><span class="p">)</span>
+    <span class="n">OH_list</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">))</span> <span class="o">/</span> <span class="n">H_list</span>
+    <span class="n">rate</span> <span class="o">=</span> <span class="p">(</span><span class="n">OH_list</span><span class="o">*</span><span class="n">k</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>    
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side and choose a stylesheet                    </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="c1">#plt.style.use(github_styles_location + &quot;S2_classic2.mplstyle&quot;)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Select data, curve fit and plot given component curves   </span>
+<span class="c1">################################################################################</span>
+
+<span class="c1">### Select data, curve fit and plot for specific acid-catalysis curve   </span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>      <span class="c1"># first three points used to define sepcific acid region</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="n">param</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">specificacid</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+<span class="n">fity</span> <span class="o">=</span> <span class="n">specificacid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">param</span> <span class="o">=</span> <span class="n">un</span><span class="o">.</span><span class="n">correlated_values</span><span class="p">(</span><span class="n">param</span><span class="p">,</span><span class="n">pcov</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;k^AH2_H2O = </span><span class="si">{</span><span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">0.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">### Select data, curve fit and plot for specific base-catalysis curve   </span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">28</span><span class="p">])</span>    <span class="c1"># last eight points used to define specific base region</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">20</span><span class="p">:</span><span class="mi">28</span><span class="p">])</span>
+<span class="n">param</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">specificbase</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">)</span>
+<span class="n">fity</span> <span class="o">=</span> <span class="n">specificbase</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">param</span> <span class="o">=</span> <span class="n">un</span><span class="o">.</span><span class="n">correlated_values</span><span class="p">(</span><span class="n">param</span><span class="p">,</span><span class="n">pcov</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;k^A-_HO- = </span><span class="si">{</span><span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">0.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">### Select data, curve fit and plot for general base-catalysis curve   </span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">18</span><span class="p">])</span>     <span class="c1"># points 7 to 17 used to define general base region</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">y</span><span class="p">[</span><span class="mi">7</span><span class="p">:</span><span class="mi">18</span><span class="p">])</span>
+<span class="n">param</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">genbase</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> 
+                        <span class="n">p0</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">],</span>                 <span class="c1"># list of initial values</span>
+                        <span class="n">bounds</span><span class="o">=</span><span class="p">([</span><span class="mf">3.</span><span class="p">,</span><span class="mf">0.1</span><span class="p">],</span> <span class="p">[</span><span class="mf">5.</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">]),</span>   <span class="c1"># lists of lower and upper bounds</span>
+                        <span class="p">)</span>
+<span class="n">fity</span> <span class="o">=</span> <span class="n">genbase</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">param</span><span class="p">)</span>
+<span class="n">param</span> <span class="o">=</span> <span class="n">un</span><span class="o">.</span><span class="n">correlated_values</span><span class="p">(</span><span class="n">param</span><span class="p">,</span><span class="n">pcov</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">fity</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pKa, k^AH_H2O = </span><span class="si">{</span><span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">param</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">:</span><span class="s2">0.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1">### plot curve for hypothetical water rate (manually)</span>
+
+<span class="n">y1</span> <span class="o">=</span> <span class="n">genacid</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="mf">0.014</span><span class="p">)</span>   <span class="c1"># uses pKa calculated from previous curve fit</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;lightgray&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Plot the data  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Set labels and scale </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pH$&quot;</span><span class="p">,</span>
+          <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">13</span><span class="p">],</span>                  
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+      <span class="p">)</span>
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)   # add 7% empty space around outside of plot area   </span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Output the final plot </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/02_plot_pH2.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>k^AH2_H2O = 1.87985+/-0.05127
+k^A-_HO- = 7970.652+/-666.734
+pKa, k^AH_H2O = 3.55+/-0.08, 0.11874+/-0.00384
+</pre></div>
+</div>
+<img alt="../_images/011a221489f3a6f96c711b67c30507dbe6275c5ed71bec60233e39b077bcc50d.png" src="../_images/011a221489f3a6f96c711b67c30507dbe6275c5ed71bec60233e39b077bcc50d.png" />
+</div>
+</div>
+</section>
+<section id="curve-fitting-the-model">
+<h2>Curve Fitting the Model<a class="headerlink" href="#curve-fitting-the-model" title="Permalink to this heading">#</a></h2>
+<p>The code below will curve fit the complete mathematical model. Two models are demonstrated, one uses three components, the better fitting model uses four and includes the water rate for the neutral species.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### The Big Curve Fit</span>
+
+<span class="n">KW</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">14.0</span><span class="p">)</span>
+<span class="c1">#KW = 10**(-14.26172)    # Kw at 17 deg C. See bottom of this notebook for more info.</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Function that defines the model - used in curve fit</span>
+<span class="c1">################################################################################</span>
+
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">pH</span><span class="p">,</span> <span class="n">ka</span> <span class="o">=</span> <span class="mf">1.88</span><span class="p">,</span> <span class="n">kb</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">kc</span> <span class="o">=</span> <span class="mf">0.119</span><span class="p">,</span> <span class="n">kd</span> <span class="o">=</span> <span class="mi">7970</span><span class="p">,</span> <span class="n">Ka1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">3.55</span><span class="p">)):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    model(x, ka, kb, kc, kd, Ka2, Ka1)</span>
+<span class="sd">    pH is an array of pH values</span>
+<span class="sd">    returns an array of log(k_obs) values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH</span><span class="p">)</span>
+    <span class="n">k_obs</span> <span class="o">=</span> <span class="p">(</span><span class="n">ka</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kb</span> <span class="o">+</span> <span class="n">kc</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">KW</span><span class="o">/</span><span class="n">H</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">k_obs</span><span class="p">))</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Same function again but using uncertainties package - used to calc confidence band</span>
+<span class="c1">################################################################################</span>
+
+<span class="k">def</span> <span class="nf">model_u</span><span class="p">(</span><span class="n">pH</span><span class="p">,</span> <span class="n">ka</span> <span class="o">=</span> <span class="mf">1.88</span><span class="p">,</span> <span class="n">kb</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">kc</span> <span class="o">=</span> <span class="mf">0.119</span><span class="p">,</span> <span class="n">kd</span> <span class="o">=</span> <span class="mi">7970</span><span class="p">,</span> <span class="n">Ka1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">3.55</span><span class="p">)):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    model(x, ka, kb, kc, kd, Ka2, Ka1)</span>
+<span class="sd">    pH is an array of pH values</span>
+<span class="sd">    returns an array of log(k_obs) values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH</span><span class="p">)</span>
+    <span class="n">k_obs</span> <span class="o">=</span> <span class="p">(</span><span class="n">ka</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kb</span> <span class="o">+</span> <span class="n">kc</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">KW</span><span class="o">/</span><span class="n">H</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">unp</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">k_obs</span><span class="p">))</span>
+                                                        
+<span class="c1">################################################################################</span>
+<span class="c1">### Choose x and y for plot</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Curve fit and extract parameters and parameters with uncertainties  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">([</span><span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mi">7000</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">4.</span><span class="p">)],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">.2</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">3.</span><span class="p">)]))</span>
+
+<span class="n">popt_un</span> <span class="o">=</span> <span class="n">un</span><span class="o">.</span><span class="n">correlated_values</span><span class="p">(</span><span class="n">popt</span><span class="p">,</span> <span class="n">pcov</span><span class="p">)</span>
+
+<span class="p">[</span><span class="n">ka</span><span class="p">,</span> <span class="n">kb</span><span class="p">,</span> <span class="n">kc</span><span class="p">,</span> <span class="n">kd</span><span class="p">,</span> <span class="n">Ka1</span><span class="p">]</span> <span class="o">=</span> <span class="n">popt_un</span>   <span class="c1"># get parameters as correlated uncertain floats</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ka = </span><span class="si">{</span><span class="n">ka</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kb = </span><span class="si">{</span><span class="n">kb</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kc = </span><span class="si">{</span><span class="n">kc</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kd = </span><span class="si">{</span><span class="n">kd</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pKa = </span><span class="si">{</span><span class="o">-</span><span class="n">unp</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">Ka1</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">unp</span><span class="o">.</span><span class="n">nominal_values</span><span class="p">(</span><span class="n">model_u</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">ka</span><span class="p">,</span> <span class="n">kb</span><span class="p">,</span> <span class="n">kc</span><span class="p">,</span> <span class="n">kd</span><span class="p">,</span> <span class="n">Ka1</span><span class="p">))</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">unp</span><span class="o">.</span><span class="n">nominal_values</span><span class="p">(</span><span class="n">model_u</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">ka</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">kc</span><span class="p">,</span> <span class="n">kd</span><span class="p">,</span> <span class="n">Ka1</span><span class="p">))</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side and choose a stylesheet   </span>
+<span class="c1">################################################################################</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="c1">#plt.style.use(github_styles_location + &quot;S2_classic2.mplstyle&quot;)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Plot the data and the line fit.   </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Set labels and scale </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pH$&quot;</span><span class="p">,</span>
+<span class="c1">#          xlim=[0,13],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+      <span class="p">)</span>
+
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)      # add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1"># upper and lower bounds of uncertain kobs as float values</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Create Confidence band upper and lower bounds</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">bestfit_y1</span> <span class="o">=</span> <span class="n">model_u</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">ka</span><span class="p">,</span> <span class="n">kb</span><span class="p">,</span> <span class="n">kc</span><span class="p">,</span> <span class="n">kd</span><span class="p">,</span> <span class="n">Ka1</span><span class="p">)</span>
+<span class="n">dev</span> <span class="o">=</span> <span class="n">unp</span><span class="o">.</span><span class="n">std_devs</span><span class="p">(</span><span class="n">bestfit_y1</span><span class="p">)</span> <span class="o">*</span> <span class="n">sigma</span>
+
+<span class="n">fit_up</span> <span class="o">=</span> <span class="n">unp</span><span class="o">.</span><span class="n">nominal_values</span><span class="p">(</span><span class="n">bestfit_y1</span><span class="p">)</span> <span class="o">+</span> <span class="n">dev</span>
+<span class="n">fit_dn</span> <span class="o">=</span> <span class="n">unp</span><span class="o">.</span><span class="n">nominal_values</span><span class="p">(</span><span class="n">bestfit_y1</span><span class="p">)</span> <span class="o">-</span> <span class="n">dev</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">fit_up</span><span class="p">,</span> <span class="n">fit_dn</span><span class="p">,</span> 
+                   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;confidence interval&quot;</span><span class="p">)</span>
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/03_plot_pH3_un.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+
+    
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ka = (1.75+/-0.17)e+00
+kb = (1.42+/-0.45)e-02
+kc = (1.20+/-0.05)e-01
+kd = (7.56+/-0.41)e+03
+pKa = 3.65+/-0.12
+</pre></div>
+</div>
+<img alt="../_images/490812fc16a8f4b37cea2f9bcfcccdea47ec0984f7d8c294a526299312adb9b0.png" src="../_images/490812fc16a8f4b37cea2f9bcfcccdea47ec0984f7d8c294a526299312adb9b0.png" />
+</div>
+</div>
+<section id="residual-plot">
+<h3>Residual Plot<a class="headerlink" href="#residual-plot" title="Permalink to this heading">#</a></h3>
+<p>The code below will output a residual plot for the model fit above.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">################################################################################</span>
+<span class="c1">### Choose x and y for plot</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span>
+
+<span class="n">bestfitvalues</span> <span class="o">=</span> <span class="n">model_u</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">ka</span><span class="p">,</span> <span class="n">kb</span><span class="p">,</span> <span class="n">kc</span><span class="p">,</span> <span class="n">kd</span><span class="p">,</span> <span class="n">Ka1</span><span class="p">)</span>
+
+<span class="n">res</span> <span class="o">=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">unp</span><span class="o">.</span><span class="n">nominal_values</span><span class="p">(</span><span class="n">bestfitvalues</span><span class="p">)</span>
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="c1">#plt.style.use(github_styles_location + &quot;S2_classic2.mplstyle&quot;)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>  
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+
+<span class="c1">#ax.scatter(x,y, s=32, color=&quot;white&quot;, zorder=2)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">res</span><span class="p">,</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;residual&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pH$&quot;</span><span class="p">,</span>
+<span class="c1">#          xlim=[0,13],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.25</span><span class="p">],</span>
+          <span class="n">xticks</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+      <span class="p">)</span>
+
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)      # add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1"># upper and lower bounds of uncertain kobs as float values</span>
+
+<span class="c1">#### Create Confidence band upper and lower bounds</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="o">-</span><span class="n">dev</span><span class="p">,</span> <span class="n">dev</span><span class="p">,</span> 
+                   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;confidence interval&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/03_residual_plot_pH3_un.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+
+    
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/af0133fc6d955be61505646364668cad8bc79369aae517f4af49912c424ce2df.png" src="../_images/af0133fc6d955be61505646364668cad8bc79369aae517f4af49912c424ce2df.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="buffer-rate-plot">
+<h1>Buffer Rate Plot<a class="headerlink" href="#buffer-rate-plot" title="Permalink to this heading">#</a></h1>
+<p>The code below reads the data fro the buffer rate experiment in the paper and plots the result.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s2">&quot;EdwardsBufferData.csv&quot;</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;conc&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="n">df1</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df1</span><span class="p">[</span><span class="s2">&quot;k_obs&quot;</span><span class="p">])</span>
+<span class="n">df1</span><span class="p">[</span><span class="s2">&quot;logconc&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df1</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+
+<span class="n">df1</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>k_obs</th>
+      <th>logk</th>
+      <th>logconc</th>
+    </tr>
+    <tr>
+      <th>conc</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0.33300</th>
+      <td>0.112</td>
+      <td>-0.950782</td>
+      <td>-0.477556</td>
+    </tr>
+    <tr>
+      <th>0.16700</th>
+      <td>0.116</td>
+      <td>-0.935542</td>
+      <td>-0.777284</td>
+    </tr>
+    <tr>
+      <th>0.08330</th>
+      <td>0.114</td>
+      <td>-0.943095</td>
+      <td>-1.079355</td>
+    </tr>
+    <tr>
+      <th>0.04170</th>
+      <td>0.114</td>
+      <td>-0.943095</td>
+      <td>-1.379864</td>
+    </tr>
+    <tr>
+      <th>0.02090</th>
+      <td>0.119</td>
+      <td>-0.924453</td>
+      <td>-1.679854</td>
+    </tr>
+    <tr>
+      <th>0.01040</th>
+      <td>0.115</td>
+      <td>-0.939302</td>
+      <td>-1.982967</td>
+    </tr>
+    <tr>
+      <th>0.00521</th>
+      <td>0.119</td>
+      <td>-0.924453</td>
+      <td>-2.283162</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#x = df1[&quot;logconc&quot;]</span>
+<span class="c1">#y = np.array(df1[&quot;logk&quot;])</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df1</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;k_obs&quot;</span><span class="p">]</span>
+
+
+<span class="c1">##################################################</span>
+<span class="c1">### Setup a figure with two plots side-by-side ###</span>
+<span class="c1">### and choose a stylesheet                    ###</span>
+<span class="c1">##################################################</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="c1">#plt.style.use(github_styles_location + &quot;S2_classic2.mplstyle&quot;)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>  
+
+<span class="c1">#########################################</span>
+<span class="c1">### Plot the data and the line fit.   ###</span>
+<span class="c1">#########################################</span>
+
+<span class="k">def</span> <span class="nf">zeroslope</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">int</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="n">x</span>
+
+<span class="n">param</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">zeroslope</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="nb">int</span> <span class="o">=</span> <span class="n">param</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">fity</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="nb">int</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">fity</span><span class="p">),</span> 
+        <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+        <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> 
+        <span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+    
+<span class="c1">############################</span>
+<span class="c1">### Set labels and scale ###</span>
+<span class="c1">############################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{(k_</span><span class="si">{obs}</span><span class="s2">\ /days^{-1})}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;log(conc. ${/mole\cdot L^{-1}}$)&quot;</span><span class="p">,</span>
+<span class="c1">#           xlim=[-0.01,0.35],                  </span>
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">1.25</span><span class="p">,</span><span class="o">-</span><span class="mf">0.7</span><span class="p">]</span>
+      
+      <span class="p">)</span>
+
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)      # add 7% empty space around outside of plot area   </span>
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/04_plot_buffer.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+<span class="n">param</span><span class="p">,</span> <span class="n">pcov</span> <span class="o">=</span> <span class="n">curve_fit</span><span class="p">(</span><span class="n">zeroslope</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">perr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">pcov</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pcov</span><span class="p">,</span> <span class="n">param</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/623e2d17ab47a008dcde9c91ce2b279c60fbcb5feb875f0be5da395be7803a50.png" src="../_images/623e2d17ab47a008dcde9c91ce2b279c60fbcb5feb875f0be5da395be7803a50.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[9.93197267e-07]] [0.11557143]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="calculation-kw-at-17-degrees">
+<h2>calculation Kw at 17 degrees<a class="headerlink" href="#calculation-kw-at-17-degrees" title="Permalink to this heading">#</a></h2>
+<p>the reactions above were performed at <span class="math notranslate nohighlight">\(17\ ^\circ C\)</span>. What is the value of <span class="math notranslate nohighlight">\(K_W\)</span> at <span class="math notranslate nohighlight">\(17\ ^\circ C\)</span>?</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># https://srd.nist.gov/JPCRD/jpcrd181.pdf</span>
+<span class="c1"># https://www.chemguide.co.uk/physical/acidbaseeqia/kw.html</span>
+<span class="c1"># </span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+<span class="kn">from</span> <span class="nn">scipy.optimize</span> <span class="kn">import</span> <span class="n">curve_fit</span>
+
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  ###</span>
+<span class="c1">################################################################################</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;data/water_density2.csv&quot;</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+<span class="c1">#                 index_col=&quot;pH&quot;, </span>
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+<span class="c1">#display(df2.head())</span>
+
+
+<span class="c1"># Data from https://www.chemguide.co.uk/physical/acidbaseeqia/kw.html</span>
+<span class="n">Temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">100</span><span class="p">])</span> <span class="o">+</span> <span class="mf">273.15</span> 
+
+<span class="n">Kw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.114e-14</span><span class="p">,</span>
+               <span class="mf">0.293E-14</span><span class="p">,</span>
+               <span class="mf">0.681E-14</span><span class="p">,</span>
+               <span class="mf">1.008E-14</span><span class="p">,</span>
+               <span class="mf">1.471E-14</span><span class="p">,</span>
+               <span class="mf">2.916E-14</span><span class="p">,</span>
+               <span class="mf">5.476E-14</span><span class="p">,</span>
+               <span class="mf">51.30E-14</span><span class="p">,</span>
+           <span class="p">])</span>
+
+<span class="c1"># Empirical equation from https://srd.nist.gov/JPCRD/jpcrd181.pdf</span>
+<span class="n">A</span> <span class="o">=</span> <span class="o">-</span><span class="mf">4.098</span>
+<span class="n">B</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3245.2</span>
+<span class="n">C</span> <span class="o">=</span> <span class="mf">2.2362E5</span>
+<span class="n">D</span> <span class="o">=</span> <span class="o">-</span><span class="mf">3.984E7</span>
+<span class="n">E</span> <span class="o">=</span> <span class="mf">13.957</span>
+<span class="n">F</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1262.3</span>
+<span class="n">G</span> <span class="o">=</span> <span class="mf">8.5641E5</span>
+
+<span class="n">T</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;temp degC&quot;</span><span class="p">]</span><span class="o">+</span><span class="mi">273</span>
+<span class="n">pw</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s2">&quot;d g/cm&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">1000</span>
+
+<span class="n">logKwCalcNIST</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="o">/</span><span class="n">T</span> <span class="o">+</span> <span class="n">C</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">D</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="p">(</span><span class="n">E</span> <span class="o">+</span> <span class="n">F</span><span class="o">/</span><span class="n">T</span> <span class="o">+</span> <span class="n">G</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">pw</span><span class="p">)</span>
+<span class="n">logKwCalcNISTnoPressure</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="o">/</span><span class="n">T</span> <span class="o">+</span> <span class="n">C</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">D</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">3</span> 
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Plot the data and the line fit.   </span>
+<span class="c1">################################################################################</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">logKwCalcNISTnoPressure</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">logKwCalcNIST</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Temp</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">Kw</span><span class="p">),</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{(K_W\ /M^</span><span class="si">{2}</span><span class="s2">)}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Temp. $/K$&quot;</span><span class="p">,</span>
+<span class="c1">#           xlim=[-0.01,0.35],                  </span>
+<span class="c1">#          ylim=[-1.25,-0.7]</span>
+      
+      <span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">17</span><span class="o">+</span><span class="mf">273.15</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;lightgray&quot;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="n">T</span><span class="o">=</span><span class="mi">17</span><span class="o">+</span><span class="mf">273.15</span>
+<span class="n">line</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df2</span><span class="p">[</span><span class="s2">&quot;temp degC&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">17</span><span class="p">]</span>
+<span class="n">pw</span> <span class="o">=</span> <span class="n">line</span><span class="p">[</span><span class="s2">&quot;d g/cm&quot;</span><span class="p">]</span><span class="o">/</span><span class="mi">1000</span>
+
+<span class="n">logKwCalcNIST</span> <span class="o">=</span> <span class="n">A</span> <span class="o">+</span> <span class="n">B</span><span class="o">/</span><span class="n">T</span> <span class="o">+</span> <span class="n">C</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">D</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">3</span> <span class="o">+</span> <span class="p">(</span><span class="n">E</span> <span class="o">+</span> <span class="n">F</span><span class="o">/</span><span class="n">T</span> <span class="o">+</span> <span class="n">G</span><span class="o">/</span><span class="n">T</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">pw</span><span class="p">)</span>
+
+<span class="n">KW17</span> <span class="o">=</span> <span class="n">logKwCalcNIST</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;log Kw at 17 deg is </span><span class="si">{</span><span class="n">KW17</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/KW_plot.pdf&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>log Kw at 17 deg is 17   -14.26712
+Name: d g/cm, dtype: float64
+</pre></div>
+</div>
+<img alt="../_images/85ac8a257b7461680f11d6658491e475963de08e6395f9505e4dd08151ad37fc.png" src="../_images/85ac8a257b7461680f11d6658491e475963de08e6395f9505e4dd08151ad37fc.png" />
+</div>
+</div>
+</section>
+<section id="using-lmfit">
+<h2>Using LMFit<a class="headerlink" href="#using-lmfit" title="Permalink to this heading">#</a></h2>
+<p>The below code will perform the same curve fit as above using the LMFit package rather than scipy.optimize.curve_fit. the detailed report from LMFit is advantageous and its built-in tools for calculating the fit line and the confidence band are also helpful.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### The Big LMFit Curve Fit</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">lmfit</span>     
+
+<span class="kn">import</span> <span class="nn">uncertainties</span> <span class="k">as</span> <span class="nn">un</span>               <span class="c1"># tool set for handling uncertainties</span>
+<span class="kn">from</span> <span class="nn">uncertainties</span> <span class="kn">import</span> <span class="n">unumpy</span> <span class="k">as</span> <span class="n">unp</span>  <span class="c1"># a replacement for numpy </span>
+
+<span class="o">!</span>mkdir<span class="w"> </span>plots
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Set global variables. Set flag accordingly</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">github</span> <span class="o">=</span> <span class="kc">False</span>  
+
+<span class="k">if</span> <span class="n">github</span><span class="p">:</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/data/&quot;</span>
+    <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/images/&quot;</span>
+    <span class="n">github_data_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+    <span class="n">github_styles_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;../Class_10/data/&quot;</span>
+    <span class="n">image_path</span> <span class="o">=</span> <span class="s2">&quot;../Class_10/images/&quot;</span>
+    <span class="n">github_data_location</span> <span class="o">=</span> <span class="s2">&quot;/Users/blink/github/LFER-QSAR/data/&quot;</span>
+    <span class="n">github_styles_location</span> <span class="o">=</span> <span class="s2">&quot;/Users/blink/github/LFER-QSAR/styles/&quot;</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Read data set. The fields are separated by commas; comments are enabled  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span> <span class="o">+</span> <span class="s2">&quot;Edwards1950.csv&quot;</span><span class="p">,</span> 
+                 <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span> 
+                 <span class="n">skipinitialspace</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                 <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;pH&quot;</span><span class="p">,</span> 
+                 <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">)</span> 
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Process data  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;k_obs&quot;</span><span class="p">])</span>        <span class="c1"># get log(K) from K</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;H&quot;</span><span class="p">]</span><span class="o">=</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>                   <span class="c1"># get [H] from pH</span>
+<span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pH&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>   <span class="c1"># one value was out of order, sort to fix.</span>
+
+<span class="c1"># display(df)</span>
+
+
+<span class="n">KW</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">14.0</span><span class="p">)</span>
+<span class="c1">#KW = 10**(-14.26172)    # Kw at 17 deg C. See bottom of this notebook for more info.</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Function that defines the model - used in curve fit</span>
+<span class="c1">################################################################################</span>
+
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">pH</span><span class="p">,</span> <span class="n">ka</span> <span class="o">=</span> <span class="mf">1.88</span><span class="p">,</span> <span class="n">kb</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span> <span class="n">kc</span> <span class="o">=</span> <span class="mf">0.119</span><span class="p">,</span> <span class="n">kd</span> <span class="o">=</span> <span class="mi">7970</span><span class="p">,</span> <span class="n">Ka1</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mf">3.55</span><span class="p">)):</span>    
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    model(x, ka, kb, kc, kd, Ka2, Ka1)</span>
+<span class="sd">    pH is an array of pH values</span>
+<span class="sd">    returns an array of log(k_obs) values</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH</span><span class="p">)</span>
+    <span class="n">k_obs</span> <span class="o">=</span> <span class="p">(</span><span class="n">ka</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kb</span> <span class="o">+</span> <span class="n">kc</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">KW</span><span class="o">/</span><span class="n">H</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">k_obs</span><span class="p">))</span>
+                                                        
+<span class="c1">################################################################################</span>
+<span class="c1">### Choose x and y for plot</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Curve fit and extract parameters and parameters with uncertainties  </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">mod</span> <span class="o">=</span> <span class="n">lmfit</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">nan_policy</span> <span class="o">=</span> <span class="s1">&#39;omit&#39;</span><span class="p">)</span>  <span class="c1"># load the function f as the model to be fit</span>
+
+                                    <span class="c1"># state the parameters (use the text strings that we used above in sympy)</span>
+<span class="n">pars</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">make_params</span><span class="p">(</span><span class="n">ka</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mf">1E-15</span><span class="p">),</span>
+                       <span class="n">kb</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.015</span><span class="p">),</span>
+                       <span class="n">kc</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="mf">0.15</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mf">1E-15</span><span class="p">),</span>
+                       <span class="n">kd</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">100000</span><span class="p">),</span>
+                       <span class="n">Ka1</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**-</span><span class="mf">4.</span><span class="p">,</span> <span class="nb">min</span> <span class="o">=</span> <span class="mi">10</span><span class="o">*-</span><span class="mi">10</span><span class="p">,</span> <span class="nb">max</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**-</span><span class="mi">1</span><span class="p">),</span>
+                       <span class="p">)</span>    <span class="c1"># initial values are also set here</span>
+                                    
+<span class="n">result</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">pars</span><span class="p">,</span> <span class="n">pH</span><span class="o">=</span><span class="n">x</span><span class="p">,</span>
+            <span class="c1">#     weights = 1/ys</span>
+                 <span class="p">)</span>  <span class="c1"># Use the .fit method on the model object to perform the curve fit</span>
+                                <span class="c1"># the variable in this function is &#39;t&#39; so we must use that in the call</span>
+<span class="c1">##########################</span>
+<span class="c1">### get the results </span>
+<span class="c1">##########################</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">fit_report</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="c1">#print(result.ci_report())</span>
+
+
+<span class="n">ka</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">uvars</span><span class="p">[</span><span class="s1">&#39;ka&#39;</span><span class="p">]</span>
+<span class="n">kb</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">uvars</span><span class="p">[</span><span class="s1">&#39;kb&#39;</span><span class="p">]</span>
+<span class="n">kc</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">uvars</span><span class="p">[</span><span class="s1">&#39;kc&#39;</span><span class="p">]</span>
+<span class="n">kd</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">uvars</span><span class="p">[</span><span class="s1">&#39;kd&#39;</span><span class="p">]</span>
+<span class="n">Ka1</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">uvars</span><span class="p">[</span><span class="s1">&#39;Ka1&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ka = </span><span class="si">{</span><span class="n">ka</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kb = </span><span class="si">{</span><span class="n">kb</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kc = </span><span class="si">{</span><span class="n">kc</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;kd = </span><span class="si">{</span><span class="n">kd</span><span class="si">:</span><span class="s2">0.2e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pKa = </span><span class="si">{</span><span class="o">-</span><span class="n">unp</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">Ka1</span><span class="p">)</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">y1</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">pH</span><span class="o">=</span><span class="n">x1</span><span class="p">)</span>
+<span class="n">derr</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">eval_uncertainty</span><span class="p">(</span><span class="n">pH</span><span class="o">=</span><span class="n">x1</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Setup a figure and choose a stylesheet   </span>
+<span class="c1">################################################################################</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>  
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Plot the data and the line fit.   </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Set labels and scale </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$\log{k_</span><span class="si">{obs}</span><span class="s2">}$&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pH$&quot;</span><span class="p">,</span>
+          <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="mi">13</span><span class="p">],</span>                  
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">2.2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+      <span class="p">)</span>
+
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)      # add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1"># upper and lower bounds of uncertain kobs as float values</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Create Confidence band upper and lower bounds</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">sigma</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+<span class="n">fit_up</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">+</span> <span class="n">derr</span>
+<span class="n">fit_dn</span> <span class="o">=</span> <span class="n">y1</span> <span class="o">-</span> <span class="n">derr</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">fit_up</span><span class="p">,</span> <span class="n">fit_dn</span><span class="p">,</span> 
+                   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;confidence interval&quot;</span><span class="p">)</span>
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/06_plot_pH3_LMFit.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+
+<span class="c1">################################################################################</span>
+<span class="c1">#######  RESIDUAL PLOT  ########################################################</span>
+<span class="c1">################################################################################</span>
+<span class="c1">################################################################################</span>
+<span class="c1">### Setup a figure  and choose a stylesheet   </span>
+<span class="c1">################################################################################</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="n">github_styles_location</span> <span class="o">+</span> <span class="s2">&quot;tufte.mplstyle&quot;</span><span class="p">)</span>        
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>  
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Plot the data and the line fit.   </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">-</span> <span class="n">result</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="n">pH</span><span class="o">=</span><span class="n">x</span><span class="p">),</span> 
+           <span class="n">marker</span> <span class="o">=</span> <span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span> 
+           <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+           <span class="n">linewidth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Set labels and scale </span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Residuals&quot;</span><span class="p">,</span> 
+       <span class="n">xlabel</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;$pH$&quot;</span><span class="p">,</span>
+          <span class="n">xlim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.3</span><span class="p">,</span><span class="mi">13</span><span class="p">],</span>                  
+          <span class="n">ylim</span><span class="o">=</span><span class="p">[</span><span class="o">-</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">]</span>
+      <span class="p">)</span>
+
+<span class="c1">#ax.margins(x=.07, y=.07, tight=True)  # add 7% empty space around outside of plot area   </span>
+
+
+<span class="c1"># upper and lower bounds of uncertain kobs as float values</span>
+
+<span class="c1">################################################################################</span>
+<span class="c1">### Create Confidence band upper and lower bounds</span>
+<span class="c1">################################################################################</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="o">-</span><span class="n">derr</span><span class="p">,</span> <span class="n">derr</span><span class="p">,</span> 
+                   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;lightgray&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">zorder</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                   <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;confidence interval&quot;</span><span class="p">)</span>
+
+<span class="c1">#############################</span>
+<span class="c1">### Output the final plot ###</span>
+<span class="c1">#############################</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s2">&quot;plots/06_plot_pH3_LMFit_residuals.pdf&quot;</span><span class="p">)</span>   <span class="c1"># use this to save the figure in PDF format</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>                 <span class="c1"># output the combined plot plots</span>
+
+
+ 
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mkdir: plots: File exists
+[[Model]]
+    Model(model)
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 32
+    # data points      = 28
+    # variables        = 5
+    chi-square         = 0.09112128
+    reduced chi-square = 0.00396179
+    Akaike info crit   = -150.377515
+    Bayesian info crit = -143.716493
+    R-squared          = 0.99816137
+[[Variables]]
+    ka:   1.74919734 +/- 0.17491554 (10.00%) (init = 1.5)
+    kb:   0.01425714 +/- 0.00462650 (32.45%) (init = 0.015)
+    kc:   0.11988751 +/- 0.00541013 (4.51%) (init = 0.15)
+    kd:   7555.71641 +/- 405.066013 (5.36%) (init = 10000)
+    Ka1:  2.2141e-04 +/- 7.1427e-05 (32.26%) (init = 0.0001)
+[[Correlations]] (unreported correlations are &lt; 0.100)
+    C(kb, Ka1) = -0.7519
+    C(ka, kb)  = -0.5367
+    C(kc, Ka1) = -0.3910
+    C(ka, Ka1) = +0.3678
+    C(kb, kc)  = +0.1240
+
+ka = (1.75+/-0.17)e+00
+kb = (1.43+/-0.46)e-02
+kc = (1.20+/-0.05)e-01
+kd = (7.56+/-0.41)e+03
+pKa = 3.65+/-0.14
+</pre></div>
+</div>
+<img alt="../_images/cce97a4e493c152efafe8d1caa2118b1416937498f64b3dd660c2cba51850195.png" src="../_images/cce97a4e493c152efafe8d1caa2118b1416937498f64b3dd660c2cba51850195.png" />
+<img alt="../_images/ded76d22c899da60d209975017c2b96b89e38792a07edf46ca529603f42cce22.png" src="../_images/ded76d22c899da60d209975017c2b96b89e38792a07edf46ca529603f42cce22.png" />
+</div>
+</div>
+<section id="minimal-code">
+<h3>Minimal Code<a class="headerlink" href="#minimal-code" title="Permalink to this heading">#</a></h3>
+<p>below is the LMFit package used with the minimum amount of code. Note that we don’t need to use a complicated set of plotting commands if we are happy with the default styles.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">rcdefaults</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">model</span><span class="p">(</span><span class="n">pH</span><span class="p">,</span> <span class="n">ka</span> <span class="p">,</span> <span class="n">kb</span><span class="p">,</span> <span class="n">kc</span><span class="p">,</span> <span class="n">kd</span><span class="p">,</span> <span class="n">Ka1</span><span class="p">):</span>    
+    <span class="n">H</span> <span class="o">=</span> <span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="n">pH</span><span class="p">)</span>
+    <span class="n">k_obs</span> <span class="o">=</span> <span class="p">(</span><span class="n">ka</span><span class="o">*</span><span class="p">(</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kb</span> <span class="o">+</span> <span class="n">kc</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span> <span class="o">+</span> <span class="n">kd</span><span class="o">*</span><span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">KW</span><span class="o">/</span><span class="n">H</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">Ka1</span><span class="o">/</span><span class="n">H</span><span class="p">))</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">k_obs</span><span class="p">))</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;logk&quot;</span><span class="p">]</span>
+
+<span class="n">mod</span> <span class="o">=</span> <span class="n">lmfit</span><span class="o">.</span><span class="n">Model</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>  
+<span class="n">result</span> <span class="o">=</span> <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">ka</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">kb</span><span class="o">=</span><span class="mf">0.015</span><span class="p">,</span> <span class="n">kc</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">kd</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span> <span class="n">Ka1</span><span class="o">=</span><span class="mi">10</span><span class="o">**-</span><span class="mi">4</span><span class="p">,</span> <span class="n">pH</span> <span class="o">=</span> <span class="n">x</span><span class="p">)</span>  
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">fit_report</span><span class="p">())</span>
+<span class="n">result</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">numpoints</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[Model]]
+    Model(model)
+[[Fit Statistics]]
+    # fitting method   = leastsq
+    # function evals   = 31
+    # data points      = 28
+    # variables        = 5
+    chi-square         = 0.09112114
+    reduced chi-square = 0.00396179
+    Akaike info crit   = -150.377559
+    Bayesian info crit = -143.716536
+    R-squared          = 0.99816138
+[[Variables]]
+    ka:   1.74957147 +/- 0.17393045 (9.94%) (init = 1.5)
+    kb:   0.01423666 +/- 0.00449439 (31.57%) (init = 0.015)
+    kc:   0.11987217 +/- 0.00542974 (4.53%) (init = 0.15)
+    kd:   7555.77823 +/- 405.070424 (5.36%) (init = 10000)
+    Ka1:  2.2177e-04 +/- 6.2941e-05 (28.38%) (init = 0.0001)
+[[Correlations]] (unreported correlations are &lt; 0.100)
+    C(kb, Ka1) = -0.7343
+    C(ka, kb)  = -0.5294
+    C(kc, Ka1) = -0.3992
+    C(ka, Ka1) = +0.3539
+    C(kb, kc)  = +0.1187
+</pre></div>
+</div>
+<img alt="../_images/1680b5be69cf0a879671a16ce3c1e2432d4815530b02eb22938a1050c0a6058d.png" src="../_images/1680b5be69cf0a879671a16ce3c1e2432d4815530b02eb22938a1050c0a6058d.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_10"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../Class_08/Question5_13.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Chapter 5, Question 13</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Class_11/01-Kirby2_PlotEqsFromPaper.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">1: The Literature Equation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Aspirin Hydrolysis Curve Fits</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-the-data">Plot the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-components-of-the-ph-rate-profile">The Components of the pH-rate Profile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curve-fitting-the-model">Curve Fitting the Model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residual-plot">Residual Plot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#buffer-rate-plot">Buffer Rate Plot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calculation-kw-at-17-degrees">calculation Kw at 17 degrees</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-lmfit">Using LMFit</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minimal-code">Minimal Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
