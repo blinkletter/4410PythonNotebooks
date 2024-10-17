@@ -1,4 +1,4 @@
-"Substituent", "sigma_n",   "sigma_r",   "sigma_I",   "sigma_R+",
+"Substituent", "sigma_n",   "sigma_r",   "sigma_I",   "sigma_R+"
 "p-OCH3",       -0.13,       -0.66,        0.27,      -1.02   
 "m-OCH3",        0.12,           0,        0.12,        0     
 "p-CH3",        -0.12,       -0.20,       -0.04,      -0.25   
