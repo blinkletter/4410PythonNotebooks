@@ -1,0 +1,19 @@
+# Data for pH rate profile of ester hydrolysis
+# Data from "The Hydrolysis of Diclofenac Esters: Synthetic Prodrug Building Blocks for Biodegradable Drug–Polymer Conjugates." Feng Wang, Joshua Finnin et al., J. Pharm. Sci., 2016, 105, 773-785.  https://doi.org/10.1002/jps.24665
+# Hyrolysis of ester 3ab
+"pH", "k1 (10-5 hr-1)", "t1/2 (hr)", "r^2"
+1.00,     4270,         16.3,     0.9895
+1.54,     1010,         68.6,     0.9988
+1.90,      352,        197,       0.9864
+2.80,      102,        679,       0.9989
+3.22,       38.4,     1810,       0.9973
+3.52,       18.9,     3680,       0.9976
+4.02,        8.46,    8190,       0.9857
+4.45,        2.46,   28200,       0.8401
+4.87,        3.02,   23000,       0.8858
+5.34,       13.3,     5230,       0.9906
+5.97,       49.1,     1410,       0.9995
+6.59,      182,        382,       0.9998
+6.93,      412,        168,       0.9999
+7.32,     1050,         66.2,     0.9997
+7.82,     2880,         24.1,     0.9999
