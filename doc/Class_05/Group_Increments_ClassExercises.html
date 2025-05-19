@@ -1,0 +1,1102 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Group Increments &#8212; Chem 4410 Python</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tufte.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Class_05/Group_Increments_ClassExercises';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="07 Handout A-Value Calculations" href="../Class_06/AValueClasshandoutDiscussion.html" />
+    <link rel="prev" title="Group Increments - Handout Discussion - Problems 2 to 4" href="Group_Increments_Class_Handout_Discussion-Problems2to4.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../start.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Chem 4410 Python</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../start.html">
+                    Chem 4410 Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Thermochemistry</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Group_Increments_Class_Handout_Discussion-Problem1.html">Group Increments Handout Discussion - Problem 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Group_Increments_Class_Handout_Discussion-Problem5.html">Group Increments Handout Discussion - Problems 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Group_Increments_Class_Handout_Discussion-Problems2to4.html">Group Increments - Handout Discussion - Problems 2 to 4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Group Increments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_06/AValueClasshandoutDiscussion.html">07 Handout A-Value Calculations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Acid and Bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Correlations.html">Plotting Related <span class="math notranslate nohighlight">\(pK_a\)</span> Values</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/CurveSmoothAndInterpolate.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/H0_Data.html">Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function_Calcs.html">Lesson #3, Meeting #8, Class Problem #1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/HNO3_Acidity_Function.html">HNO<sub>3</sub> Acidity Function Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/LookAheadToKinetics.html">A Look Ahead to Kinetics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_08/Question5_13.html">Chapter 5, Question 13</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Aspirin Hydrolysis</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_10/aspirin_notebook_with_uncertainty.html">Aspirin Hydrolysis Curve Fits</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Kirby Enzyme Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/01-Kirby2_PlotEqsFromPaper.html">1: The Literature Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/02-Kirby2_PlotEqsFromPaper.html">2: The Correct Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/03-Kirby2_PlotEqsFromPaper.html">3: Integrating the Rate Laws</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04-Kirby2_PlotEqsFromPaper.html">4: Numeric Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/05-Kirby2_DataAnalysis.html">5: Abs vs Time Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/06-Kirby2_DataAnalysis.html">6: pH-Rate Data Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_11/04X-Kirby2_PlotEqsFromPaper.html">X: Creating Data Sets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_4_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_5_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_6_Plots.html"><span class="math notranslate nohighlight">\(\sigma\)</span> and <span class="math notranslate nohighlight">\(\sigma ^+\)</span> Plots</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_7_Plots_with_YukawaTsuno.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table_7_Plots.html">Data Sets from the Literature</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_14/Table1and2_ClassExamples.html">Class Discussion Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_15/15-BrownOkamoto_Python_Notebook.html">The Browm-Okamoto Plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_15/15-YukawaTsunoFitNotebook.html">Yukawa-Tsuno Example</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_16/16_Class_Handout_Problems_OLd.html">Class handout Questions and Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_16/16_Class_Handout_Problems.html">Class Handout: Interpretting Table 1 and Discussion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_16/16-EstroneSyn.html">Curved Plot Example</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">LFER 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table1and3.html">Taft Plot Investigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table3.html">Taft Plot Investigations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_17/17-ClassExample-table4and5.html">Taft Plot Investigations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_21/21-Beckman-1.html">Beckmann rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_21/21-Beckman-2.html">Beckmann rate Data</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-1b_calculator.html">Calculating <span class="math notranslate nohighlight">\(k_{A,R}\)</span> for 1b</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-AutoFit.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure2Paper_Hammett_Acid_Rate.html">Figure 4: Hammett Plot for pH = 11.5 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure3Paper_Hammett_Uncat_Rate.html">Figure 4: Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Figure4Paper_Hammett_Acid_Rate.html">Figure 4: Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Acid_Rate.html">Hammett Plot for pH = 1.0 (<span class="math notranslate nohighlight">\(\log{k_{H^+}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Base_Rate.html">Hammett Plot for pH = 11.5 (<span class="math notranslate nohighlight">\(\log{k_{OH^-}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-Hammett_Water_Rate.html">Hammett Plot for pH = 3.8 (<span class="math notranslate nohighlight">\(\log{k_{H_2O}}\)</span> vs <span class="math notranslate nohighlight">\(\sigma\)</span>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_profile_fit.html">pH-rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_Profiles_AutoFit_kHKa.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pH_Profiles_AutoFit.html">pH-rate Data AutoFitter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-pHprofilefor1f.html">pH-rate Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_23/23-ResultsTableCalculations.html">Calculations for Results Tables</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/01A-ActivityOfWaterinH2SO4byWt.html">Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(X_{H_2SO_4}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/01B-ActivityOfWaterinH2SO4byX.html">Activity of water (<span class="math notranslate nohighlight">\(a_{H_2O}\)</span>) vs. <span class="math notranslate nohighlight">\(\text{\%wt }{H_2SO_4}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/02_H2SO4_PercentWt_to_H0.html">Combined <span class="math notranslate nohighlight">\(H_0\)</span> Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/03_H2SO4_Percent_Density_Molarity.html">Combined <span class="math notranslate nohighlight">\(\% H_2SO_4\)</span> Table for Density and Molarity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/03_H2SO4_PercentWt_to_MolarConc.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/04_Cook_1975_HR_Values_Smooth.html">Data Smoothing and Interpolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/04_H0_HR_Comparison.html">Comparison of <span class="math notranslate nohighlight">\(H-0\)</span> data and <span class="math notranslate nohighlight">\(H_R\)</span> data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/interpolators_check.html">Interpolation Tools Quality Check</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-interpolators.html">Interpolation of data tables</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explorations 3 Yates</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig5-HRH0.html">A Plot of <span class="math notranslate nohighlight">\(H_R\)</span> vs. <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig5-HRH0%2BinterpolatorsH0HR-Patches.html">A Plot of <span class="math notranslate nohighlight">\(H_R\)</span> vs. <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig6-MeOAc.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig7-MeOAc.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig8-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(a_{H_2O}\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig10-rate_vs_gammaH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\gamma [H_2O]\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig13-rate_vs_gammaH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\gamma [H_2O]\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig15-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig20-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-Fig23-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Class_30/Yates-FigX-rate_vs_aH2O.html">A Plot of <span class="math notranslate nohighlight">\(k_{obs}\)</span> vs. <span class="math notranslate nohighlight">\(\%H_2SO_4\)</span> or <span class="math notranslate nohighlight">\(H_0\)</span></a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Class_09/CatenaryCurve.html">The Hammond Postulate and Rope</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/blinkletter/4410PythonNotebooks/blob/main/./Class_05/Group_Increments_ClassExercises.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/blinkletter/4410PythonNotebooks" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Source repository"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Class_05/Group_Increments_ClassExercises.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Group Increments</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-the-data">Manipulating the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-data">Using the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculation">Example Calculation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-the-data">A note on the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#another-example">Another Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-benefits-of-a-documented-notebook">The Benefits of a Documented Notebook</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="group-increments">
+<h1>Group Increments<a class="headerlink" href="#group-increments" title="Permalink to this heading">#</a></h1>
+<p>Let us try some calculations in group increments using python as our calculator. First we must load in a data set. I will take the file from the moodle site and place it in the same directory as this notebook. This data was taken from table 2.4 (pg 81) of the textbook.</p>
+<p>The following code will import the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="s2">&quot;Group_Increments.csv&quot;</span>    <span class="c1"># This is the data file in the GitHub repository</span>
+
+<span class="c1">############################</span>
+<span class="c1">### Set global variables ###</span>
+<span class="c1">############################</span>
+
+<span class="n">data_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/data/&quot;</span>
+<span class="n">image_path</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_10/images/&quot;</span>
+
+<span class="n">github_data_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/data/&quot;</span>
+<span class="n">github_styles_location</span> <span class="o">=</span> <span class="s2">&quot;https://raw.githubusercontent.com/blinkletter/LFER-QSAR/main/styles/&quot;</span>
+
+
+
+<span class="n">data_file</span> <span class="o">=</span> <span class="n">github_data_location</span> <span class="o">+</span> <span class="n">data_file</span>
+
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_file</span><span class="p">,</span>    <span class="c1"># create pandas dataframe from data file</span>
+                  <span class="n">delimiter</span> <span class="o">=</span> <span class="s2">&quot;,&quot;</span><span class="p">,</span>           <span class="c1"># data is separated by commas</span>
+                  <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;group&quot;</span><span class="p">,</span>         <span class="c1"># use the column with &quot;group&quot; as a header for the index</span>
+                  <span class="n">comment</span> <span class="o">=</span> <span class="s2">&quot;#&quot;</span><span class="p">,</span>             <span class="c1"># ignore lines in the file that are comments</span>
+                  <span class="n">skipinitialspace</span> <span class="o">=</span> <span class="kc">True</span>    <span class="c1"># ignore extra spaces</span>
+                 <span class="p">)</span> 
+
+<span class="c1">#display(df1.head())     # display first five rows at head of Pandas dataframe</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dHf</th>
+    </tr>
+    <tr>
+      <th>group</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>C-H3C</th>
+      <td>-10.20</td>
+    </tr>
+    <tr>
+      <th>C-H2C2</th>
+      <td>-4.93</td>
+    </tr>
+    <tr>
+      <th>C-HC3</th>
+      <td>-1.90</td>
+    </tr>
+    <tr>
+      <th>C-C4</th>
+      <td>0.50</td>
+    </tr>
+    <tr>
+      <th>Cd-H2</th>
+      <td>6.26</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>N-(CO)C2</th>
+      <td>14.40</td>
+    </tr>
+    <tr>
+      <th>N-(CO)CbH</th>
+      <td>0.40</td>
+    </tr>
+    <tr>
+      <th>N-(CO)2H</th>
+      <td>-18.50</td>
+    </tr>
+    <tr>
+      <th>N-(CO)2C</th>
+      <td>-5.90</td>
+    </tr>
+    <tr>
+      <th>N-(CO)2Cb</th>
+      <td>-0.50</td>
+    </tr>
+  </tbody>
+</table>
+<p>85 rows × 1 columns</p>
+</div></div></div>
+</div>
+<section id="manipulating-the-data">
+<h2>Manipulating the Data<a class="headerlink" href="#manipulating-the-data" title="Permalink to this heading">#</a></h2>
+<p>the data tablein in units of kcal/mole. We usually use kJ/mole so let us convert the numbers to that unit and add a new column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1">#replace n with the number of rows you want to see completely</span>
+
+<span class="n">df1</span><span class="p">[</span><span class="s2">&quot;dHfkJ&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df1</span><span class="p">[</span><span class="s2">&quot;dHf&quot;</span><span class="p">]</span><span class="o">*</span><span class="mf">4.18</span>        <span class="c1"># add a series in units of Kj/mole</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dHf</th>
+      <th>dHfkJ</th>
+    </tr>
+    <tr>
+      <th>group</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>C-H3C</th>
+      <td>-10.20</td>
+      <td>-42.6360</td>
+    </tr>
+    <tr>
+      <th>C-H2C2</th>
+      <td>-4.93</td>
+      <td>-20.6074</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>N-(CO)2C</th>
+      <td>-5.90</td>
+      <td>-24.6620</td>
+    </tr>
+    <tr>
+      <th>N-(CO)2Cb</th>
+      <td>-0.50</td>
+      <td>-2.0900</td>
+    </tr>
+  </tbody>
+</table>
+<p>85 rows × 2 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="using-the-data">
+<h2>Using the Data<a class="headerlink" href="#using-the-data" title="Permalink to this heading">#</a></h2>
+<p>We will extract a single data series out of the dataframe. It will still be indexed by “group”. let us grab just the series that is in kJ/mole and then we can access individual values using the index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="n">df1</span><span class="p">[</span><span class="s2">&quot;dHfkJ&quot;</span><span class="p">]</span>             <span class="c1"># extract a series of group increments in kJ/mole as &quot;i&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>group
+C-H3C    -42.6360
+C-H2C2   -20.6074
+C-HC3     -7.9420
+C-C4       2.0900
+Cd-H2     26.1668
+Name: dHfkJ, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="example-calculation">
+<h2>Example Calculation<a class="headerlink" href="#example-calculation" title="Permalink to this heading">#</a></h2>
+<p>Let us demonstrate the usefulness of using a notebook as a calculator in thermochemistry. Our calculation will be fully documented in the code and any error and be identified and corrected. Others can see exactly how the result was obtained and provide critical analysis of our work. Scientists love to be criticised. (Really, we do. That means somebody read our paper!)</p>
+<p>We can answer one of the problems in 8 from chapter 2. What is the calculated heat of formation of adamantane (and compare it to the experimental value).</p>
+<p><img alt="adamantane" src="https://raw.githubusercontent.com/blinkletter/4410PythonNotebooks/main/Class_05/images/adamantane.png" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">CH2</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>       <span class="c1"># increment for CH2 groups</span>
+<span class="n">CH</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-HC3&quot;</span><span class="p">]</span>         <span class="c1"># increment for CH groups</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The group increment for C-H2C2 is </span><span class="si">{</span><span class="n">CH2</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The group increment for C-HC3 is </span><span class="si">{</span><span class="n">CH</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">Hf</span> <span class="o">=</span> <span class="mi">6</span><span class="o">*</span><span class="n">CH2</span> <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">CH</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the calculated delta Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The group increment for C-H2C2 is -20.61
+The group increment for C-HC3 is -7.94
+the calculated delta Hf is -155.41 kJ/mole
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have calculate the heat of formation of adamantane using group increments as shown above.  The reported observed heat of formation is indicated in problem 8 of chapter 2 and is reported to be -134.25 kJ/mole (-32.12 kcal/mole). We will convert to kJ/mole and then calculate the difference in energy. (Note that the NIST website quotes values from -129 to -139 kJ/mole)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ObsE</span> <span class="o">=</span> <span class="o">-</span><span class="mf">32.12</span><span class="o">*</span><span class="mf">4.184</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the observed delta Hf is </span><span class="si">{</span><span class="n">ObsE</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the calculated delta Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the strain energy is therefore </span><span class="si">{</span><span class="n">ObsE</span><span class="o">-</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the observed delta Hf is -134.39 kJ/mole
+the calculated delta Hf is -155.41 kJ/mole
+the strain energy is therefore +21.02 kJ/mole
+</pre></div>
+</div>
+</div>
+</div>
+<p>Below is another way to do the same math. here I am using the entries in the table directly and splitting the lines (using the “&quot;) so that each entry is on its own line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Hf2</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">6</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">4</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-HC3&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;the calculated delta Hf is </span><span class="si">{</span><span class="n">Hf2</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>the calculated delta Hf is -155.41 kJ/mole
+</pre></div>
+</div>
+</div>
+</div>
+<section id="a-note-on-the-data">
+<h3>A note on the data<a class="headerlink" href="#a-note-on-the-data" title="Permalink to this heading">#</a></h3>
+<p>I didn’t notice it being clearly stated in the textbook but all data is from gas-phase condition in the thermochemistry table (table 2.4). The data from the NIST webbook gives the <span class="math notranslate nohighlight">\(\Delta H_f\)</span> to be between <span class="math notranslate nohighlight">\(-129\)</span> and <span class="math notranslate nohighlight">\(-139\; kJ/mole\)</span></p>
+<p>The most accepted value of <span class="math notranslate nohighlight">\(-134.4\;kJ/mole\)</span> comes from J.B. Pedley, R.D. Naylor, S.P. Kirby, “Thermochemical Data of Organic Compounds”, <em>Chapman and Hall, New York</em>, <strong>1986</strong>, 1-792. See course web-book for access.</p>
+</section>
+</section>
+<section id="another-example">
+<h2>Another Example<a class="headerlink" href="#another-example" title="Permalink to this heading">#</a></h2>
+<p>What are the strain energies in cyclobutanone vs. cyclobutanol. Compare with strain energies in cyclohexanone and cyclohexanol? Which do you think will favour reduction?</p>
+<p>According to the NIST webbook here are some observed experimental values…</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>∆Hf˚ (kJ/mole)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Cyclobutanone</p></td>
+<td class="text-left"><p>-91.6 or -101.1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Cyclobutanol</p></td>
+<td class="text-left"><p>-145</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Hexanone</p></td>
+<td class="text-left"><p>-231.1 or -226</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Hexanol</p></td>
+<td class="text-left"><p>-290.8</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Methylenecyclobutane</p></td>
+<td class="text-left"><p>-106 or -121.5</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Norbornane</p></td>
+<td class="text-left"><p>-54.9</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>And the observed heats of hydrogenation from NIST…</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>∆Hr˚ (kJ/mole)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Cyclobutanone + H2</p></td>
+<td class="text-left"><p>-68 or -53</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Hexanone + H2</p></td>
+<td class="text-left"><p>-75.9 or -63.5</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>2-butanone +H2</p></td>
+<td class="text-left"><p>-54.2</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>3-pentanone + H2</p></td>
+<td class="text-left"><p>-56.7</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>2-pentanone + H2</p></td>
+<td class="text-left"><p>-54.7</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>propanone + H2</p></td>
+<td class="text-left"><p>-55.23</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hf for Cyclobutanone</span>
+
+<span class="n">Hf</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-(CO)CH2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;CO-C2&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cyclobutanone: Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole.  Strain energy is </span><span class="si">{</span><span class="o">-</span><span class="mf">91.6</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hf for Cyclobutanol</span>
+
+<span class="n">Hf</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-OC2H&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;O-CH&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cyclobutanol: Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole.  Strain energy is </span><span class="si">{</span><span class="o">-</span><span class="mi">145</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hf for Cyclohexanone</span>
+
+<span class="n">Hf</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-(CO)CH2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;CO-C2&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cyclohexanone: Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole.  Strain energy is </span><span class="si">{</span><span class="o">-</span><span class="mf">231.1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hf for Cyclohexanol</span>
+
+<span class="n">Hf</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-OC2H&quot;</span><span class="p">]</span>   \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;O-CH&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cyclohexanol: Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole.  Strain energy is </span><span class="si">{</span><span class="o">-</span><span class="mf">290.8</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hf for Methylenecyclobutane  ∆Hf = 121.5 (NIST)</span>
+
+<span class="n">Hf</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-CdCH2&quot;</span><span class="p">]</span>   \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;Cd-C2&quot;</span><span class="p">]</span>   \
+   <span class="o">+</span> <span class="mi">1</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;Cd-H2&quot;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Methylenecyclobutane: Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> kJ/mole.  Strain energy is </span><span class="si">{</span><span class="mf">121.5</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+
+<span class="c1"># print(f&quot;\nTest compared to textbook - Calculated methylenecyclobutene: Hf is {Hf:.2f} kJ/mole. \</span>
+<span class="c1">#         \nStrain energy is {(121.5 - Hf):+.2f} kJ/mole&quot;)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Compare to value of </span><span class="si">{</span><span class="mi">29</span><span class="o">*</span><span class="mf">4.183</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> given in figure 2.15 of book&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hf for Norbornane  ∆Hf = 121.5 (NIST)</span>
+
+<span class="n">Hf</span> <span class="o">=</span> \
+   <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-H2C2&quot;</span><span class="p">]</span>  \
+   <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">[</span><span class="s2">&quot;C-HC3&quot;</span><span class="p">]</span>   
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Norbornane: Hf is </span><span class="si">{</span><span class="n">Hf</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> kJ/mole.  Strain energy is </span><span class="si">{</span><span class="o">-</span><span class="mf">54.9</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Hf</span><span class="si">:</span><span class="s2">+.2f</span><span class="si">}</span><span class="s2"> kJ/mole&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Compare to value of +</span><span class="si">{</span><span class="mf">17.0</span><span class="o">*</span><span class="mf">4.183</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> given in figure 2.15 of book&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Cyclobutanone: Hf is -193.66 kJ/mole.  Strain energy is +102.06 kJ/mole
+Cyclobutanol: Hf is -250.34 kJ/mole.  Strain energy is +105.34 kJ/mole
+Cyclohexanone: Hf is -276.09 kJ/mole.  Strain energy is +44.99 kJ/mole
+Cyclohexanol: Hf is -291.55 kJ/mole.  Strain energy is +0.75 kJ/mole
+
+Methylenecyclobutane: Hf is 8.99 kJ/mole.  Strain energy is +112.51 kJ/mole
+Compare to value of 121.31 given in figure 2.15 of book
+
+Norbornane: Hf is -118.92 kJ/mole.  Strain energy is +64.02 kJ/mole
+Compare to value of +71.11 given in figure 2.15 of book
+</pre></div>
+</div>
+</div>
+</div>
+<section id="discussion">
+<h3>Discussion<a class="headerlink" href="#discussion" title="Permalink to this heading">#</a></h3>
+<p>The strain energy does not significantly change between cyclobutanone and cyclobutanol. This is reflected in the heats of hydrogenation of the pair. they are similar. The heat of hydrogenation is for the group alone since strain energy provides no change.</p>
+<p>The strain energy does change for cyclohexanone and cyclohexanol.  Cyclohexanone has a strain energy component whereas cyclohexanol has almost none (as expected). We observe an extra 10 or 20 kJ/mole released with hydrogenation of cyclohexanone compared to a linear ketone (no data was found for 2- or 3-hexanone so I used data for 2- and 3-pentanone.)</p>
+<p>So cyclohexanol is easier to hydrogenate compared to cyclobutanol. Was that the way you expected it to go?</p>
+</section>
+<section id="the-benefits-of-a-documented-notebook">
+<h3>The Benefits of a Documented Notebook<a class="headerlink" href="#the-benefits-of-a-documented-notebook" title="Permalink to this heading">#</a></h3>
+<p>Initially my results made no sense. Eventually I realized that I had failed to include the group increment for the alcohol oxygen (i[“O-CH”]). Having a set of code that I could check helped locate that error. Also, it would have helped others find my mistake if I had not corrected it. Everyone can see exactly how I calculated the heats of formation.</p>
+<p>It will also be easy to alter the code for cyclopentanone/cyclopentanol and other pairings. Give that a try.</p>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<p>Below are some places that I found data used in this exercise. If you find useful tables or databases please share with the class.</p>
+<hr>
+<p>Heats of combustion from CRC handbook:
+https://hbcp-chemnetbase-com.proxy.library.upei.ca/faces/documents/05_05/05_05_0001.xhtml</p>
+<p>Heats of Formation from Argonne National laboratory:
+https://atct.anl.gov/Thermochemical%20Data/version%201.122r/index.php</p>
+<p>NIST Webbook:
+https://webbook.nist.gov/chemistry/</p>
+<p>See also : “Chemical calculations ; an introduction to the use of mathematics in chemistry”, Sidney W. Benson, <em>Wiley &amp; Sons</em>, <strong>1971</strong>, UPEI library Stacks (2nd floor) QD42.B453 1971</p>
+<p>and</p>
+<p>“Thermochemical Data of Organic Compounds”, J.B. Pedley, R.D. Naylor, S.P. Kirby, <em>Chapman and Hall, New York</em>, <strong>1986</strong>, 1-792 (pirated from the web - honestly, the only legitimate copy that I could find within a library system was in Australia). - There was one error/omission in table 2.4 that I corrected using data from this book. See course web-book for access.</p>
+<p>“Organic Compounds – Physical and Thermochemical Data”.  J.G. Speight, <em>Rules of Thumb for Petroleum Engineers, John Wiley &amp; Sons</em>, <strong>2017</strong>. 539-545.  https://ebookcentral.proquest.com/lib/upei/detail.action?docID=4812517</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hf of benzene </span>
+
+<span class="n">group</span> <span class="o">=</span> <span class="n">i</span><span class="p">[</span><span class="s2">&quot;Cb-H&quot;</span><span class="p">]</span>
+<span class="n">energy</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">group</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The energy is </span><span class="si">{</span><span class="n">energy</span><span class="si">:</span><span class="s2">0.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The energy is 82.76
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./Class_05"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Group_Increments_Class_Handout_Discussion-Problems2to4.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Group Increments - Handout Discussion - Problems 2 to 4</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Class_06/AValueClasshandoutDiscussion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">07 Handout A-Value Calculations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manipulating-the-data">Manipulating the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-data">Using the Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-calculation">Example Calculation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-note-on-the-data">A note on the data</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#another-example">Another Example</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#discussion">Discussion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-benefits-of-a-documented-notebook">The Benefits of a Documented Notebook</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Barry Linkletter
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
