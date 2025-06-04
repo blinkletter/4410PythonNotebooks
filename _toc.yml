@@ -4,13 +4,6 @@
 format: jb-book
 root: start
 parts:
-    - caption: Thermochemistry
-      chapters:
-        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problem1.ipynb
-        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problem5.ipynb
-        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.ipynb
-        - file: Class_05/Group_Increments_ClassExercises.ipynb
-        - file: Class_06/AValueClasshandoutDiscussion.ipynb
     - caption: Acid and Bases
       chapters:
         - file: Class_08/Correlations.ipynb
@@ -20,6 +13,26 @@ parts:
         - file: Class_08/HNO3_Acidity_Function.ipynb
         - file: Class_08/LookAheadToKinetics.ipynb
         - file: Class_08/Question5_13.ipynb    
+    - caption: Meeting  12 - LFER 1
+      chapters:
+        - file: Class_14/Table_4_Plots.ipynb
+        - file: Class_14/Table_5_Plots.ipynb
+        - file: Class_14/Table_6_Plots.ipynb
+        - file: Class_14/Table_7_Plots_with_YukawaTsuno.ipynb
+        - file: Class_14/Table_7_Plots.ipynb
+        - file: Class_14/Table1and2_ClassExamples.ipynb
+    - caption: Meeting 13 - LFER 2
+      chapters:
+        - file: Class_15/15-BrownOkamoto_Python_Notebook.ipynb
+        - file: Class_15/15-YukawaTsunoFitNotebook.ipynb
+        - file: Class_16/16_Class_Handout_Problems_OLd.ipynb
+        - file: Class_16/16_Class_Handout_Problems.ipynb
+        - file: Class_16/16-EstroneSyn.ipynb
+    - caption: LFER 3
+      chapters:
+        - file: Class_17/17-ClassExample-table1and3.ipynb
+        - file: Class_17/17-ClassExample-table3.ipynb
+        - file: Class_17/17-ClassExample-table4and5.ipynb
     - caption: Aspirin Hydrolysis
       chapters:
         - file: Class_10/aspirin_notebook_with_uncertainty.ipynb
@@ -32,26 +45,6 @@ parts:
         - file: Class_11/05-Kirby2_DataAnalysis.ipynb
         - file: Class_11/06-Kirby2_DataAnalysis.ipynb
         - file: Class_11/04X-Kirby2_PlotEqsFromPaper.ipynb
-    - caption: LFER 1
-      chapters:
-        - file: Class_14/Table_4_Plots.ipynb
-        - file: Class_14/Table_5_Plots.ipynb
-        - file: Class_14/Table_6_Plots.ipynb
-        - file: Class_14/Table_7_Plots_with_YukawaTsuno.ipynb
-        - file: Class_14/Table_7_Plots.ipynb
-        - file: Class_14/Table1and2_ClassExamples.ipynb
-    - caption: LFER 2
-      chapters:
-        - file: Class_15/15-BrownOkamoto_Python_Notebook.ipynb
-        - file: Class_15/15-YukawaTsunoFitNotebook.ipynb
-        - file: Class_16/16_Class_Handout_Problems_OLd.ipynb
-        - file: Class_16/16_Class_Handout_Problems.ipynb
-        - file: Class_16/16-EstroneSyn.ipynb
-    - caption: LFER 3
-      chapters:
-        - file: Class_17/17-ClassExample-table1and3.ipynb
-        - file: Class_17/17-ClassExample-table3.ipynb
-        - file: Class_17/17-ClassExample-table4and5.ipynb
     - caption: Explorations 1
       chapters:
         - file: Class_21/21-Beckman-1.ipynb
@@ -98,3 +91,10 @@ parts:
     - caption: Extras
       chapters:
         - file: Class_09/CatenaryCurve.ipynb
+    - caption: Unused - Thermochemistry
+      chapters:
+        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problem1.ipynb
+        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problem5.ipynb
+        - file: Class_05/Group_Increments_Class_Handout_Discussion-Problems2to4.ipynb
+        - file: Class_05/Group_Increments_ClassExercises.ipynb
+        - file: Class_06/AValueClasshandoutDiscussion.ipynb
