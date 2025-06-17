@@ -10,7 +10,7 @@
 # Units for rate constants are 10^-3 M^-1 s^-1
 #
 Substituent, Substituent2,      sigma,           k(OH)X1000
-m-OCH3,          3-MeO,          0.12,           3.92
+m-OCH3,          3-MeO,          0.11,           3.92
 p-N(CH3)2,       4-NMe2,        -0.83,           0.0634
 p-Cl,            4-Cl,           0.23,          11.7
 m-Cl,            3-Cl,           0.37,          18.2
@@ -29,7 +29,7 @@ H,               H,              0,              2.89
 m-CH3,           3-Me,          -0.07,           1.69
 p-CH3,           4-Me,          -0.17,           1.14
 o-CN,            2-CN,           1.06,         122
-o-OEt,           2-EtO,         -0.01,           1.16
+o-OCH3,           2-MeO,         0.12,           1.16
 o-CH3,           2-Me,           0.29,           0.338
 o-Cl,            2-Cl,           1.26,           4.40
 o-NO2,           2-NO2,          2.03,          16.9
