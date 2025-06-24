@@ -1,0 +1,33 @@
+﻿## data from table 1 of "Linear Free Energy Relationships from Rates of 
+# Esterification for Hydrolysis of Aliphatic Ortho-substituted Benzoate Esters""
+# Robert W. Taft Jr.
+# Journal of the American Chemical Society, 1952, 74, 2729-2732
+# https://doi.org/10.1021/ja01131a010
+#
+# Values are log(k_X/k_Me)
+#
+"Sub",    "acid ratio",    "acid Error",    "base ratio",    "base error"
+H,                1.24,            0.09,            2.46,           0.12
+CH3,              0,               0.06,            0,              0.08
+C2H5,            -0.07,            0.02,           -0.31,           0.05
+n-C3H7,          -0.36,            0.02,           -0.64,           0.09
+n-C4H9,          -0.39,            0.05,           -0.71,           0.09
+n-C5H11,         -0.4,             0.07,           -0.55,           0.02
+i-C5H11,         -0.35,            0.01,                ,           
+CH2C6C5,         -0.38,            0.04,            0.17,           0.03
+CH2CH2C6H5,      -0.43,            0.09,           -0.14,           0.01
+CH2CH2CH2C6H5,   -0.45,            0.06,           -0.4,            0.02
+i-C3H7,          -0.47,            0.06,           -0.94,           0.08
+c-C6H11,         -0.79,            0.17,                ,           
+i-C4H9,          -0.93,            0.1,            -1.24,           0.06
+CH2-c-C6H11,     -0.98,            0.05,           -1.13,           
+CH(CH3)(C2H5),   -1.13,            0.16,                ,           
+CHMePh,          -1.19,            0.07,           -0.93,           
+CHPhEt,          -1.5,             0.1,            -1.42,           
+t-C4H9,          -1.54,            0.02,           -2.38,           0.12
+CHPh2,           -1.76,            0.15,           -1.09,           
+CHEt2,           -1.98,            0.28,           -2.7,            0.06
+CHCHPh,          -1.99,            ,               -0.75,           0.09
+CCl3,            -2.06,            ,                    ,           
+C6H5,            -2.55,            0.08,           -1.06,           0.04
+CH2Cl,           -0.19,            0.05,                ,           

@@ -1,0 +1,45 @@
+﻿## data from table 1 of "Linear Free Energy Relationships from Rates of 
+# Esterification for Hydrolysis of Aliphatic Ortho-substituted Benzoate Esters""
+# Robert W. Taft Jr.
+# Journal of the American Chemical Society, 1952, 74, 2729-2732
+# https://doi.org/10.1021/ja01131a010
+#
+# rates are calculated from the ratios of the rates of hydrolysis of ethyl acetate
+# reported in "The activation energy of organic reactions. Part III. 
+# The kinetics of acid hydrolysis of esters."
+# E. W. Timm, C. N. Hinshelwood  
+# J. Chem. Soc., 1938, 862-869
+# https://doi.org/10.1039/JR9380000862
+#
+# acid rate chosen was 43e-6 at 25 deg c in 60% acetone.
+# base rate chose was 0.112 M-1 s-1 at 25 deg as per "The Reaction Rate of the 
+# Alkaline Hydrolysis of Ethyl Acetate", Hiroo Tsujikawa, Hakuai Inoue, 
+# Bulletin of the Chemical Society of Japan, 39, 1966, Pages 1837–1842, 
+# https://doi-org.proxy.library.upei.ca/10.1246/bcsj.39.1837
+#
+#
+"Sub",     "acid rate (s-1)", "acid err", "base rate (M-1s-1)",  "base err"
+H,                 7.473e-04,  1.549e-04,        3230.e-02,   893.e-02
+CH3,               4.300e-05,  5.941e-06,        11.20e-02,     2.06e-02
+C2H5,              3.660e-05,  1.685e-06,        5.486e-02,     0.632e-02
+n-C3H7,            1.877e-05,  8.644e-07,        2.566e-02,     0.532e-02
+n-C4H9,            1.752e-05,  2.017e-06,        2.184e-02,     0.453e-02
+n-C5H11,           1.712e-05,  2.759e-06,        3.157e-02,     0.145e-02
+i-C5H11,           1.921e-05,  4.423e-07,                 ,             
+CH2C6C5,           1.793e-05,  1.651e-06,        16.57e-02,      1.14e-02 
+CH2CH2C6H5,        1.598e-05,  3.311e-06,        8.114e-02,      0.187e-02
+CH2CH2CH2C6H5,     1.526e-05,  2.108e-06,        4.459e-02,      0.205e-02
+i-C3H7,            1.457e-05,  2.013e-06,        1.286e-02,      0.237e-02
+c-C6H11,           6.974e-06,  2.730e-06,                 ,               
+i-C4H9,            5.052e-06,  1.163e-06,        0.645e-02,      0.089e-02
+CH2-c-C6H11,       4.503e-06,  5.184e-07,        0.833e-02,                
+CH(CH3)(C2H5),     3.188e-06,  1.174e-06,                 ,               
+CHMePh,            2.776e-06,  4.475e-07,        1.316e-02,               
+CHPhEt,            1.360e-06,  3.131e-07,        0.426e-02,               
+t-C4H9,            1.240e-06,  5.711e-08,        0.047e-02,      0.013e-02
+CHPh2,             7.473e-07,  2.581e-07,        0.910e-02,              
+CHEt2,             4.503e-07,  2.903e-07,        0.022e-02,      0.0031e-02
+CHCHPh,            4.400e-07,       ,            1.992e-02,      0.413e-02     
+CCl3,              3.745e-07,       ,                     ,                   
+C6H5,              1.212e-07,  2.232e-08,        0.976e-02,      0.090e-02
+CH2Cl,             2.776e-05,  3.196e-06,                 ,          
