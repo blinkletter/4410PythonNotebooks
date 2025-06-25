@@ -8,6 +8,13 @@
 # We have access to the E-textbook version via the UPEI library.
 # https://ebookcentral.proquest.com/lib/upei/detail.action?docID=1185543
 #
+# Original raw data from "Kinetic Studies of the Hydrolysis of Esters. I. Alkaline
+# Hydrolysis of Esters of Substituted Benzoic Acids", 
+# E. Tommila, , Ann. Acad. Sci. Fennicae, 1941, Ser A57, 3.
+# Interlibrary loan
+#
+# NOT COMPLETE YET
+#
 # Units for rate constants are 10^-3 M^-1 s^-1
 #                                                 k(OH)X1000 at four temperatures
 Substituent, Substituent2,      sigma,         T_1,            k_1,           T_2,         k_2,       T_3,        k_3,       T_4,    k_4       
