@@ -1,0 +1,9 @@
+Ligand,     Group,   Substituent,         Ph(CO)H,   PhCH2CH2(CO)H,  Ph(CO)CH3
+1a,         t-Bu,        C(CH3)3,         96,        74,             69
+1b,         Me,          CH3,             60,        51,             25
+1c,         Et,          C2H5,            65.5,      52.5,           24
+1d,         i-Pr,        CH(CH3)2,        82.5,      56.5,           37.5
+1e,         1-Adamantyl,1-Adamantyl,       96,        73.5,           72
+1f,         n-Pr2CH,     CH(C3H7)2,       73,            ,           37.5
+1g,         i-Pr2CH,     CH(CH(CH3)2)2,   77.5,          ,           55
+1h,         Et3C   ,     C(C2H5)3,        91.5,          ,           61.5
