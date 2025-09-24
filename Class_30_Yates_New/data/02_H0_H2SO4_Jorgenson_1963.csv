@@ -1,0 +1,37 @@
+### Data from table 3 of 
+###
+### A Critical Re-evaluation of the Hammett Acidity Function at Moderate and High Acid Concentrations of Sulfuric Acid. New H0 Values Based Solely on a Set of Primary Aniline Indicators
+### Margaret J. Jorgenson and Donald R. Hartter
+### Journal of the American Chemical Society, 1963, 85, 878-883
+### https://doi.org/10.1021/ja00890a009
+### 
+### Temp = 25.0 deg C
+### Concentrations in %wt H2SO4 
+###
+"%H2SO4",  "H0"
+60,        -4.46
+62,        -4.70
+64,        -4.95
+66,        -5.20
+68,        -5.50
+70,        -5.80
+72,        -6.10
+74,        -6.41
+76,        -6.71
+78,        -7.03
+80,        -7.34
+82,        -7.66
+84,        -7.97
+85,        -8.14
+86,        -8.29
+88,        -8.61
+90,        -8.92
+92,        -9.29
+94,        -9.68
+95,        -9.85
+96,        -10.03
+97,        -10.21
+98,        -10.41
+98.82,     -10.62
+99.27,     -10.92
+99.44,     -11.12

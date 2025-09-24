@@ -1,0 +1,59 @@
+### Data from table VI of 
+###
+### "Acidity functions and the protonation of weak bases. VIII. Temperature variation of the Hr acidity function in aqueous sulfuric acid."
+### M. J. Cook, N. L. Dassanayake, C. D. Johnson, A. R. Katritzky, and T. W. Toone
+### Journal of the American Chemical Society 1975 97 (4), 760-764
+### https://doi.org/10.1021/ja00837a012
+### 
+### HR values
+### in various sulfuric acid mixtures
+###
+### Temp = 25.0 deg C
+### Note: This paper has values for othjer temperatures as well.
+"%H2SO4", "HR"
+ 6,         -0.08
+ 8,         -0.03
+10,         -0.55
+12,         -0.78
+14,         -1.02
+16,         -1.25
+18,         -1.50
+20,         -1.75
+22,         -2.05
+24,         -2.23
+26,         -2.55
+28,         -2.85
+30,         -3.15
+32,         -3.45
+34,         -3.75
+36,         -4.15
+38,         -4.60
+40,         -5.00
+42,         -5.35
+44,         -5.80
+46,         -6.20
+48,         -6.60
+50,         -7.05
+52,         -7.45
+56,         -8.40
+58,         -9.00
+60,         -9.50
+62,         -10.00
+64,         -10.50
+66,         -11.00
+68,         -11.55
+70,         -12.05
+72,         -12.55
+74,         -13.05
+76,         -13.50
+78,         -13.95
+80,         -14.34
+82,         -14.80
+84,         -15.30
+86,         -15.80
+88,         -16.15
+90,         -16.75
+
+
+
+
