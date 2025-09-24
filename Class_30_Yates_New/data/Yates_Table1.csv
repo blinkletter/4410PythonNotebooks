@@ -1,0 +1,131 @@
+### Data from table 1 of 
+###
+### "Mechanisms of ester hydrolysis in aqueous sulfuric acids"
+### Keith. Yates and Robert A. McClelland
+### Journal of the American Chemical Society 1967 89 (11), 2686-2692
+### https://doi.org/10.1021/ja00987a033
+### mcclelland-yates-2002-mechanisms-of-ester-hydrolysis-in-aqueous-sulfuric-acids.pdf
+### ja00987a033_Yates.pdf
+###
+### rates of hydrolysis of various esters
+### in various sulfuric acid mixtures
+###
+### Temp = 25.0 deg C
+### kobs units are (/ 10-2 min-1)
+###
+### NOTE: values for MeOAc where %H2SO4 > 80.0% are digitized from figure #1 and figure #3. Calculations were required to convert the data from F3 to the same format as F1 but bot sets of data were very close. the data from F3 is presented as it was more precise (better resolution in image used).
+###
+"Ester", "%H2SO4",  "10^2kobs"
+MeOAc,       14.1,          1.50
+MeOAc,       20.7,          2.61
+MeOAc,       28.3,          4.22
+MeOAc,       34.8,          6.41
+MeOAc,       40.4,          8.14
+MeOAc,       45.4,         10.4
+MeOAc,       50.2,         11.4
+MeOAc,       55.2,         13.3
+MeOAc,       60.4,         13.8
+MeOAc,       65.2,         11.9
+MeOAc,       70.4,          7.25
+MeOAc,       74.1,          3.83
+MeOAc,       80.0,          0.931
+MeOAc,       90.02,         0.72   # Digitized Data
+MeOAc,       95.69,         1.38   # Digitized Data
+MeOAc,       99.13,         1.44   # Digitized Data
+nPrOAc,      14.1,          1.47
+nPrOAc,      20.7,          2.52
+nPrOAc,      30.2,          5.23
+nPrOAc,      34.8,          6.78
+nPrOAc,      40.4,          8.47
+nPrOAc,      45.4,          9.76
+nPrOAc,      50.2,         11.4
+nPrOAc,      55.2,         11.5
+nPrOAc,      60.4,         10.4
+nPrOAc,      65.2,          8.23
+nPrOAc,      70.4,          4.48
+nPrOAc,      74.1,          2.20
+nPrOAc,      89.7,          0.205
+nPrOAc,      95.0,          0.323
+nPrOAc,      98.6,          0.450
+iPrOAc,      14.1,          0.890
+iPrOAc,      25.3,          1.99
+iPrOAc,      34.8,          3.30
+iPrOAc,      40.4,          4.21
+iPrOAc,      45.4,          4.96
+iPrOAc,      50.2,          5.38
+iPrOAc,      55.2,          5.48
+iPrOAc,      60.4,          4.54
+iPrOAc,      65.2,          3.60
+iPrOAc,      70.4,          1.80
+iPrOAc,      74.1,          1.14
+iPrOAc,      80.0,          1.48
+iPrOAc,      81.7,          2.30
+iPrOAc,      84.7,          4.69
+iPrOAc,      88.2,         11.2
+iPrOAc,      89.7,         13.5
+iPrOAc,      90.8,         17.0
+secBuOAc,    14.1,          0.964
+secBuOAc,    45.4,          4.72
+secBuOAc,    50.2,          5.00
+secBuOAc,    55.2,          5.02
+secBuOAc,    60.4,          3.96
+secBuOAc,    65.2,          2.99
+secBuOAc,    70.4,          1.71
+secBuOAc,    74.1,          2.03
+secBuOAc,    77.7,          3.90
+secBuOAc,    80.0,          7.00
+secBuOAc,    81.7,         11.00
+secBuOAc,    84.7,         23.6
+secBuOAc,    88.2,         63.2
+BnOAc,       10.1,          0.74
+BnOAc,       25.3,          2.52
+BnOAc,       30.2,          4.04
+BnOAc,       34.8,          4.61
+BnOAc,       40.4,          6.08
+BnOAc,       45.4,          7.13
+BnOAc,       50.2,          9.81
+BnOAc,       52.8,          9.30
+BnOAc,       55.2,          9.91
+BnOAc,       60.4,          8.52
+BnOAc,       62.5,          9.24
+BnOAc,       65.2,         10.1
+BnOAc,       66.8,         13.7
+BnOAc,       67.3,         15.7
+BnOAc,       69.0,         22.3
+PhOAc,       15.1,          1.08
+PhOAc,       20.1,          1.62
+PhOAc,       25.3,          2.38
+PhOAc,       30.2,          3.30
+PhOAc,       34.8,          4.34
+PhOAc,       40.4,          6.20
+PhOAc,       45.4,          8.36
+PhOAc,       50.2,         10.9
+PhOAc,       55.2,         14.5
+PhOAc,       60.4,         19.2
+PhOAc,       65.2,         22.6
+PhOAc,       70.4,         27.2
+PhOAc,       74.1,         29.3
+p-ClPhOAc,   15.1,          0.922
+p-ClPhOAc,   34.8,          4.25
+p-ClPhOAc,   45.4,          7.90
+p-ClPhOAc,   55.2,         13.4
+p-ClPhOAc,   65.2,         22.7
+p-ClPhOAc,   70.4,         27.3
+p-ClPhOAc,   74.1,         38.2
+p-NO2PhOAc,  15.1,          0.751
+p-NO2PhOAc,  20.1,          1.12
+p-NO2PhOAc,  25.3,          1.52
+p-NO2PhOAc,  30.2,          2.36
+p-NO2PhOAc,  34.8,          3.09
+p-NO2PhOAc,  40.4,          4.27
+p-NO2PhOAc,  45.4,          5.71
+p-NO2PhOAc,  50.2,          7.81
+p-NO2PhOAc,  55.2,         10.8
+p-NO2PhOAc,  60.4,         15.2
+p-NO2PhOAc,  65.2,         21.3
+p-NO2PhOAc,  70.4,         36.1
+p-NO2PhOAc,  74.1,         70.5
+p-NO2PhOAc,  75.3,         93.3
+p-NO2PhOAc,  77.7,        161
+p-NO2PhOAc,  78.5,        158
+p-NO2PhOAc,  80.0,        222
