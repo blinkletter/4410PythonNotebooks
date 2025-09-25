@@ -1,0 +1,28 @@
+### Data for hydrolysis of ethyl acetate from
+### "The Hydrolysis of Ethyl Acetate in Concentrated Aqueous Sulphuric Acid." 
+### D. Jaques, J. Chem. Soc. 1965, 3854–3904. https://doi.org/10.1039/JR9650003854.
+### jr9650003854.pdf
+### and "The Kinetics of Ester Hydrolysis in Concentrated Aqueous Acids." 
+### R.P. Bell, A.L. Dowding, J.A. Noble, J. Chem. Soc. 1955, 3106–3110. https://doi.org/10.1039/JR9550003106.
+### jr9550003106.pdf
+###
+###
+### rates of hydrolysis of ethyl acetate
+### in various sulfuric acid mixtures
+###
+### Temp = 25.0 deg C
+### kobs units are (/ min-1)
+###
+###
+### and "The Kinetics of Ester Hydrolysis in Concentrated Aqueous Acids." 
+### R.P. Bell, A.L. Dowding, J.A. Noble, J. Chem. Soc. 1955, 3106–3110. https://doi.org/10.1039/JR9550003106.
+"[H2SO4] mole/L",    "10^5 kobs",   "H0"
+1.35,              18.8,             -0.31 
+1.37,              19.8,             -0.33
+1.87,              30.9,             -0.62
+2.85,              56.1,             -1.15
+3.08,              65.5,             -1.25
+3.63,              79.7,             -1.50
+4.25,              104,              -1.80
+4.76,              128,              -2.05
+6.75,              192,              -3.03

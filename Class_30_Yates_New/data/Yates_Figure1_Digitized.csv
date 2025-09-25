@@ -12,7 +12,7 @@
 ### Data for Methyl Acetate
 ### Temp = 25.0 deg C
 ### x is log % H2SO4
-### y is 10^2 kobs
+### y is 10^2 kobs (min^-1)
 ###
 "%H2SO4",     "10^2kobs"
 14.48,       1.52

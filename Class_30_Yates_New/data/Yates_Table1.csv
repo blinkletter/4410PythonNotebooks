@@ -14,6 +14,11 @@
 ### kobs units are (/ 10-2 min-1)
 ###
 ### NOTE: values for MeOAc where %H2SO4 > 80.0% are digitized from figure #1 and figure #3. Calculations were required to convert the data from F3 to the same format as F1 but bot sets of data were very close. the data from F3 is presented as it was more precise (better resolution in image used).
+### NOTE: values for EtOac from...
+### "The Hydrolysis of Ethyl Acetate in Concentrated Aqueous Sulphuric Acid." D. Jaques, J. Chem. Soc. 1965, 3854–3904. https://doi.org/10.1039/JR9650003854.
+### and "The Kinetics of Ester Hydrolysis in Concentrated Aqueous Acids." R.P. Bell, A.L. Dowding, J.A. Noble, J. Chem. Soc. 1955, 3106–3110. https://doi.org/10.1039/JR9550003106.
+###
+###
 ###
 "Ester", "%H2SO4",  "10^2kobs"
 MeOAc,       14.1,          1.50

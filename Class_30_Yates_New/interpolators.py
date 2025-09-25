@@ -41,6 +41,32 @@ def MakeInterpolationFunctionForH0inH2SO4byPercentWt():
 
 
 ###################################################
+### Create Interpolation Function for %H2SO4 from H0 from Tickle
+###################################################
+
+# This is the same as above but gets %H2SO4 from H0
+
+def MakeInterpolationFunctionForH2SO4byPercentWtinH0():
+    Data_File_Name = "02_H0_H2SO4_Tickle_1970.csv"
+
+    Filename = github_location + Data_File_Name
+    
+    df = pd.read_csv(Filename, 
+                     delimiter = ",", 
+                     skipinitialspace=True, 
+                     comment = "#") 
+    df_sorted = df.sort_values(by="H0", ascending=True). # interpolator required x-axis to be accending in order to work
+    y = df["%H2SO4"]
+    x = df["H0"]
+    
+    interpolation = make_smoothing_spline(x, y,      ### The x and y data
+                                          w=None,    ### A list of weights for each point (default = None)
+                                          lam=5)   ### A factor for the degree of smoothing. Change this to change the smoothness.
+    
+    return(interpolation)
+
+
+###################################################
 ### Create Interpolation Function for HR from %H2SO4
 ###################################################
 

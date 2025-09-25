@@ -1,0 +1,32 @@
+### Data from Figure 3 of 
+###
+### "Mechanisms of ester hydrolysis in aqueous sulfuric acids"
+### Keith. Yates and Robert A. McClelland
+### Journal of the American Chemical Society 1967 89 (11), 2686-2692
+### https://doi.org/10.1021/ja00987a033
+### mcclelland-yates-2002-mechanisms-of-ester-hydrolysis-in-aqueous-sulfuric-acids.pdf
+###
+### rates of hydrolysis of various esters
+### in various sulfuric acid mixtures
+###
+### Data for Methyl Acetate
+### Temp = 25.0 deg C
+### x is log % H2SO4
+### y is 10^2 kobs (min^-1)
+###
+"%H2SO4",     "10^2kobs"
+14.47784938,1.547557841
+20.96274223,2.637532134
+28.46957243,4.241645244
+35.18375275,6.42159383
+40.67627699,8.16966581
+45.77714503,10.3907455
+55.73921865,13.33161954
+60.59523672,13.84575835
+65.39056106,11.95372751
+70.92302904,7.285347044
+74.4624598,3.604113111
+80.24807774,0.971722365
+89.9289889,0.766066838
+95.59581311,1.424164524
+99.02786264,1.485861183
