@@ -55,9 +55,9 @@ def MakeInterpolationFunctionForH2SO4byPercentWtinH0():
                      delimiter = ",", 
                      skipinitialspace=True, 
                      comment = "#") 
-    df_sorted = df.sort_values(by="H0", ascending=True). # interpolator required x-axis to be accending in order to work
-    y = df["%H2SO4"]
-    x = df["H0"]
+    df_sorted = df.sort_values(by="H0", ascending=True) # interpolator required x-axis to be accending in order to work
+    y = df_sorted["%H2SO4"]
+    x = df_sorted["H0"]
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
@@ -194,6 +194,34 @@ def MakeInterpolationFunctionForDensityofH2SO4byPercentWt():
     
     y = df['Density']
     x = df['%H2SO4']
+    
+    interpolation = make_smoothing_spline(x, y,     ### The x and y data
+                                          w=None,   ### A list of weights for each point (default = None)
+                                          lam=5)  ### A factor for the degree of smoothing. Change this to change the smoothness.
+
+    return(interpolation)
+
+
+###################################################
+### Create Interpolation Function for %H2SO4 from Molarity
+###################################################
+
+# The Density of 100% H2SO4 is 1.831
+
+### This function below could be in an external library that you call in your own program.
+
+def MakeInterpolationFunctionMolarToH2SO4byPercentWt():
+    Data_File_Name = "03_H2SO4_PercentWt_to_MolarConc_CRC.csv"
+
+    Filename = github_location + Data_File_Name
+    
+    df = pd.read_csv(Filename, 
+                     delimiter = ",", 
+                     skipinitialspace=True, 
+                     comment = "#") 
+    
+    x = df['mol/L']
+    y = df['%H2SO4']
     
     interpolation = make_smoothing_spline(x, y,     ### The x and y data
                                           w=None,   ### A list of weights for each point (default = None)
