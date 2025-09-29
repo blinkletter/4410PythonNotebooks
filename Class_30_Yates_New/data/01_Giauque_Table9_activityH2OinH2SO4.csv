@@ -5,6 +5,10 @@
 ### Journal of the American Chemical Society 1960 82 (1), 62-70
 ### DOI: 10.1021/ja01486a014
 ### 
+### a_H2O values determined with isopiestic method (fractionalo vapour pressure)
+### a_H2O = activity coefficient * mole fraction
+### https://en.wikipedia.org/wiki/Water_activity
+###
 ### Activity coefficient of water in sulfuric acid
 ###
 ### Temp = 25.0 deg C
@@ -52,4 +56,5 @@
  300,              1.38E-5,   2.83,           96.7131212200894,             0.84375
  400,              7.87E-6,   2.19,           97.51441638496719,            0.8780487804878049
  500,              5.20E-6,   1.78,           98.00159872102319,            0.9
-1000,              1.50E-7,   0.92,           98.99071457408155,            0.9473684210526315
+1000,              1.50E-6,   0.92,           98.99071457408155,            0.9473684210526315
+#1000000000,        1.56E-9,   0,              100.0,                         1

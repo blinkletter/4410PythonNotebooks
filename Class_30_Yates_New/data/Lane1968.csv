@@ -1,0 +1,44 @@
+### Data for hydrolysis of ethyl acetate from
+### "The Hydrolysis of Ethyl Acetate in Concentrated Aqueous Sulphuric Acid." 
+### D. Jaques, J. Chem. Soc. 1965, 3854–3904. https://doi.org/10.1039/JR9650003854.
+### jr9650003854.pdf
+### and "The Kinetics of Ester Hydrolysis in Concentrated Aqueous Acids." 
+### R.P. Bell, A.L. Dowding, J.A. Noble, J. Chem. Soc. 1955, 3106–3110. https://doi.org/10.1039/JR9550003106.
+### jr9550003106.pdf
+### and "The Possibility of a Cyclic Mechanism for Acid-Catalyzed Ester Hydrolysis."
+### C.A. Lane, M.F. Cheung, G.F. Dorsey, J. Am. Chem. Soc. 1968, 90, 6492–6494. https://doi.org/10.1021/ja01025a046.
+### cheung-et-al-2002-the-possibility-of-a-cyclic-mechanism-for-acid-catalyzed-ester-hydrolysis.pdf
+###
+###
+### rates of hydrolysis of ethyl acetate
+### in various sulfuric acid mixtures
+###
+### Temp = 25.0 deg C
+### kobs units are (/ s-1)
+### k_BH units are (/ s-1)
+###
+###
+### and "The Possibility of a Cyclic Mechanism for Acid-Catalyzed Ester Hydrolysis."
+### C.A. Lane, M.F. Cheung, G.F. Dorsey, J. Am. Chem. Soc. 1968, 90, 6492–6494. https://doi.org/10.1021/ja01025a046.
+###
+"%[H2SO4]",  "H0",   "10^3 kobs",   "BH+/B",   "10^2 k_BH",     "a_H2O"
+12.2,        -0.46,    0.188,       6.76E-5,      278,          0.942                           
+16.4,        -0.76,    0.309,       1.05E-4,      294,          0.914                       
+23.9,        -1.29,    0.561,       2.32E-4,      242,          0.836                           
+25.5,        -1.41,    0.655,       2.76E-4,      237,          0.816                           
+29.4,        -1.68,    0.797,       4.14E-4,      193,          0.761                           
+33.43,       -1.96,    1.04,        6.24E-4,      167,          0.694                           
+36.67,       -2.18,    1.28,        8.71E-4,      147,          0.633                           
+43.56,       -2.72,    1.66,        1.96E-3,       84.8,        0.490                            
+47.00,       -3.06,    1.785,       3.18E-3,       56.3,        0.415                             
+48.00,       -3.17,    1.92,        3.76E-3,       51.2,        0.393                            
+51.55,       -3.55,    1.86,        6.61E-3,       28.3,        0.317                            
+55.60,       -3.98,    1.97,        1.24E-2,       16.1,        0.238                           
+56.25,       -4.05,    1.84,        1.39E-2,       13.4,        0.225                            
+59.18,       -4.37,    1.84,        2.21E-2,        8.49,       0.176                             
+59.88,       -4.45,    1.83,        2.51E-2,        7.48,       0.164                            
+66.32,       -5.25,    1.21,        8.26E-2,        1.58,       0.078                            
+68.97,       -5.64,    0.903,       1.47E-1,        0.704,      0.054                              
+69.88,       -5.79,    0.903,       1.83E-1,        0.584,      0.047                              
+73.55,       -6.33,    0.444,       4.16E-1,        0.151,      0.0241                              
+78.80,       -7.16,    0.0918,      1.41,           0.0157,     0.00769                           

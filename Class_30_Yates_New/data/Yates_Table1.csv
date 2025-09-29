@@ -20,7 +20,7 @@
 ###
 ###
 ###
-"Ester", "%H2SO4",  "10^2kobs"
+"Ester", "%H2SO4",  "kobs"
 MeOAc,       14.1,          1.50
 MeOAc,       20.7,          2.61
 MeOAc,       28.3,          4.22
@@ -34,9 +34,38 @@ MeOAc,       65.2,         11.9
 MeOAc,       70.4,          7.25
 MeOAc,       74.1,          3.83
 MeOAc,       80.0,          0.931
-MeOAc,       90.02,         0.72   # Digitized Data
-MeOAc,       95.69,         1.38   # Digitized Data
-MeOAc,       99.13,         1.44   # Digitized Data
+MeOAc,       90.02,         0.72    # Digitized Data         
+MeOAc,       95.69,         1.38    # Digitized Data         
+MeOAc,       99.13,         1.44    # Digitized Data         
+EtOAc,       12.2,          1.128  # From Lane/Bell/Jaques
+EtOAc,       16.4,          1.854  # From Lane/Bell/Jaques
+EtOAc,       23.9,          3.366  # From Lane/Bell/Jaques
+EtOAc,       25.5,          3.93   # From Lane/Bell/Jaques
+EtOAc,       29.4,          4.782  # From Lane/Bell/Jaques
+EtOAc,       33.43,         6.24   # From Lane/Bell/Jaques
+EtOAc,       36.67,         7.68   # From Lane/Bell/Jaques
+EtOAc,       43.56,         9.96   # From Lane/Bell/Jaques
+EtOAc,       47,           10.71   # From Lane/Bell/Jaques
+EtOAc,       48,           11.52   # From Lane/Bell/Jaques
+EtOAc,       51.55,        11.16   # From Lane/Bell/Jaques
+EtOAc,       55.6,         11.82   # From Lane/Bell/Jaques
+EtOAc,       56.25,        11.04   # From Lane/Bell/Jaques
+EtOAc,       59.18,        11.04   # From Lane/Bell/Jaques
+EtOAc,       59.88,        10.98   # From Lane/Bell/Jaques
+EtOAc,       61.0,         10.0    # From Lane/Bell/Jaques
+EtOAc,       65.0,          8.91   # From Lane/Bell/Jaques
+EtOAc,       66.32,         7.26   # From Lane/Bell/Jaques
+EtOAc,       68.97,         5.418  # From Lane/Bell/Jaques
+EtOAc,       69.88,         5.418  # From Lane/Bell/Jaques
+EtOAc,       71.4,          3.77   # From Lane/Bell/Jaques
+EtOAc,       73.55,         2.664  # From Lane/Bell/Jaques
+EtOAc,       75.4,          2.94   # From Lane/Bell/Jaques
+EtOAc,       78.8,          0.551 # From Lane/Bell/Jaques
+EtOAc,       80.2,          0.392  # From Lane/Bell/Jaques
+EtOAc,       84.4,          0.188  # From Lane/Bell/Jaques
+EtOAc,       90.0,          0.305  # From Lane/Bell/Jaques
+EtOAc,       98.4,          0.656  # From Lane/Bell/Jaques
+EtOAc,       100.0,         0.746  # From Lane/Bell/Jaques
 nPrOAc,      14.1,          1.47
 nPrOAc,      20.7,          2.52
 nPrOAc,      30.2,          5.23

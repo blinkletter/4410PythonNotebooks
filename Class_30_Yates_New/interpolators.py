@@ -20,6 +20,10 @@ from scipy.interpolate import make_smoothing_spline               # A function f
 github_location = "./data/"
 
 
+
+
+
+
 def MakeInterpolationFunctionForH0inH2SO4byPercentWt():
     Data_File_Name = "02_H0_H2SO4_Tickle_1970.csv"
 
@@ -194,6 +198,34 @@ def MakeInterpolationFunctionForDensityofH2SO4byPercentWt():
     
     y = df['Density']
     x = df['%H2SO4']
+    
+    interpolation = make_smoothing_spline(x, y,     ### The x and y data
+                                          w=None,   ### A list of weights for each point (default = None)
+                                          lam=5)  ### A factor for the degree of smoothing. Change this to change the smoothness.
+
+    return(interpolation)
+
+
+###################################################
+### Create Interpolation Function for Density from %H2SO4
+###################################################
+
+# The Density of 100% H2SO4 is 1.831
+
+### This function below could be in an external library that you call in your own program.
+
+def MakeInterpolationFunctionForH2SO4byPercentWtbyMolarConc():
+    Data_File_Name = "03_H2SO4_PercentWt_to_MolarConc_CRC.csv"
+
+    Filename = github_location + Data_File_Name
+    
+    df = pd.read_csv(Filename, 
+                     delimiter = ",", 
+                     skipinitialspace=True, 
+                     comment = "#") 
+    
+    x = df['mol/L']
+    y = df['%H2SO4']
     
     interpolation = make_smoothing_spline(x, y,     ### The x and y data
                                           w=None,   ### A list of weights for each point (default = None)
