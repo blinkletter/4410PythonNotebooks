@@ -5,19 +5,42 @@
 ### Journal of the American Chemical Society 1971 93 (20), 5083-5087
 ### DOI: 10.1021/ja00749a021
 ### 
+### The values below were taken from the Ph.D. Thesis of Terence Peel at McMaster University
+### https://macsphere.mcmaster.ca/bitstream/11375/19972/1/Peel_Terence_E._1971Sept_Ph.D..pdf
+###
+### Peel, Terence Edward. The Hammett Acidity Function for Some Superacid Media.
+### Degree: PhD, 1971, McMaster University
+### URL: http://hdl.handle.net/11375/19972
+###
+### 98.5% is strongest commercially available sulphuric acid
+### 100% is enough added SO3 to get to electrochemical definition of 100%
+### 101% is 5.45% (excess mol%) added SO3
+### % conc is 100% + 18/80*%oleum (oleum is excess SO3 expressed as the mass of H2O.SO3) (https://en.wikipedia.org/wiki/Oleum)
 ### Temp = 25.0 deg C
 ### Concentrations in %wt H2SO4 
 ###
 "%H2SO4",  "H0"
-98.00,      -10.44 
-98.20,      -10.50 
-98.40,      -10.56 
-98.60,      -10.62 
-98.80,      -10.71 
-99.00,      -10.84 
-99.20,      -10.93 
-99.40,      -11.05 
-99.60,      -11.15 
-99.80,      -11.40 
-99.90,      -11.64 
-100.00,     -11.93
+95.0,  -9.86
+95.5,  -9.94
+96.0,  -10.02
+96.5,  -10.10
+97.0,  -10.22
+97.5,  -10.32
+98.0,  -10.44
+98.2,  -10.50
+98.4,  -10.56
+98.6,  -10.62
+98.8,  -10.71
+99.0,  -10.84
+99.2,  -10.93
+99.4,  -11.05
+99.6,  -11.15
+99.8,  -11.40
+99.9,  -11.64
+100.0, -11.93
+100.1, -12.15
+100.2, -12.27
+100.4, -12.47
+100.6, -12.60
+100.8, -12.70
+101.0, -12.77

@@ -13,7 +13,8 @@
 ### Temp = 25.0 deg C
 ### kobs units are (/ 10-2 min-1)
 ###
-### NOTE: values for MeOAc where %H2SO4 > 80.0% are digitized from figure #1 and figure #3. Calculations were required to convert the data from F3 to the same format as F1 but bot sets of data were very close. the data from F3 is presented as it was more precise (better resolution in image used).
+### NOTE: Values for MeOAc where %H2SO4 > 80.0% are digitized from figure #1. 
+###       
 ### NOTE: values for EtOac from...
 ### "The Hydrolysis of Ethyl Acetate in Concentrated Aqueous Sulphuric Acid." D. Jaques, J. Chem. Soc. 1965, 3854–3904. https://doi.org/10.1039/JR9650003854.
 ### and "The Kinetics of Ester Hydrolysis in Concentrated Aqueous Acids." R.P. Bell, A.L. Dowding, J.A. Noble, J. Chem. Soc. 1955, 3106–3110. https://doi.org/10.1039/JR9550003106.
@@ -34,9 +35,9 @@ MeOAc,       65.2,         11.9
 MeOAc,       70.4,          7.25
 MeOAc,       74.1,          3.83
 MeOAc,       80.0,          0.931
-MeOAc,       90.02,         0.72    # Digitized Data         
-MeOAc,       95.69,         1.38    # Digitized Data         
-MeOAc,       99.13,         1.44    # Digitized Data         
+MeOAc,       89.7,         0.72    # Digitized Data - Used concentrations from nPrOAc that matched      
+MeOAc,       95.0,         1.38    # Digitized Data - Used concentrations from nPrOAc that matched        
+MeOAc,       98.6,         1.44    # Digitized Data - Used concentrations from nPrOAc that matched        
 EtOAc,       12.2,          1.128  # From Lane/Bell/Jaques
 EtOAc,       16.4,          1.854  # From Lane/Bell/Jaques
 EtOAc,       23.9,          3.366  # From Lane/Bell/Jaques
