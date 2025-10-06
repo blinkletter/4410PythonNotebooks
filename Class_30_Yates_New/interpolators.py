@@ -137,6 +137,29 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byMoleFraction():
     
     return(interpolation)
 
+def DataForInterpolateH2OActivitybyPercentWtH2SO4():
+    Data_File_Name = "01_Giauque_Table9_activityH2OinH2SO4.csv"
+    
+    molwtH2SO4 = 98.08; molwtH20 = 18.0; densityH2SO4 = 1.83; densityH2O = 1.000
+    
+    Filename = github_location + Data_File_Name
+    
+    df1 = pd.read_csv(Filename, 
+                     delimiter = ",", 
+                     skipinitialspace=True, 
+                     comment = "#") 
+    
+    molal = df1["conc H2SO4 / m"]
+    mass_add_to_1_kg_water = molal * molwtH2SO4
+    total_mass_solution = mass_add_to_1_kg_water + 1000
+    percent_H2SO4 = mass_add_to_1_kg_water / total_mass_solution * 100
+    
+    df1["%H2SO4"] = percent_H2SO4
+    
+    x = df1["%H2SO4"]
+    y = df1["aH2O"]
+    
+    return(x,y)
 
 ###################################################
 ### Create Interpolation Function for a_H2O by % H2SO4
