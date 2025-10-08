@@ -1,11 +1,11 @@
-# Data from
-# Tables of physical and chemical constants and some mathematical functions 
-# originally compiled by G.W.C. Kaye and T.H. Laby ; now prepared under the direction of an editorial committee.
-# London ; New York : Longman, 1986. 15th ed.
-# Reference section of library	QC61.K3 1986 REF
-# Page 222. Section 2.6.3
-#
-"%H2SO4", "20C" 
+### Data from
+### Tables of physical and chemical constants and some mathematical functions 
+### originally compiled by G.W.C. Kaye and T.H. Laby ; now prepared under the direction of an editorial committee.
+### London ; New York : Longman, 1986. 15th ed.
+### Reference section of library	QC61.K3 1986 REF
+### Page 222. Section 2.6.3
+###
+"%H2SO4", "20C"
 1.731,    1.010
 3.242,    1.020
 6.221,    1.040

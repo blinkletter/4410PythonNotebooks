@@ -1,0 +1,21 @@
+### Data from
+### Surface Tensions and Densities of Sulfuric Acid + Dimethylamine + Water Solutions
+### Antti-P. Hyvärinen, Heikki Lihavainen, Kaisa Hautio, Tomi Raatikainen, Yrjö Viisanen, and Ari Laaksonen
+### Journal of Chemical & Engineering Data 2004 49 (4), 917-922
+### DOI: 10.1021/je034225b
+### 
+### density (kg/m,^3) vs mole fraction at 25 degC
+###
+"X H2SO4", "25C"
+0.001,  998
+0.003, 1005
+0.006, 1017
+0.008, 1024
+0.026, 1085
+0.052, 1156
+0.090, 1253
+0.125, 1328
+0.180, 1422
+0.250, 1528
+0.350, 1622
+0.480, 1725
