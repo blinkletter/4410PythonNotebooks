@@ -143,7 +143,7 @@ def MakeInterpolationFunctionForH2OActivityinH2SO4byPercentWt():
     
     interpolation = make_smoothing_spline(x, y,      ### The x and y data
                                           w=None,    ### A list of weights for each point (default = None)
-                                          lam=10)  ### A factor for the degree of smoothing. Change this to change the smoothness.
+                                          lam=0)  ### A factor for the degree of smoothing. Change this to change the smoothness.
     
     return(interpolation)
 
