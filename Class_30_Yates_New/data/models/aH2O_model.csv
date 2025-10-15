@@ -1,0 +1,107 @@
+# Data for a_H2O vs m for interpolation model
+# data from Giauque and rard combined and suplicated removed.
+#
+# "The Thermodynamic Properties of Aqueous Sulfuric Acid Solutions and Hydrates from 15 to 300 K."
+# W. F. Giauque, E. W. Hornung, J. E. Kunzler, and T. R. Rubin
+# Journal of the American Chemical Society 1960 82 (1), 62-70
+# DOI: 10.1021/ja01486a014
+# 
+# a_H2O values determined with isopiestic method (fractionalo vapour pressure)
+# a_H2O = activity coefficient * mole fraction
+# https://en.wikipedia.org/wiki/Water_activity
+#
+# Activity coefficient of water in sulfuric acid
+#
+# Temp = 25.0 deg C
+# Concentrations in molal H2SO4 (mole H2SO4 per kg of solvent)
+#
+#
+# "A Review of the Osmotic Coefficients of Aqueous H2S04 at 25 °C"
+# Joseph A. Rard, Anton Habenschuss, and Frank H. Speddlng
+# Journal of Chemical and Engineering Data, Vol. 21, No. 3, 1976, 374-379
+# DOI: 10.1021/je60070a002
+# # rard-et-al-2002-a-review-of-the-osmotic-coefficients-of-aqueous-sulfuric-acid-at-25-degree-c.pdf
+# See Table IV in the paper
+#
+#
+"m",    "aH2O"
+0.1,      0.99633
+0.2,      0.99284
+0.3,      0.98928
+0.4,      0.98564
+0.5,      0.98192
+0.6,      0.97811
+0.7,      0.97421
+0.8,      0.97021
+0.9,      0.9661
+1.0,      0.96188
+1.2,      0.95309
+1.4,      0.94381
+1.6,      0.93401
+1.8,      0.9237
+2.0,      0.91286
+2.2,      0.9015
+2.4,      0.8897
+2.6,      0.8773
+2.8,      0.8646
+3.0,      0.8514
+3.2,      0.8378
+3.4,      0.8238
+3.6,      0.8095
+3.8,      0.795
+4.0,      0.7801
+4.5,      0.7423
+5.0,      0.7036
+5.5,      0.6647
+6.0,      0.6257
+6.5,      0.5881
+7.0,      0.5503
+7.5,      0.5154
+8.0,      0.4806
+8.5,      0.4484
+9.0,      0.4175
+9.5,      0.3881
+10.0,     0.3611
+10.5,     0.3348
+11.0,     0.3113
+11.5,     0.2882
+12.0,     0.2678
+12.5,     0.2478
+13.0,     0.2303
+13.5,     0.213
+14.0,     0.1975
+14.5,     0.1831
+15.0,     0.1697
+15.5,     0.1573
+16.0,     0.1462
+16.5,     0.1353
+17.0,     0.1254
+17.5,     0.1163
+18.0,     0.1077
+18.5,     0.1000
+19.0,     0.0927
+19.5,     0.086
+20.0,     0.07929
+21.0,     0.0685
+22.0,     0.0589
+23.0,     0.0507
+24.0,     0.0437
+25.0,     0.0378
+26.0,     0.0328
+27.0,     0.0286
+30.0,     0.01937
+35.0,     0.01042
+40.0,     0.0059
+45.0,     0.00353
+50.0,     0.00223
+60.0,     0.00105
+70.0,     0.00058
+80.0,     0.000361
+90.0,     0.000247
+100.0,    0.000179
+200.0,    3.2e-05
+300.0,    1.38e-05
+400.0,    7.87e-06
+500.0,    5.2e-06
+1000.0,    1.5e-06
+#1000000000.0,    1.56e-09

@@ -1,0 +1,97 @@
+# data for H_0 vs w (%H2SO4) interpolation model
+# Combination of Johnson (w < 94.5% and Gillespie (w > 94.5%)
+# Combined values and kep Gillespie values when there was a duplicate.
+#
+# Hammett acidity function for some super acid systems. I. Systems H2SO4-SO3, H2SO4-HSO3F, H2SO4-HSO3Cl, and H2SO4-HB(HSO4)4
+# R. J. Gillespie, T. E. Peel, and E. A. Robinson
+# Journal of the American Chemical Society 1971 93 (20), 5083-5087
+# DOI: 10.1021/ja00749a021
+# 
+# The values below were taken from the Ph.D. Thesis of Terence Peel at McMaster University
+# https://macsphere.mcmaster.ca/bitstream/11375/19972/1/Peel_Terence_E._1971Sept_Ph.D..pdf
+#
+# Peel, Terence Edward. The Hammett Acidity Function for Some Superacid Media.
+# Degree: PhD, 1971, McMaster University
+# URL: http://hdl.handle.net/11375/19972
+#
+# Temperature variation of the H0 acidity function in aqueous sulfuric acid solution
+# Colin Douglas Johnson, A. R. Katritzky, and S. A. Shapiro
+# Journal of the American Chemical Society 1969 91 (24), 6654-6662
+# https://doi.org/10.1021/ja01052a021
+# 
+# at 25 deg C
+# w is %H2SO4
+
+#
+"w",    "H0"
+2.0,     0.53
+4.0,     0.2
+6.0,    -0.02
+8.0,    -0.2
+10.0,   -0.35
+12.0,   -0.5
+14.0,   -0.65
+16.0,   -0.78
+18.0,   -0.92
+20.0,   -1.06
+22.0,   -1.2
+24.0,   -1.34
+26.0,   -1.47
+28.0,   -1.6
+30.0,   -1.73
+32.0,   -1.85
+34.0,   -1.99
+36.0,   -2.12
+38.0,   -2.27
+40.0,   -2.42
+42.0,   -2.6
+44.0,   -2.77
+46.0,   -2.95
+48.0,   -3.12
+50.0,   -3.3
+52.0,   -3.48
+54.0,   -3.68
+56.0,   -3.9
+58.0,   -4.13
+60.0,   -4.37
+62.0,   -4.62
+64.0,   -4.91
+66.0,   -5.2
+68.0,   -5.52
+70.0,   -5.82
+72.0,   -6.13
+74.0,   -6.47
+76.0,   -6.81
+78.0,   -7.13
+80.0,   -7.46
+82.0,   -7.8
+84.0,   -8.13
+86.0,   -8.42
+88.0,   -8.71
+90.0,   -9.01
+92.0,   -9.34
+94.0,   -9.66
+95.0,   -9.86
+95.5,   -9.94
+96.0,   -10.02
+96.5,   -10.1
+97.0,   -10.22
+97.5,   -10.32
+98.0,   -10.44
+98.2,   -10.5
+98.4,   -10.56
+98.6,   -10.62
+98.8,   -10.71
+99.0,   -10.84
+99.2,   -10.93
+99.4,   -11.05
+99.6,   -11.15
+99.8,   -11.4
+99.9,   -11.64
+100.0,  -11.93
+100.1,  -12.15
+100.2,  -12.27
+100.4,  -12.47
+100.6,  -12.6
+100.8,  -12.7
+101.0,  -12.77
