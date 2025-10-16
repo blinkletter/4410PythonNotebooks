@@ -164,3 +164,35 @@ p-NO2PhOAc,  75.3,         93.3
 p-NO2PhOAc,  77.7,        161
 p-NO2PhOAc,  78.5,        158
 p-NO2PhOAc,  80.0,        222
+### Data for ethyl Benzoate from..
+### "Effect of sulfuric acid concentration on the rates of hydrolysis of ethyl benzoate ethyl thiolbenzoate, and ethyl thionbenzoate"
+### J.T. Edwards, S.C. Wong
+### J. Am. Chem. Soc., 1977, 99(22), 7224 – 7228, DOI: 10.1021/ja00464a022
+### 25 degC
+### Ester,   %H2SO4,    10^2 k_obs /min 
+EtOBz,      31.7,        0.0258
+EtOBz,      39.8,        0.0504 
+EtOBz,      48.7,        0.0888 
+EtOBz,      55.3,        0.1152
+EtOBz,      63.0,        0.102 
+EtOBz,      68.1,        0.0864 
+EtOBz,      73.0,        0.066
+EtOBz,      76.5,        0.0408
+EtOBz,      80.5,        0.0294
+EtOBz,      85.9,        0.0396
+EtOBz,      90.6,        0.0768
+EtOBz,      95.6,        0.123
+EtOBz,      99.0,        0.2142
+
+
+
+
+
+
+
+
+
+
+
+
+
