@@ -1,0 +1,35 @@
+Nucleophilic solvent participation in the solvolysis of 4-methoxybenzyl bromide and chloride
+Kwang-Ting Liu,   Yeh-Fang Duann  and  Su-Jiun Hou  
+J. Chem. Soc., Perkin Trans. 2, 1998, 2181-2186
+https://doi.org/10.1039/A802518E
+a802518e.pdf
+
+IUPAC recommendations for the representation of reaction mechanisms
+Robert D. Guthrie and William P. Jencks
+Accounts of Chemical Research 1989 22 (10), 343-349
+DOI: 10.1021/ar00166a001
+guthrie-jencks-2002-iupac-recommendations-for-the-representation-of-reaction-mechanisms.pdf
+
+Mizue Fujio, Toshihiro Susuki, Mutsuo Goto, Yutaka Tsuji, Ken-ichi Yatsugi, Yoshihiro Saeki, Sung Hong Kim, Yuho Tsuno, Solvent Effects on the Solvolysis of Benzyl p-Toluenesulfonates, Bulletin of the Chemical Society of Japan, Volume 67, Issue 8, August 1994, Pages 2233–2243, https://doi.org/10.1246/bcsj.67.2233
+bcsj.67.2233.pdf
+
+Concurrent stepwise and concerted substitution reactions of 4-methoxybenzyl derivatives and the lifetime of the 4-methoxybenzyl carbocation.'' T.L. Amyes, J.P. Richard, \textit{J. Am. Chem. Soc.}, \textbf{1990}, \textit{112}, 9507-9512. \url{https://doi.org/10.1021/ja00182a009
+
+A primer for the Bema Hapothle. An empirical approach to the characterization of changing transition-state structures
+William P. Jencks
+Chemical Reviews 1985 85 (6), 511-527
+DOI: 10.1021/cr00070a001
+
+Kevill DN, D’Souza MJ. Sixty Years of the Grunwald–Winstein Equation: Development and Recent Applications. Journal of Chemical Research. 2008;2008(2):61-66. doi:10.3184/030823408X293189
+
+Bentley, T.W. and Llewellyn, G. (1990). 17, 121-158, YX Scales of Solvent Ionizing Power. In Progress in Physical Organic Chemistry, R.W. Taft (Ed.). https://doi.org/10.1002/9780470171967.ch5
+
+Resonance Effect in Hammett Relationship. III. The Modified Hammett Relationship for Electrophilic ReactionsGet accessArrow
+Yasuhide Yukawa and Yuho Tsuno
+Bulletin of the Chemical Society of Japan, Volume 32, Issue 9, September 1959, Pages 971–981, https://doi.org/10.1246/bcsj.32.971
+Yasuhide Yukawa, Yuho Tsuno, Resonance Effect in Hammett Relationship. III. The Modified Hammett Relationship for Electrophilic Reactions, Bulletin of the Chemical Society of Japan, Volume 32, Issue 9, September 1959, Pages 971–981, https://doi.org/10.1246/bcsj.32.971
+yukawa1959.pdf
+
+Harris, J. Milton; Shafer, Steven G.; Moffatt, John R.; Becker, Allyn R. (1979). "Prediction of SN2 transition state variation by the use of More O'Ferrall plots". J. Am. Chem. Soc. 101 (12): 3295–3300. doi:10.1021/ja00506a026
+
+
