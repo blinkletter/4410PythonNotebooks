@@ -1,0 +1,26 @@
+## 
+## from table I in 
+## "Mechanism of cyclodehydration of 2-phenyltriarylcarbinols", H. Hart, E.A. Sedor, J. Am. Chem. Soc., 1967, 89, 2342-2347. https://doi.org/10.1021/ja00986a018
+##
+## sum_sigma values are from "A survey of Hammett substituent constants and resonance and field parameters", C. Hansch, A. Leo, R.W. Taft, Chemical Reviews, 1991, 91, 165-195. https://doi.org/10.1021/cr00002a004
+##
+## k_obs is relative rate reported in table I
+##
+## see "HammetPlot.ipynb" notebook
+##
+##
+Reactant, X,    Y,     Z,     sum_sigma, sum_sigma_plus, k_obs
+1,        H,  p-Cl,  p-Cl,   0.46,        0.22,          0.096
+2,      m-CF3,  H,     H,    0.43,        0.43,          0.052
+3,      m-Cl,   H,     H,    0.37,        0.37,          0.100
+4,        H,  p-Cl,    H,    0.23,        0.11,          0.30
+5,      m-OCH3, H,     H,    0.12,        0.12,          0.74
+6,        H,    H,     H,    0,           0,             1.00
+7,      m-CH3,  H,     H,   -0.07,       -0.07,          1.48
+8,        H,  p-CH3,   H,   -0.17,       -0.31,          3.27
+9,        H,  p-OCH3,  H,   -0.27,       -0.78,          0.56
+10,       H,  p-CH3, p-CH3, -0.34,       -0.62,          5.80
+11,       H,  p-CH3, p-OCH3,-0.44,       -1.09,          0.176
+12,       H,  p-OCH3,p-OCH3,-0.54,       -1.56,          0.009
+##
+## Note: Data for reactant 11 should be 0.176. Was 1.76 in data table in paper.

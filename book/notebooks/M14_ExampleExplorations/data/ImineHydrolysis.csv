@@ -1,0 +1,18 @@
+# Data from table 6 of the handout #14.
+#
+#Kinetics of hydrolysis of substituted salicylideneanilines. 
+#J. Hoffmann, J. Klicnar, V. Štěrba, M. Večeřa, 
+#Coll. Czech. Chem. Comm., 1970, 35, 1387–1398. 
+#http://doi.org/10.1135/cccc19701387
+#
+#
+#"Substituent",          "k /min /10^-3"
+"Substituent",          "k"
+p-OCH3,                  4.07
+p-CH3,                   7.76
+m-CH3,                   8.71
+H,                      12.59
+m-OCH3,                 14.79
+p-Cl,                   12.02
+m-Cl,                   13.49
+m-NO2,                   7.08
