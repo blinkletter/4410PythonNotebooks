@@ -1,0 +1,18 @@
+﻿# Data from table 6 of the handout #14.
+#
+# Physical Organic Chemistry, 2nd ed. by Neil Isaacs. 1995, Wiley, New York
+# B.A. Porai-Koshits, E.Y. Belyaev, E. Shadovskii, Reacts. Sposobnost. Org. Soedin., 1964, 1, 10.
+#
+#
+#"Substituent",   "k /10-5 s-1"
+"Substituent",    "k"
+"p-OCH3",        11.59
+"p-CH3",          6.03
+"H",              2.04
+"p-Cl",            1.58
+"p-F",            0.52
+"p-I",           2.05
+"p-Br",           2.38
+"p-CO2Et",       57.41
+"p-NO2",        293.76
+
