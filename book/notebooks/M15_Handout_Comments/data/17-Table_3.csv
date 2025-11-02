@@ -1,0 +1,11 @@
+### ACID HYDROLYSIS DATA FOR TAFT
+###
+### from Timm, E. W., & Hinshelwood, C. N. (1938). 168. The activation energy of organic reactions. Part III. The kinetics of acid hydrolysis of esters. Journal of the Chemical Society (Resumed), 862. doi:10.1039/jr9380000862  timm1938.pdf
+###
+### Acid Hydrolysis 100 deg c (log of first order rate)
+### 50% ethanol in acid, 100 deg C
+Name,                    Substituent,   log(k X 10^6 s^-1), k X 10^6 s^-1, ref
+Ethyl acetate,             CH3,         4.03,               1072,          Timm
+Ethyl chloroacetate,       CH2Cl,       3.86,                724,          Timm     
+Ethyl dichloroacetate,     CHCl2,       3.44,                275,          Timm    
+Ethyl trichloroacetate,    CCl3,        3.74,                550,          Timm   

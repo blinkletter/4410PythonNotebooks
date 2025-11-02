@@ -1,0 +1,33 @@
+﻿## data from table 1 of "Linear Free Energy Relationships from Rates of 
+# Esterification for Hydrolysis of Aliphatic Ortho-substituted Benzoate Esters""
+# Robert W. Taft Jr.
+# Journal of the American Chemical Society, 1952, 74, 2729-2732
+# https://doi.org/10.1021/ja01131a010
+#
+# Values are log(k_X/k_Me)
+#
+"Group",   "Substituent",              "acid ratio",    "acid error",    "base ratio",    "base error"
+H,                 H,                   1.24,            0.09,            2.46,           0.12
+Me,                CH3,                 0,               0.06,            0,              0.08
+CH2Cl,             CH2Cl,              -0.19,            0.05,                ,           
+Et,                C2H5,               -0.07,            0.02,           -0.31,           0.05
+n-Pr,              CH2CH2CH3,          -0.36,            0.02,           -0.64,           0.09
+n-Bu,              (CH2)3CH3,          -0.39,            0.05,           -0.71,           0.09
+n-pentyl,          (CH2)4CH3,          -0.4,             0.07,           -0.55,           0.02
+i-pentyl,          (CH2)2CH(CH3)2,     -0.35,            0.01,                ,           
+Bz,                CH2C6H5,            -0.38,            0.04,            0.17,           0.03
+(CH2)2Ph,          CH2CH2C6H5,         -0.43,            0.09,           -0.14,           0.01
+(CH2)3Ph,          (CH2)3C6H5,         -0.45,            0.06,           -0.4,            0.02
+i-Pr,              CH(CH3)2,           -0.47,            0.06,           -0.94,           0.08
+cyclohexyl,        cyc-C6H11,          -0.79,            0.17,                ,           
+i-Bu,              CH2CH(CH3)2,        -0.93,            0.1,            -1.24,           0.06
+CH2-cyclohexane,   CH2-c-C6H11,        -0.98,            0.05,           -1.13,           
+CHMeEt,            CH(CH3)C2H5,        -1.13,            0.16,                ,           
+CHMePh,            CH(CH3)C6H5,        -1.19,            0.07,           -0.93,           
+CHEtPh,            CH(C2H5)C6H5,       -1.5,             0.1,            -1.42,           
+t-Bu,              C(CH3)3,            -1.54,            0.02,           -2.38,           0.12
+CHPh2,             CH(C6H5)2,          -1.76,            0.15,           -1.09,           
+CHEt2,             CH(C2H5)2,          -1.98,            0.28,           -2.7,            0.06
+CH=CHPh,           CHCHC6H6,           -1.99,            ,               -0.75,           0.09
+CCl3,              CCl3,               -2.06,            ,                    ,           
+Ph,                C6H5,               -2.55,            0.08,           -1.06,           0.04

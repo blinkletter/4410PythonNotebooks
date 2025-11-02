@@ -1,0 +1,16 @@
+# Data for hydrolysis of benzylchloride by water in hydroxide solution
+# olivier1934A.pdf
+# Olivier, S.C.J. and Weber, A.P. (1934), Relations Entre la Constitution du Substrat et sa Sensibilité à L'ion oh dans L'hydrolyse. Recl. Trav. Chim. Pays-Bas, 53: 869-890. https://doi.org/10.1002/recl.19340531002
+#              50% acetone/Water  0.0506M NaOH       0.104M NaOH        0.259M NaOH
+#substituent   k (x 10^5) min^-1   k (x 10^5)         k (x 10^5)         k (x 10^5)
+Substituent,   k_H2O,              k_0.05,            k_0.10,            k_0.26
+H,             2.2,                17,               31,                61
+p-CH3,         19,                 38,               58,                94
+o-CH3,         9.4,                42,               68,                127
+m-CH3,         2.6,                33.2,             28,                53
+p-Br,          1.09,               17,               34,                64
+o-Br,          0.58,               11,               22,                47
+m-Br,          0.41,               9.0,              17,                37
+m-CN,          0.27,               17,               33,                68
+p-CN,          0.25,               22,               43,                92
+o-CN,          0.21,               24,               46,                102
