@@ -1,0 +1,15 @@
+# rate vs. [buffer]
+#
+# data is from "The hydrolysis of aspirin. A determination of the thermodynamic dissociation constant and a study of the reaction kinetics by ultra-violet spectrophotometry" L. J. Edwards, Trans. Faraday Soc., 1950,46, 723-735, https://doi.org/10.1039/TF9504600723
+#
+# Reactions in different concentration of acetate buffer, 17 deg C
+#k_obs is days^-1
+#
+conc,     k_obs
+0.333,    0.112
+0.167,    0.116
+0.0833,   0.114
+0.0417,   0.114
+0.0209,   0.119
+0.0104,   0.115
+0.00521,  0.119
